@@ -1,0 +1,161 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Darker black background */
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.subscription-container {
+    display: flex;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Payment details styling */
+.payment-details {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #444;
+}
+
+.payment-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.payment-details label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.payment-details input {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.payment-details input#card-details {
+    width: calc(100% - 10px); /* Card Details field full width */
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px;
+}
+
+.card-info input#expiry {
+    width: calc(100% - 10px); /* Make the expiry box full width */
+}
+
+.card-info input#cvv {
+    width: calc(100% - 10px); /* Make the CVV box full width */
+}
+
+.cancel-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+/* Subscription plan styling */
+.subscription-plan {
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.change-plan-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+
+.plan-price {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-features li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 30px; /* To create space for the icon */
+    color: #fff; /* Ensuring the text remains white */
+}
+
+.plan-features li::before {
+    content: "\2713"; /* Unicode for the checkmark */
+    position: absolute;
+    left: 0;
+    color: red; /* Explicitly set to red */
+}
+
+.total-fee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.subscribe-btn {
+    background-color: #d32f2f;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}

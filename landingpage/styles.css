@@ -1,0 +1,542 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+}
+
+/* Header */
+.header {
+  background-color: transparent; /* Ensure there's no background color for the header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  padding: 20px; /* Add padding for some spacing from the edge */
+}
+
+.logo img {
+  height: 40px; /* Adjust the logo size if necessary */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1001; /* Ensure the logo is above other elements */
+}
+
+/* Welcome Section */
+.welcome {
+  height: 100vh; /* Ensure it covers the entire screen */
+  background-image: url('images/moviepostergallery.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex; /* Enables flexbox to center the content */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.welcome-content {
+  text-align: center; /* Center-align the text */
+  color: white;
+}
+
+.welcome-content h1 {
+  font-size: 7rem;
+  margin-bottom: 10px;
+}
+
+.welcome-content .subheading {
+  font-size: 2.5rem;
+  margin-bottom: 7px;
+}
+
+.welcome-content .tagline {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.welcome-content .coming-soon {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.email-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px; /* Remove the gap between the input and button */
+}
+
+.email-signup input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 250px;
+  text-align: center;
+  background-color: #333; /* Dark grey background */
+  color: white; /* Black text */
+}
+
+.email-signup input[type="email"]::placeholder {
+  color: white; /* Black placeholder text */
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e50914; /* Red button */
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded corners only on right side */
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #d40813;
+}
+
+
+/* Subscription Offer Section */
+.subscription {
+  position: relative;
+  text-align: left;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.left-section {
+  text-align: left;
+}
+
+.right-section {
+  text-align: left;
+}
+
+.big-text {
+  font-size: 5rem; /* Large font for "30%" and "Off" */
+  font-weight: bold;
+  color: #e50914;
+  margin: 0;
+}
+
+.medium-text {
+  font-size: 3rem; /* Medium font for "One Month" */
+  color: #e50914;
+  margin: 2px 0; /* Extremely reduced margin between lines */
+}
+
+.regular-text {
+  font-size: 2rem; /* Standard font size for other text */
+  color: #fff;
+  margin: 2px 0; /* Extremely reduced margin between lines */
+}
+
+.now-text {
+  font-size: 2.5rem; /* Bigger font for "NOW!" */
+  font-weight: bold;
+  color: #e50914;
+  margin-left: 10px; /* Spacing to the left of "NOW!" */
+}
+
+.red-text {
+  color: #e50914; /* Red text for highlights */
+}
+
+.subscription::before {
+  content: "";
+  background: url('images/moviepostergallery.png') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3; /* Adjust opacity for better text visibility */
+  z-index: -1; /* Ensure the background is behind the text */
+}
+
+/* Plan Container */
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Plan Heading */
+.plan-container h2 {
+  color: white;
+  font-size: 2.7rem;
+  font-weight: bold; /* Bold heading */
+  text-align: center; /* Centered heading */
+  margin-bottom: 20px;
+}
+
+/* Plan Selection Container */
+.plan-selection-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #000; /* Thick black background */
+  border-radius: 50px; /* Pill-shaped container */
+  padding: 5px; /* Padding inside container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Plan Options */
+.plan-option {
+  flex: 1;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #333; /* Default inactive state */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  border: none; /* No border */
+}
+
+/* Active Option (Light Red) */
+.plan-option.active {
+  background-color: #ff4d4d; /* Light red for active option */
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.5); /* Glow effect when active */
+}
+
+/* Hover effect with no red light unless active */
+.plan-option:hover {
+  background-color: #444; /* Just darken slightly on hover */
+}
+
+/* Special rounded edges for the entire container */
+.plan-option:first-child {
+  border-radius: 50px 0 0 50px; /* Round left side of the first option */
+}
+
+.plan-option:last-child {
+  border-radius: 0 50px 50px 0; /* Round right side of the last option */
+}
+
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px auto;
+}
+
+.plan-details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plan-details-box {
+  background-color: white;
+  border: 2px solid #e50914;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 320px;
+  color: black;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.plan-details-box.annual-plan {
+  width: 350px;
+}
+
+.price-container {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  position: relative;
+}
+
+.plan-price {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.discount {
+  background-color: #e50914;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Red underline separator added for both top and bottom sections */
+.plan-header-line {
+  width: 100%;
+  height: 2px;
+  background-color: #e50914;
+  margin: 20px 0;
+}
+
+.plan-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.plan-details-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.plan-details-box ul li {
+  margin-bottom: 10px;
+  color: black;
+  position: relative;
+  padding-left: 20px;
+}
+
+.plan-details-box ul li::before {
+  content: '✔';
+  color: #e50914;
+  position: absolute;
+  left: 0;
+}
+
+.select-plan {
+  background-color: #e50914;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.select-plan:hover {
+  background-color: #d40813;
+}
+
+/* Spacer to separate the top and bottom sections */
+.spacer {
+  height: 50px; /* Adjust the space between the two sections */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plan-details {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .plan-details-box {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+
+
+.flow-section {
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;      /* Vertically center */
+  flex-direction: column;   /* Stack the text and image vertically */
+  padding: 20px 0;          /* Padding to allow more space for other content */
+  background-color: #000;   /* Black background */
+  color: white;             /* White text */
+}
+
+/* Heading Styling */
+.flow-section h2 {
+  font-size: 2rem;          /* Adjust font size as needed */
+  text-align: center;       /* Ensure text is centered */
+  margin-bottom: 10x;      /* Reduced space between the heading and the image */
+}
+
+/* Image Styling */
+.flow-image {
+  max-width: 60%;           /* Resize the image to fit better in the layout */
+  height: auto;
+  display: block;
+  margin: 0 auto;           /* Center the image */
+  border-radius: 10px;      /* Optional: Rounded corners for the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flow-section h2 {
+    font-size: 1.5rem;      /* Smaller font for mobile */
+  }
+
+  .flow-image {
+    max-width: 80%;         /* Larger image on smaller screens */
+  }
+}
+
+
+
+
+
+/* Nonso Section */
+.nonso-section {
+  background-color:#000;  /* Changed to thick black */
+  padding: 40px 20px;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+/* Avatar Section */
+.avatar-section {
+  background-color: #000;  /* Changed to thick black */
+  padding: 40px 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* Culture Section */
+.culture-section {
+  background-color: #000;  /* Thick black background */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.culture-section h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* Categories container */
+/* Categories Section */
+/* Categories Section */
+/* Categories Section */
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center the entire section */
+  gap: 50px;
+  max-width: 100%; /* Full width for responsiveness */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Center-align the genre titles */
+.category {
+  text-align: center; /* Center genre titles */
+  width: 100%; /* Ensure genre title spans full width */
+}
+
+.category h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: white;
+  width: 100%; /* Ensures the genre title takes full width */
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: flex;
+  justify-content: center; /* Center movie posters horizontally */
+  gap: 10px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  width: 100%; /* Full width for responsiveness */
+}
+
+/* Movie Poster Container */
+.movie-poster {
+  width: 150px;
+  height: 200px;
+  background-color: #e50914;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Movie Poster Image */
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the poster box */
+}
+
+/* Hover effect for movie posters */
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movies-grid {
+    justify-content: center; /* Keep posters centered on smaller screens */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .movie-poster {
+    width: 120px;
+    height: 160px;
+  }
+
+  .category h3 {
+    padding-left: 10px;
+  }
+}
+

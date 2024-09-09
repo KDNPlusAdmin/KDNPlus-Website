@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-container {
+    width: 100%;
+    text-align: left;
+    padding: 20px 40px;
+}
+
+.logo-container .brand {
+    display: inline-block;
+    color: #d32f2f; /* Red color for the brand */
+    font-size: 36px;
+    margin: 0;
+    border: 2px solid #d32f2f;
+    padding: 10px;
+    border-radius: 15px; /* Curved look for the logo border */
+    transform: rotate(-10deg) skewX(-10deg); /* Bend effect for the logo text */
+    transform-origin: left; /* Make the text curve from the left */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #000;
+}
+
+.left-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.left-content h2 {
+    color: #e53935; /* Red color for the heading */
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.left-content p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.right-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between button and FAQ text */
+}
+
+.submit-btn:hover {
+    background-color: #d32f2f;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.faq-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+}
+
+.faq-link {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
