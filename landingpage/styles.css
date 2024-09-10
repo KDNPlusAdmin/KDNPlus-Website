@@ -1,8 +1,9 @@
 /* Global Styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #000;
   color: #fff;
   height: 100%;
@@ -37,7 +38,7 @@ body, html {
 /* Welcome Section */
 .welcome {
   height: 100vh; /* Ensure it covers the entire screen */
-  background-image: url('images/moviepostergallery.png');
+  background-image: url("images/moviepostergallery.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -119,7 +120,6 @@ body, html {
   background-color: #d40813;
 }
 
-
 /* Subscription Offer Section */
 .subscription {
   position: relative;
@@ -178,7 +178,7 @@ body, html {
 
 .subscription::before {
   content: "";
-  background: url('images/moviepostergallery.png') no-repeat center center;
+  background: url("images/moviepostergallery.png") no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -191,11 +191,13 @@ body, html {
 
 /* Plan Container */
 .plan-container {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
+  /* gap: 30px; */
+  margin: 20px 0;
 }
 
 /* Plan Heading */
@@ -213,9 +215,9 @@ body, html {
   justify-content: center;
   width: 100%;
   max-width: 600px;
-  background-color: #000; /* Thick black background */
+  background-color: #333; /* Thick black background */
   border-radius: 50px; /* Pill-shaped container */
-  padding: 5px; /* Padding inside container */
+  /* Padding inside container */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
@@ -235,14 +237,10 @@ body, html {
 
 /* Active Option (Light Red) */
 .plan-option.active {
-  background-color: #ff4d4d; /* Light red for active option */
+  background-color: #e50914; /* Light red for active option */
   color: white;
   box-shadow: 0 0 15px rgba(255, 77, 77, 0.5); /* Glow effect when active */
-}
-
-/* Hover effect with no red light unless active */
-.plan-option:hover {
-  background-color: #444; /* Just darken slightly on hover */
+  border-radius: 50px; /* Pill-shaped container */
 }
 
 /* Special rounded edges for the entire container */
@@ -260,20 +258,11 @@ body {
   color: white;
 }
 
-.plan-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin: 20px auto;
-}
-
 .plan-details {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .plan-details-box {
@@ -296,11 +285,10 @@ body {
   background-color: white;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-radius: 10px 10px 0 0;
   width: 100%;
-  position: relative;
 }
 
 .plan-price {
@@ -308,6 +296,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  padding-left: 3.125rem;
 }
 
 .discount {
@@ -316,7 +305,6 @@ body {
   padding: 5px 10px;
   font-size: 0.8rem;
   border-radius: 15px;
-  position: absolute;
   bottom: 10px;
   right: 10px;
 }
@@ -349,7 +337,7 @@ body {
 }
 
 .plan-details-box ul li::before {
-  content: '✔';
+  content: "✔";
   color: #e50914;
   position: absolute;
   left: 0;
@@ -376,64 +364,120 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .plan-details {
-      flex-direction: column;
-      align-items: center;
-  }
+@media (max-width: 1200px) {
+  /* .plan-details {
+    flex-direction: column;
+    align-items: center;
+  } */
 
   .plan-details-box {
-      width: 100%;
-      margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .plan-details-box {
+    background-color: white;
+    border: 2px solid #e50914;
+    padding: 20px 20px;
+    border-radius: 10px;
+    width: 250px;
+    color: black;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
+@media (max-width: 1000px) {
+  .plan-details {
+    /* flex-direction: column;
+    align-items: center; */
+    font-size: 0.7rem;
+  }
 
+  .plan-details-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .plan-price {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 3.125rem;
+  }
+  .plan-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .plan-details {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .plan-details-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .plan-price {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 3.125rem;
+  }
+  .plan-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
 
 .flow-section {
   display: flex;
-  justify-content: center;  /* Horizontally center */
-  align-items: center;      /* Vertically center */
-  flex-direction: column;   /* Stack the text and image vertically */
-  padding: 20px 0;          /* Padding to allow more space for other content */
-  background-color: #000;   /* Black background */
-  color: white;             /* White text */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  flex-direction: column; /* Stack the text and image vertically */
+  padding: 20px 0; /* Padding to allow more space for other content */
+  background-color: #000; /* Black background */
+  color: white; /* White text */
 }
 
 /* Heading Styling */
 .flow-section h2 {
-  font-size: 2rem;          /* Adjust font size as needed */
-  text-align: center;       /* Ensure text is centered */
-  margin-bottom: 10x;      /* Reduced space between the heading and the image */
+  font-size: 2rem; /* Adjust font size as needed */
+  text-align: center; /* Ensure text is centered */
+  margin-bottom: 10x; /* Reduced space between the heading and the image */
 }
 
 /* Image Styling */
 .flow-image {
-  max-width: 60%;           /* Resize the image to fit better in the layout */
+  max-width: 60%; /* Resize the image to fit better in the layout */
   height: auto;
   display: block;
-  margin: 0 auto;           /* Center the image */
-  border-radius: 10px;      /* Optional: Rounded corners for the image */
+  margin: 0 auto; /* Center the image */
+  border-radius: 10px; /* Optional: Rounded corners for the image */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .flow-section h2 {
-    font-size: 1.5rem;      /* Smaller font for mobile */
+    font-size: 1.5rem; /* Smaller font for mobile */
   }
 
   .flow-image {
-    max-width: 80%;         /* Larger image on smaller screens */
+    max-width: 80%; /* Larger image on smaller screens */
   }
 }
 
-
-
-
-
 /* Nonso Section */
 .nonso-section {
-  background-color:#000;  /* Changed to thick black */
+  background-color: #000; /* Changed to thick black */
   padding: 40px 20px;
   font-size: 1.9rem;
   text-align: center;
@@ -441,16 +485,15 @@ body {
 
 /* Avatar Section */
 .avatar-section {
-  background-color: #000;  /* Changed to thick black */
+  background-color: #000; /* Changed to thick black */
   padding: 40px 20px;
   font-size: 2rem;
   text-align: center;
 }
 
-
 /* Culture Section */
 .culture-section {
-  background-color: #000;  /* Thick black background */
+  background-color: #000; /* Thick black background */
   padding: 40px 20px;
   text-align: center;
 }
@@ -522,6 +565,12 @@ body {
   transform: scale(1.05);
 }
 
+/* Default display none for some plan sections*/
+.standard-option-section,
+.premium-option-section {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .movies-grid {
@@ -539,4 +588,3 @@ body {
     padding-left: 10px;
   }
 }
-
