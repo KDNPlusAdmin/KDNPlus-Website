@@ -173,3 +173,108 @@ document.addEventListener("DOMContentLoaded", () => {
   populateCarousel("action-carousel", 10); // Populate Action Carousel with 10 images
   populateCarousel("horror-carousel", 8); // Populate Horror Carousel with 8 images
 });
+
+
+//movie slider section
+document.addEventListener('DOMContentLoaded', function () {  
+
+
+
+
+// Initialize Swiper  
+const swiper = new Swiper('.action-slider', {  
+  slidesPerView: 4,
+  spaceBetween: 10,
+  grabCursor: true,  // Enables a grabbing cursor, making it clear that the user can swipe
+  loop: true,  
+  navigation: {  
+      nextEl: '.action-button-next',  
+      prevEl: '.action-button-prev',  
+  },  
+  // Additional parameters can be added here if needed  
+});  
+
+// Add event listeners for the scroll arrows  
+document.querySelector('.scroll-arrow.left').addEventListener('click', function () {  
+  swiper.slidePrev(); // Move to the previous slide  
+});  
+
+document.querySelector('.scroll-arrow.right').addEventListener('click', function () {  
+  swiper.slideNext(); // Move to the next slide  
+});
+
+
+
+
+  // Initialize the horror slider Swiper  
+  const horrorSwiper = new Swiper('.horror-slider', {  
+
+    slidesPerView: 4,
+    spaceBetween: 10,
+    grabCursor: true,  // Enables a grabbing cursor, making it clear that the user can swipe
+    loop: true, 
+      navigation: {  
+          nextEl: '.horror-button-next',  
+          prevEl: '.horror-button-prev',  
+      },  
+  });  
+
+  // Add event listeners for the scroll arrows  
+  document.querySelector('.scroll-arrow.left1').addEventListener('click', function () {  
+      horrorSwiper.slidePrev();  
+  });  
+
+  document.querySelector('.scroll-arrow.right1').addEventListener('click', function () {  
+      horrorSwiper.slideNext();  
+  });  
+
+
+
+// Initialize the thriller slider Swiper  
+  const thrillerSwiper = new Swiper('.thriller-slider', {  
+  slidesPerView: 4,
+  spaceBetween: 10,
+  grabCursor: true,  // Enables a grabbing cursor, making it clear that the user can swipe
+  loop: true, 
+  navigation: {  
+      nextEl: '.thriller-button-next',  
+      prevEl: '.thriller-button-prev',  
+  },  
+  // Additional parameters can be added here if needed  
+});  
+
+// Add event listeners for the scroll arrows in the thriller category  
+document.querySelector('.scroll-arrow.left2').addEventListener('click', function () {  
+  thrillerSwiper.slidePrev(); // Move to the previous slide  
+});  
+
+document.querySelector('.scroll-arrow.right2').addEventListener('click', function () {  
+  thrillerSwiper.slideNext(); // Move to the next slide  
+});
+
+
+
+
+  // Initialize the crime slider Swiper  
+  const crimeSwiper = new Swiper('.crime-slider', { 
+    
+    slidesPerView: 4,
+    spaceBetween: 10,
+    grabCursor: true,  // Enables a grabbing cursor, making it clear that the user can swipe
+    loop: true, 
+    navigation: {  
+        nextEl: '.crime-button-next',  
+        prevEl: '.crime-button-prev',  
+    },  
+});  
+
+// Add event listeners for the scroll arrows  
+document.querySelector('.scroll-arrow.left3').addEventListener('click', function () {  
+    crimeSwiper.slidePrev();  
+});  
+
+document.querySelector('.scroll-arrow.right3').addEventListener('click', function () {  
+    crimeSwiper.slideNext();  
+});  
+
+});
