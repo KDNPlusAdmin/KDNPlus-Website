@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konplus Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="images/kdn00.png" alt="Kdnplus Logo"> <!-- Updated logo to kdn00.png -->
+                                <img src="https://d2c512779vw9nw.cloudfront.net/text.png" alt="Kdnplus Logo"> <!-- Updated logo to kdn00.png -->
+ <!-- Updated logo to kdn00.png -->
             </div>
         </div>
     </header>
@@ -32,15 +35,7 @@
 
     <section class="subscription">
         <div class="offer">
-            <div class="left-section">
-                <h2 class="big-text">30%</h2>
-                <h3 class="big-text">Off</h3>
-            </div>
-            <div class="right-section">
-                <p class="regular-text">If You Pre-order Your</p>
-                <h3 class="medium-text red-text">One Month</h3>
-                <p class="regular-text">Subscription <span class="now-text">NOW!</span></p>
-            </div>
+           <img src="../landingpage/images/offer.jpg" alt="ads" class="offer1">
         </div>
     </section>
     <!DOCTYPE html>
@@ -457,85 +452,193 @@
         <h2>Personalize Your Avatar</h2>
     </section>
     
-    <section class="culture-section">
+     <section class="culture-section">
         <h2>Culture at your Door Step</h2>
         <section class="categories">
+    
+            <!-- Action Category -->
             <div class="category">
                 <h3>Action</h3>
-                <div class="movies-grid" id="action-grid">
-                    <div class="movie-poster" data-id="1">
-                        <img src="images/OTTG.jpg" alt="Action Movie 1">
+                <!-- Left scroll arrow -->
+                <div class="scroll-arrow left">&#9664;</div>
+                <div class="swiper-container action-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide movie-poster" data-id="1">
+                            <img src="images/OTTG.jpg" alt="Action Movie 1" class="movie-1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="2">
+                            <img src="images/deepsecret1.jpg" alt="Action Movie 2" class="movie-1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="3">
+                            <img src="images/littlecalabash.jpg" alt="Action Movie 3" class="movie-1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="4">
+                            <img src="images/bloodymoon.jpg" alt="Action Movie 4" class="movie-1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="5">
+                            <img src="images/littlecalabash.jpg" alt="Action Movie 3" class="movie-1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="6">
+                            <img src="images/bloodymoon.jpg" alt="Action Movie 4" class="movie-1">
+                        </div>
                     </div>
-                    <div class="movie-poster" data-id="2">
-                        <img src="images/deepsecret1.jpg" alt="Action Movie 2">
-                    </div>
-                    <div class="movie-poster" data-id="3">
-                        <img src="images/littlecalabash.jpg" alt="Action Movie 3">
-                    </div>
-                    <div class="movie-poster" data-id="4">
-                        <img src="images/bloodymoon.jpg" alt="Action Movie 4"> <!-- Action 4th slot -->
-                    </div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="action-button-next"></div>
+                    <div class="action-button-prev"></div> -->
                 </div>
+                <!-- Right scroll arrow -->
+      <div class="scroll-arrow right">&#9654;</div>
             </div>
-        
+    
+            <!-- Horror Category -->
             <div class="category">
                 <h3>Horror</h3>
-                <div class="movies-grid" id="horror-grid">
-                    <div class="movie-poster" data-id="1">
-                        <img src="images/bloodymoon2.jpg" alt="Horror Movie 1">
+                <div class="scroll-arrow left1">&#9664;</div>
+                <div class="swiper-container horror-slider">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide movie-poster" data-id="1">
+                            <img src="images/bloodymoon2.jpg" alt="Horror Movie 1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="2">
+                            <img src="images/OTTG.jpg" alt="Horror Movie 2">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="3">
+                            <img src="images/Champions 2.jpg" alt="Horror Movie 3">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="4">
+                            <img src="images/OTTG 3.jpg" alt="Horror Movie 4">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="5">
+                            <img src="images/Champions 2.jpg" alt="Horror Movie 5">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="6">
+                            <img src="images/OTTG 3.jpg" alt="Horror Movie 6">
+                        </div>
                     </div>
-                    <div class="movie-poster" data-id="2">
-                        <img src="images/OTTG.jpg" alt="Horror Movie 2">
-                    </div>
-                    <div class="movie-poster" data-id="3">
-                        <img src="images/Champions 2.jpg" alt="Horror Movie 3">
-                    </div>
-                    <div class="movie-poster" data-id="4">
-                        <img src="images/OTTG 3.jpg" alt="Horror Movie 4"> <!-- Ensure this path is correct -->
-                    </div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="horror-button-next">  </div>
+                    <div class="horror-button-prev">  </div> -->
                 </div>
+                <!-- Right scroll arrow -->
+      <div class="scroll-arrow right1">&#9654;</div>
             </div>
-        
+    
+            <!-- Thriller Category -->
             <div class="category">
                 <h3>Thriller</h3>
-                <div class="movies-grid" id="thriller-grid">
-                    <div class="movie-poster" data-id="1">
-                        <img src="images/OTTG 3.jpg" alt="Thriller Movie 1">
+                <div class="scroll-arrow left2">&#9664;</div>
+                <div class="swiper-container thriller-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide movie-poster" data-id="1">
+                            <img src="images/OTTG 3.jpg" alt="Thriller Movie 1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="2">
+                            <img src="images/deepsecret1.jpg" alt="Thriller Movie 2">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="3">
+                            <img src="images/littlecalabash.jpg" alt="Thriller Movie 3">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="4">
+                            <img src="images/bloodymoon.jpg" alt="Thriller Movie 4">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="5">
+                            <img src="images/littlecalabash.jpg" alt="Thriller Movie 3">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="6">
+                            <img src="images/bloodymoon.jpg" alt="Thriller Movie 4">
+                        </div>
                     </div>
-                    <div class="movie-poster" data-id="2">
-                        <img src="images/deepsecret1.jpg" alt="Thriller Movie 2">
-                    </div>
-                    <div class="movie-poster" data-id="3">
-                        <img src="images/littlecalabash.jpg" alt="Thriller Movie 3">
-                    </div>
-                    <div class="movie-poster" data-id="4">
-                        <img src="images/bloodymoon.jpg" alt="Thriller Movie 4">
-                    </div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="thriller-button-next">  </div>
+                    <div class="thriller-button-prev">  </div> -->
                 </div>
-            </div>
-        
-            <div class="category">
+                <!-- Right scroll arrow -->
+      <div class="scroll-arrow right2">&#9654;</div>
+    </div>
+    
+    <!-- Crime Category -->
+    <div class="category">
                 <h3>Crime</h3>
-                <div class="movies-grid" id="crime-grid">
-                    <div class="movie-poster" data-id="1">
-                        <img src="images/bloodymoon2.jpg" alt="Crime Movie 1">
+                <div class="scroll-arrow left3">&#9664;</div>
+                <div class="swiper-container crime-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide movie-poster" data-id="1">
+                            <img src="images/bloodymoon2.jpg" alt="Crime Movie 1">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="2">
+                            <img src="images/OTTG.jpg" alt="Crime Movie 2">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="3">
+                            <img src="images/Champions 2.jpg" alt="Crime Movie 3">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="4">
+                            <img src="images/OTTG 3.jpg" alt="Crime Movie 4">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="5">
+                            <img src="images/Champions 2.jpg" alt="Crime Movie 3">
+                        </div>
+                        <div class="swiper-slide movie-poster" data-id="6">
+                            <img src="images/OTTG 3.jpg" alt="Crime Movie 4">
+                        </div>
                     </div>
-                    <div class="movie-poster" data-id="2">
-                        <img src="images/OTTG.jpg" alt="Crime Movie 2">
-                    </div>
-                    <div class="movie-poster" data-id="3">
-                        <img src="images/Champions 2.jpg" alt="Crime Movie 3">
-                    </div>
-                    <div class="movie-poster" data-id="4">
-                        <img src="images/OTTG 3.jpg" alt="Crime Movie 4"> <!-- Ensure this path is correct -->
-                    </div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="crime-button-next">  </div>
+                    <div class="crime-button-prev">  </div>  -->
                 </div>
+                <div class="scroll-arrow right3">&#9654;</div>
             </div>
+            
         </section>
-        
-        
-        
+    </section>
 
+     <footer class="footer-section">
+        <div class="container">
+          <div class="footer-content">
+            
+            <!-- About Section -->
+            <div class="footer-column">
+              <h5>About Kdnplus</h5>
+              <p>
+                Kdnplus brings the best of Nollywood content <br>
+                 to your doorstep. Stream, enjoy, and discover 
+                 the finest in Nigerian <br> cinema,  all in one place.
+              </p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-column">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Subscription Plans</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+            
+            <!-- Newsletter Signup -->
+            <div class="footer-column">
+              <h5>Newsletter</h5>
+              <p>Sign up for the latest updates and offers</p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Kdnplus. All Rights Reserved.</p>
+        </div>
+      </footer>
+        
+        
+        
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
