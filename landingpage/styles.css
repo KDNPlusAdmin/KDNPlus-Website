@@ -12,14 +12,20 @@ html {
 /* Header */
 .header {
   background-color: transparent; /* Ensure there's no background color for the header */
-  position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   z-index: 1000;
+  background-image: url('images/moviepostergallery.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
 }
 
 .container {
+  background-color: rgba(0, 0, 0, 0.7);
   position: relative;
   display: flex;
   justify-content: space-between; /* Align content to the left */
@@ -28,10 +34,6 @@ html {
 
 .logo img {
   height: 40px; /* Adjust the logo size if necessary */
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1001; /* Ensure the logo is above other elements */
 }
 
 
@@ -39,6 +41,8 @@ html {
 .header-buttons {
   display: flex;
   gap: 15px; /* Space between buttons */
+  transition: opacity 0.3s ease;
+
 }
 
 /* Button Styling */
