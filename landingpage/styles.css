@@ -15,16 +15,15 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   z-index: 1000;
 }
 
 .container {
   position: relative;
-  width: 100%;
   display: flex;
-  justify-content: flex-start; /* Align content to the left */
-  padding: 20px; /* Add padding for some spacing from the edge */
+  justify-content: space-between; /* Align content to the left */
+  padding: 10px 40px; /* Add padding for some spacing from the edge */
 }
 
 .logo img {
@@ -33,6 +32,65 @@ html {
   top: 10px;
   left: 10px;
   z-index: 1001; /* Ensure the logo is above other elements */
+}
+
+
+/* Buttons Container */
+.header-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+/* Button Styling */
+.header-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  color: white;
+}
+
+.btn-signup {
+  background-color: #e50914;
+  font-weight: 500;
+
+}
+
+.btn-pre-order {
+  background-color: #fff;
+  color: #e50914 !important;
+  border: #444;
+  font-weight: 500;
+}
+
+.btn-signup:hover {
+  background-color: #f5424b;
+  font-weight: 600;
+  box-sizing: border-box;
+
+}
+
+.btn-pre-order:hover {
+  background-color: #fff;
+  font-weight: 600;
+  box-sizing: border-box;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-buttons {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 
 /* Welcome Section */
