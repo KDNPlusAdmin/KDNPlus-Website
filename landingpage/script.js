@@ -55,26 +55,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle movie poster positions every 15 seconds
   setInterval(toggleMoviePositions, 15000);
 
-  // add active class to basic-option on page load
-  const basicOption = document.querySelector(".basic-option");
-  basicOption.classList.add("active");
+  // JavaScript to show/hide the sections based on which button is clicked
+  document.querySelectorAll('.plan-option').forEach(function(button) {
+      button.addEventListener('click', function() {
+          const selectedPlan = this.dataset.plan;
+  
+          // Remove 'active' class from all sections and buttons
+          document.querySelectorAll('.plan-section').forEach(function(section) {
+              section.classList.remove('active');
+              section.classList.add('hidden');
+              
+          });
+          document.querySelectorAll('.plan-option').forEach(function(btn) {
+              btn.classList.remove('active');
+          });
+          
+          // Add 'active' class to the selected section and button
+          document.querySelector(`.${selectedPlan}-option-section`).classList.add('active');
+            this.classList.add('active');
+        
 
-  // show section based on button clicked
-  document.querySelectorAll(".plan-option").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const selectedPlan = event.target.dataset.plan;
-
-      // Hide all sections
-      document.querySelectorAll(".plan-section").forEach((section) => {
-        section.style.display = "none";
-      });
-
-      // Show the selected section
-      document.querySelector(`.${selectedPlan}-option-section`).style.display =
-        "block";
-    });
+          
+        });
+        
+    
   });
-
   // Menu Button Interaction
   const menuIcon = document.querySelector(".menu-icon");
   const header = document.querySelector("header");
