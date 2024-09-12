@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const moviePosters = document.querySelectorAll(".movie-poster");
   moviePosters.forEach((poster) => {
     poster.addEventListener("click", () => {
-      poster.style.transform = "scale(1.5)"; // Enlarge poster when clicked
+      poster.style.transform = "scale(1.05)"; // Enlarge poster when clicked
       setTimeout(() => {
         poster.style.transform = "scale(1)"; // Return to original size after 1 second
       }, 1000);
