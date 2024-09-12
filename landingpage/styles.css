@@ -294,7 +294,7 @@ html {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   /* gap: 30px; */
   margin: 20px 0;
@@ -463,13 +463,36 @@ body {
   height: 50px; /* Adjust the space between the two sections */
 }
 
+
+/* Active section that is visible */
+.plan-section.active {
+  display: inline;
+  
+
+}
+
+.plan-section.active{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row !important;
+}
+
+
+
+.plan-details{
+  padding: 18px;
+  flex: 1;
+}
+
+.hidden{
+  display: none;
+}
+
+
 /* Responsive Design */
 @media (max-width: 1200px) {
-  /* .plan-details {
-    flex-direction: column;
-    align-items: center;
-  } */
-
+ 
   .plan-details-box {
     width: 100%;
     margin-bottom: 20px;
@@ -723,6 +746,23 @@ body {
   right: 10px;
   
 
+}
+
+
+.preorder button {
+  padding: 10px 20px;
+  background-color: #e50914;  /* Customize the button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  /* Adds a hover transition */
+}
+
+.preorder button:hover {
+  background-color: rgb(231, 76, 76);  /* Darkens button on hover */
 }
 
 /* Footer Section */
