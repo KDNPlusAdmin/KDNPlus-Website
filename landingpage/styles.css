@@ -7,6 +7,7 @@ html {
   background-color: #000;
   color: #fff;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -16,7 +17,7 @@ html {
   left: 0;
   min-width: 100%;
   z-index: 1000;
-  background-image: url('images/moviepostergallery.png');
+  background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,24 +57,12 @@ html {
   color: white;
 }
 
-.btn-signup {
-  background-color: #e50914;
-  font-weight: 500;
-
-}
 
 .btn-pre-order {
   background-color: #fff;
   color: #e50914 !important;
   border: #444;
   font-weight: 500;
-}
-
-.btn-signup:hover {
-  background-color: #f5424b;
-  font-weight: 600;
-  box-sizing: border-box;
-
 }
 
 .btn-pre-order:hover {
@@ -122,10 +111,19 @@ html {
   }
 }
 
+.gradient{
+  background-image: linear-gradient(
+    to right,
+    rgba(229, 9, 20,0.5),
+    rgba(42, 42, 44,0.8)
+  );
+}
+
+
 /* Welcome Section */
 .welcome {
   height: 100vh; /* Ensure it covers the entire screen */
-  background-image: url("images/moviepostergallery.png");
+  background-image: url("https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,6 +131,7 @@ html {
   display: flex; /* Enables flexbox to center the content */
   align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
+  top: -50px !important;
 }
 
 .overlay {
@@ -215,7 +214,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 50px 0px 0px 0px;
+  top: -50px !important;
 }
 
 .subscription {  
@@ -230,6 +230,7 @@ html {
   display: flex;              /* Enables flexbox for the offer div */  
   justify-content: center;    /* Centers items horizontally */  
   align-items: center;        /* Centers items vertically */  
+  width: 100%;
 }  
 
 .offer1 {  
