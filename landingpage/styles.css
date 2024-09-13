@@ -375,6 +375,7 @@ body {
   text-align: left;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  min-height: 400px;
 }
 
 .plan-details-box.annual-plan {
@@ -612,6 +613,30 @@ body {
   padding: 40px 20px;
   font-size: 2rem;
   text-align: center;
+   /* ........... */
+  position: relative;
+  min-height: 50vh;
+}
+
+
+.custom-shape-divider-bottom-1726254733 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1726254733 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 184px;
+}
+
+.custom-shape-divider-bottom-1726254733 .shape-fill {
+  fill: #B10000;
 }
 
 /* Culture Section */
@@ -628,125 +653,110 @@ body {
   margin-bottom: 40px;
 }
 
+/* ........................CATEGORY START.................................... */
 /* Categories container */
 /* Categories Section */
 /* Categories Section */
-/* Categories Section */
-.categories {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Horizontally center the entire section */
-  gap: 50px;
-  max-width: 100%; /* Full width for responsiveness */
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Center-align the genre titles */
-.category {
-  text-align: center; /* Center genre titles */
-  width: 100%; /* Ensure genre title spans full width */
-}
 
 .category h3 {
   margin-bottom: 20px;
+  text-align: center;
   font-size: 1.8rem;
   color: white;
   width: 100%; /* Ensures the genre title takes full width */
 }
 
-/* Movies Grid */
-.movies-grid {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-
-/* Movie Poster Container */
-.movie-poster {
-  width: 150px;
-  height: 200px;
-  background-color: #e50914;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s ;
-}
-
-/* Movie Poster Image */
-.movie-poster img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image fills the poster box */
-}
-
-/* Hover effect for movie posters */
-.movie-poster:hover img {
-  transform: scale(1.1);
-  transition: transform 0.3s;
+.category {  
+  background: linear-gradient(to bottom, rgba(255, 0, 0,.7), rgba(128, 0, 128,.5));  
+  padding-bottom: 10px;
+  padding-top: 15px;
  
+}  
+
+
+.containerrr {  
+  text-align: center; /* Center the text */  
+  padding-bottom: 20px;
+}  
+
+
+
+/* Categories Section */
+
+.slider{
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
-
-/* Swiper styling */
-.swiper-container {
-  width: 100%;
-  padding: 20px 0;
-}
-
-.swiper-slide {
+.slide-track{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto; /* Auto width to fit the content */
+  width: calc(250px * 18);
+  animation: scroll 40s linear infinite;
 }
 
-/* Arrows for Swiper */
-.swiper-button-next,
-.swiper-button-prev {
-  color: white;
+.slide-track:hover{
+  animation-play-state: paused;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .movie-poster {
-    width: 120px;
-    height: 160px;
+@keyframes scroll {
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translateX(calc(-250px * 9));
   }
 }
 
-/* Swiper navigation arrows end */
-/* Positioning and styling for scroll arrows */
-.scroll-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border-radius: 50%;
+.slide{
+  height: 200px;
+  width: 250px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  z-index: 10;  /* Ensure it appears over the slider */
+  padding: 15px;
+  perspective: 100px;
 }
 
-/* Left arrow */
-.scroll-arrow.left, .scroll-arrow.left1, .scroll-arrow.left2,.scroll-arrow.left3{
-  left: 10px;
+img{
+  width: 100%;
+  transition: transform 1s;
   
 }
 
-/* Right arrow */
-.scroll-arrow.right ,.scroll-arrow.right1,.scroll-arrow.right2,.scroll-arrow.right3 {
-  right: 10px;
-  
-
+img:hover{
+  transform: translateZ(20px);
 }
+
+/* GRADIENT SHADOWS */
+
+.slider::before,
+.slider::after{
+  background: linear-gradient(to right,rgba(253, 191, 191,0.9)0%, rgba(255,255,255,0)50%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: z;
+}
+
+.slider::before{
+  left: 0;
+  top: 0;
+}
+
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+
+
+/* <!--..................CATEGORY END..........................................--> */
 
 
 .preorder button {
