@@ -16,14 +16,14 @@ body, html {
 .header {
   background-color: transparent; /* Ensure there's no background color for the header */
   /* position: absolute; */
-  top: 0;
-  left: 0;
-  min-width: 100%;
+  /* top: 0; */
+  /* left: 0; */
+  /* min-width: 100%; */
   z-index: 1000;
-  background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   position: relative;
   
   
@@ -31,8 +31,8 @@ body, html {
 
 
 .container {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* position: relative; */
   display: flex;
   justify-content: space-between; /* Align content to the left */
   padding: 10px 40px; /* Add padding for some spacing from the edge */
@@ -148,7 +148,7 @@ body, html {
 /* Welcome Section */
 .welcome {
   height: 100vh; /* Ensure it covers the entire screen */
-  background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png');
+  /* background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,15 +160,19 @@ body, html {
   padding-bottom: 50px;
   bottom: 20px;
   box-sizing: border-box;
-
-  
-  
-
   
 }
 
+.hero1{
+  background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
 .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
@@ -181,8 +185,9 @@ body, html {
 .welcome-content {
   text-align: center; /* Center-align the text */
   color: white;
-  top: -80px;
-  margin-bottom: 30px;
+  top: -100px;
+  margin-bottom: 40px;
+  /* height: 100vh; */
   
 }
 
@@ -316,7 +321,7 @@ body, html {
   border-radius: 5px 0 0 5px;
   width: 250px;
   text-align: center;
-  /* background-color: rgba(177, 185, 202, 0.4); */
+  /* background-color: #181818; */
   background: linear-gradient(to right, rgba(255, 0, 0,.2), rgba(128, 0, 128,.4));  
 
   
@@ -517,14 +522,15 @@ body {
 .plan-details-box {
   background-color: white;
   border: 2px solid #e50914;
-  padding: 30px 20px;
+  padding: 30px 30px;
   border-radius: 10px;
-  width: 320px;
+  width: 350px;
   color: black;
   text-align: left;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  min-height: 400px;
+  height: 37.5rem;
+  box-sizing: border-box !important;
 }
 
 .plan-details-box.annual-plan {
@@ -822,7 +828,8 @@ body {
 }
 
 .custom-shape-divider-bottom-1726664902 .shape-fill {
-  fill: #B10000;
+  /* fill: #B10000; */
+  fill: #181818;
 }
 
 
@@ -854,7 +861,9 @@ body {
 }
 
 .category {  
-  background: linear-gradient(to bottom, rgba(255, 0, 0,.7), rgba(128, 0, 128,.5));  
+  /* background: linear-gradient(to bottom, rgba(255, 0, 0,.7), rgba(128, 0, 128,.5));   */
+  background-color: #181818;
+
   padding-bottom: 10px;
   padding-top: 15px;
  
@@ -871,7 +880,7 @@ body {
 .slider {
   margin: auto;
   position: relative;
-  width: 100%;
+  width: 90%;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -881,7 +890,7 @@ body {
 .slide-track {
   display: flex;
   width: calc(250px * 18);
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .slide-track:hover {
@@ -1013,21 +1022,22 @@ body {
 
 
 /* GRADIENT SHADOWS */
-
 .slider::before,
 .slider::after{
-  background: linear-gradient(to right,rgba(128, 0, 128, 0.7)0%, rgba(65, 64, 64, 0)50%);
+  background: linear-gradient(to right,rgba(24, 24, 24,1)0%, rgba(65, 64, 64, 0)100%) !important;
   content: '';
   height: 100%;
   position: absolute;
-  width: 15%;
-  z-index: z;
+  width: 10%;
+  z-index: 2;
 }
 
 .slider::before{
   left: 0;
   top: 0;
-}
+} 
+
+
 
 .slider::after{
   right: 0;
