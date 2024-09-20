@@ -1024,11 +1024,11 @@ body {
 /* GRADIENT SHADOWS */
 .slider::before,
 .slider::after{
-  background: linear-gradient(to right,rgba(24, 24, 24,1)0%, rgba(65, 64, 64, 0)100%) !important;
+  background: linear-gradient(to right,rgba(24, 24, 24,1)0%, rgba(0, 0, 255, 0)100%) !important;
   content: '';
   height: 100%;
   position: absolute;
-  width: 10%;
+  width: 21%;
   z-index: 2;
 }
 
