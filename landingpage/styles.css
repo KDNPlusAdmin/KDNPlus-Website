@@ -42,51 +42,6 @@ body, html {
   max-height: 40px; /*Adjust the logo size if necessary*/
 }
 
-<<<<<<< HEAD
-/* Style for the header container */
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  max-width: 1200px; /* Set max-width to prevent cutting off */
-  margin: 0 auto;    /* Center the content */
-}
-
-/* Style for the signup button */
-.btn-signup {
-  background-color: #ff4d4d; /* Red color */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-right: 20px; /* Add some margin to the right to keep space */
-}
-
-.btn-signup:hover {
-  background-color: #e60000; /* Darker red on hover */
-}
-
-/* Ensure the sign-up button is positioned to the right */
-.header .nav {
-  margin-left: auto;
-  padding-right: 20px; /* Add padding to ensure it stays within screen bounds */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .header .container {
-      padding: 10px;
-      max-width: 100%; /* Ensure full width on small screens */
-  }
-
-  .btn-signup {
-      padding: 8px 15px; /* Smaller padding for mobile */
-      margin-right: 10px;
-=======
 
 /* Buttons Container */
 .header-buttons {
@@ -176,13 +131,10 @@ body, html {
   .logo img {
     max-height: 50px; /* Smaller logo for small screens */
     content: url('https://d2c512779vw9nw.cloudfront.net/plus.png'); /* Update source for smaller screens */ 
->>>>>>> 2fd0016c14f3629c3f9524bdb32e402d4614cb2e
   }
 }
 
 
-<<<<<<< HEAD
-=======
 .gradient{
   background-image: linear-gradient(
     to right,
@@ -193,7 +145,6 @@ body, html {
 
 
 
->>>>>>> 2fd0016c14f3629c3f9524bdb32e402d4614cb2e
 /* Welcome Section */
 .welcome {
   height: 100vh; /* Ensure it covers the entire screen */
@@ -1223,6 +1174,7 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
+    
   }
 }
 
