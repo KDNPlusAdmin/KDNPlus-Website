@@ -6,21 +6,23 @@ document.querySelector('.subscribe-btn').addEventListener('click', function() {
 $(document).ready(function() {
     let currentPlanIndex = 1;
     const totalPlans = 3;
+    const animationDuration = 800; // 500ms animation duration (0.5 seconds)
 
-    // Function to switch between plans
+    // Function to switch between plans with fade animation
     function switchPlan() {
-        // Hide current plan
-        $(`#plan-${currentPlanIndex}`).hide();
+        // Fade out the current plan
+        $(`#plan-${currentPlanIndex}`).fadeOut(animationDuration, function() {
+            // Increment the index, and wrap back to 1 if we exceed total plans
+            currentPlanIndex = (currentPlanIndex % totalPlans) + 1;
 
-        // Increment the index, and wrap back to 1 if we exceed total plans
-        currentPlanIndex = (currentPlanIndex % totalPlans) + 1;
-
-        // Show the next plan
-        $(`#plan-${currentPlanIndex}`).show();
+            // Fade in the next plan
+            $(`#plan-${currentPlanIndex}`).fadeIn(animationDuration);
+        });
     }
 
-    // On clicking the change plan button, switch plans
+    // On clicking the change plan button, switch plans with animation
     $(".change-plan-btn").click(function() {
         switchPlan();
     });
 });
+
