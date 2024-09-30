@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    border-bottom: 1px solid #333333;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #FF0000;
+    font-weight: bold;
+}
+
+
+.logo img {
+    max-height: 40px; /*Adjust the logo size if necessary*/
+  }
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.main-content {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #FF0000;
+    margin-bottom: 30px;
+}
+
+/* Accordion Styles */
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    background-color: #222222;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.accordion-header h3 {
+    font-size: 18px;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 0 15px;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 200px;
+    padding: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px 0;
+    border-top: 1px solid #333333;
+    text-align: center;
+    background-color: #000000;
+}
+
+.footer-links a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-note p {
+    color: #666666;
+    font-size: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .menu-icon {
+        margin-top: 10px;
+    }
+
+    
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 0 15px;
+    transition: max-height 0.3s ease;
+}
+
+    
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    .accordion-header h3 {
+        font-size: 16px;
+    }
+
+    .accordion-icon {
+        font-size: 18px;
+    }
+
+    
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 0 15px;
+    transition: max-height 0.3s ease;
+}
+
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 20px;
+        height: 2px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .accordion-header h3 {
+        font-size: 14px;
+    }
+
+    .accordion-icon {
+        font-size: 16px;
+    }
+
+    .accordion-content {
+        padding: 10px 15px;
+    }
+
+    .footer-links a {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .footer-note p {
+        font-size: 10px;
+    }
+
+    
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 0 15px;
+    transition: max-height 0.3s ease;
+}
+
+}
