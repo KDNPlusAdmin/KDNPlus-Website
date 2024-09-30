@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -27,13 +31,15 @@ body {
     font-weight: bold;
 }
 
+/* Main content layout */
 .main-content {
     display: flex;
     margin: 20px 0;
 }
 
+/* Left panel */
 .left-panel {
-    width: 30%;
+    width: 30%; /* Keeps 30% width on larger screens */
     background-color: #ffffff;
     padding: 20px;
     border-right: 2px solid #f4f4f4;
@@ -73,12 +79,14 @@ body {
     color: #ffffff;
 }
 
+/* Right panel */
 .right-panel {
-    width: 70%;
+    width: 70%; /* Keeps 70% width on larger screens */
     padding: 20px;
     background-color: #ffffff;
 }
 
+/* Tab navigation */
 .tabs {
     display: flex;
     margin-bottom: 20px;
@@ -100,8 +108,9 @@ body {
     color: #ffffff;
 }
 
-.transactions, .membership {
-    margin-bottom: 20px;
+/* Table and container */
+.table-container {
+    overflow-x: auto; /* Allow horizontal scroll for small screens */
 }
 
 .transaction-table, .membership-table {
@@ -110,12 +119,14 @@ body {
     margin-bottom: 20px;
 }
 
-.transaction-table th, .membership-table th, .transaction-table td, .membership-table td {
+.transaction-table th, .membership-table th, 
+.transaction-table td, .membership-table td {
     border: 1px solid #dcdcdc;
     padding: 10px;
     text-align: center;
 }
 
+/* Actions for buttons */
 .actions {
     display: flex;
     justify-content: space-between;
@@ -146,4 +157,75 @@ body {
 
 .footer-note p {
     color: #666666;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    /* For large desktop, make minor adjustments */
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%; /* Full width on small screens */
+        border-right: none; /* Remove border */
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Table for smaller screens */
+@media (max-width: 480px) {
+    .transaction-table, .membership-table {
+        display: block; /* Force block layout for scrolling */
+        overflow-x: auto; /* Enable horizontal scroll */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .transaction-table th, .membership-table th, 
+    .transaction-table td, .membership-table td {
+        display: inline-block; /* Makes each cell inline-block */
+        min-width: 120px; /* Set a min-width to prevent collapsing small cells */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Adjust logo size for small screens */
+    }
+
+    .left-panel h2 {
+        font-size: 16px; /* Smaller heading size */
+    }
+
+    .update-profile-btn,
+    .change-password-btn,
+    .close-account-btn {
+        width: 100%; /* Full-width buttons */
+    }
+
+    .avatar, .profile-cover {
+        width: 100px; /* Adjust avatar size for small screens */
+        height: 100px;
+    }
 }

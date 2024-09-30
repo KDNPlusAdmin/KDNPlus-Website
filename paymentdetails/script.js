@@ -6,7 +6,7 @@ document.querySelector('.subscribe-btn').addEventListener('click', function() {
 $(document).ready(function() {
     let currentPlanIndex = 1;
     const totalPlans = 3;
-    const animationDuration = 800; // 500ms animation duration (0.5 seconds)
+    const animationDuration = 800; // 800ms animation duration (0.8 seconds)
 
     // Function to switch between plans with fade animation
     function switchPlan() {
