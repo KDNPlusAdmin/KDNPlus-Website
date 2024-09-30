@@ -26,11 +26,11 @@
 
             <div class="right-panel">
                 <div class="tabs">
-                    <button class="tab active">Transactions</button>
-                    <button class="tab">Membership</button>
-                    <button class="tab">Profiles</button>
+                    <a href="../transactions/index.html" class="tab active">Transactions</a>
+                    <a href="../membership/index.html" class="tab">Membership</a>
+                    <a href="../profiles/index.html" class="tab">Profiles</a>
                 </div>
-
+<!-- 
                 <div class="transactions">
                     <h3>Transactions</h3>
                     <table class="transaction-table">
@@ -54,6 +54,33 @@
                             </tr>
                         </tbody>
                     </table>
+                </div> -->
+
+                <div class="transactions">  
+                    <h3>Transactions</h3>  
+                    <div class="table-container"> <!-- Added container div here -->  
+                        <table class="transaction-table">  
+                            <thead>  
+                                <tr>  
+                                    <th scope="col">Transactions ID</th>  
+                                    <th scope="col">Invoice ID</th>  
+                                    <th scope="col">Plan</th>  
+                                    <th scope="col">Payment Gateway</th>  
+                                    <th scope="col">Payment Type</th>  
+                                    <th scope="col">Transaction Status</th>  
+                                    <th scope="col">Amount</th>  
+                                    <th scope="col">Used Coupon Code</th>  
+                                    <th scope="col">Used Coupon Discount</th>  
+                                    <th scope="col">Payment Date</th>  
+                                </tr>  
+                            </thead>  
+                            <tbody>  
+                                <tr>  
+                                    <td colspan="10" class="no-transactions">There are no transactions</td>  
+                                </tr>  
+                            </tbody>  
+                        </table>  
+                    </div> <!-- End of container div -->  
                 </div>
 
                 <div class="actions">

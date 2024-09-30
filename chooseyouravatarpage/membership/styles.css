@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+ 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -116,6 +120,11 @@ body {
     text-align: center;
 }
 
+.transaction-table tr,  
+.membership-table tr {  
+    width: 100%; /* Force each row to take full width */  
+} 
+
 .actions {
     display: flex;
     justify-content: space-between;
@@ -146,4 +155,134 @@ body {
 
 .footer-note p {
     color: #666666;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        border-right: none;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .avatar, .profile-cover {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .avatar, .profile-cover {
+        width: 100px;
+        height: 100px;
+    }
+
+    .update-profile-btn, .change-password-btn, .close-account-btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* for tables */
+/* Add this style to enable responsiveness for the tables */  
+.transaction-table,  
+.membership-table {  
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-bottom: 20px;  
+    overflow-x: auto; /* Allow horizontal scrolling */  
+    display: block; /* Force block layout for scrolling */  
+}  
+
+.transaction-table th,  
+.membership-table th,  
+.transaction-table td,  
+.membership-table td {  
+    border: 1px solid #dcdcdc;  
+    padding: 10px;  
+    text-align: center;  
+}  
+
+/* Responsive adjustments for tables */  
+@media (max-width: 480px) {  
+    .transaction-table,  
+    .membership-table {  
+        display: block; /* Maintain block layout for scroll */  
+        overflow-x: auto; /* Enable horizontal scroll */  
+        white-space: nowrap; /* Prevent wrapping */  
+    }  
+
+    .transaction-table th,  
+    .membership-table th,  
+    .transaction-table td,  
+    .membership-table td {  
+        display: inline-block; /* Makes each cell inline-block */  
+        min-width: 120px; /* Set a min-width to prevent collapsing small cells */  
+    }  
 }
