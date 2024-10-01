@@ -117,6 +117,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    
 }
 
 .transaction-table th, .membership-table th, 
@@ -228,5 +229,90 @@ body {
     .avatar, .profile-cover {
         width: 100px; /* Adjust avatar size for small screens */
         height: 100px;
+    }
+}
+
+
+
+/* ......................................... */
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+
+}
+
+h3 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling on smaller screens */
+    
+}
+
+.purchase-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.purchase-table thead {
+    background-color: #f9f9f9;
+}
+
+.purchase-table th, .purchase-table td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.purchase-table th {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.purchase-table td {
+    font-size: 14px;
+    color: #777777;
+}
+
+.purchase-table tbody td[colspan="6"] {
+    color: #999999;
+    font-style: italic;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .purchase-table th, .purchase-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .purchase-table th, .purchase-table td {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    h3 {
+        font-size: 14px;
     }
 }
