@@ -37,13 +37,6 @@ body {
     max-height: 40px; /*Adjust the logo size if necessary*/
   }
 
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    cursor: pointer;
-}
 
 .menu-bar {
     width: 25px;
@@ -139,10 +132,7 @@ h2 {
         font-size: 24px;
     }
 
-    .menu-icon {
-        margin-top: 10px;
-    }
-
+   
     
 .accordion-content {
     max-height: 0;

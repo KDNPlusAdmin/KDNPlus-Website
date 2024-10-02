@@ -26,12 +26,10 @@ body {
     border-bottom: 2px solid #f4f4f4;  
 }  
 
-.logo h1 {  
-    color: #FF0000;  
-    font-size: 28px;  
-    font-weight: bold;  
-}  
-
+.logo img {
+    max-height: 40px; /*Adjust the logo size if necessary*/
+  }
+  
 .main-content {  
     display: flex;  
     flex-wrap: wrap; /* Allow wrapping */  
