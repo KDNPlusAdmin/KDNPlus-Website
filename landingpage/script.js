@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ///////////////////////////////////////////////////////////////////////////////////////
   
-  
+
   // JavaScript to show/hide the sections based on which button is clicked
   document.querySelectorAll('.plan-option').forEach(function(button) {
       button.addEventListener('click', function() {
@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+  
   // Smooth Scrolling to Sections
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
@@ -182,12 +184,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       populateCarousel('action-carousel', 10); // Populate Action Carousel with 10 images
       populateCarousel('horror-carousel', 8); // Populate Horror Carousel with 8 images
-  });
+  
 
 
+    });
+    // ............................FAQ SECTION..........................................
+    
+  
+    
   //////////////////////////////////////////////////////////////////////////////
 
-// ......................................................................
+
 ////////////////////////////////////////////////////////////////////////////
 
 
