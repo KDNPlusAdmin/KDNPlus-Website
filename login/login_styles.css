@@ -1,0 +1,113 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Dark black background */
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for login box */
+.login-container {
+    background-color: #1c1c1c; /* Dark gray background */
+    border-radius: 10px;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 2px 2px 4px 4px rgba(190, 65, 15, 0.5);
+}
+
+.login-container:hover {
+    box-shadow: 4px 4px 8px 8px rgba(190, 65, 15, 0.7);
+}
+
+/* Header text */
+.login-container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    color: #ffab00; /* Accent color for header */
+}
+
+/* Form fields */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #e0e0e0; /* Slightly lighter gray */
+}
+
+.login-form input {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Input field background */
+    color: #fff; /* White text */
+    font-size: 16px;
+}
+
+.login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 165, 0, 0.5); /* Orange glow */
+}
+
+/* Button styling */
+.login-btn {
+    background-color: #d32f2f; /* Primary button color */
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #ff5722; /* Lighter orange on hover */
+}
+
+/* Link to sign up */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffab00; /* Accent color */
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Error message */
+.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    padding: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+    }
+
+    .login-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}

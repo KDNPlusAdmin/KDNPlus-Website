@@ -1,29 +1,48 @@
-// Set the countdown date to 29 days from today
-const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 29); // Set countdown to 29 days from now
+document.addEventListener('DOMContentLoaded', () => {
+  const getStartedButton = document.getElementById('getStartedBtn');
+  const preOrderButton = document.getElementById('preOrderBtn');
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+  // Handle "Get Started" button click event
+  if (getStartedButton) {
+    getStartedButton.addEventListener('click', () => {
+      const emailInput = document.getElementById('email').value.trim();
 
-    // Time calculations for days, hours, minutes, and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      // Validate Email Format
+      if (validateEmail(emailInput)) {
+        // Send email to backend for pre-order
+        fetch('/auth/preorder', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: emailInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert('Thank you for signing up!');
+          } else if (data.message === 'User already exists') {
+            alert('This email is already registered.');
+          } else {
+            console.error('Pre-order failed');
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });
+  }
 
-    // Display the result in the elements with id
-    document.getElementById('days').innerText = days.toString().padStart(2, '0');
-    document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+  // Handle "Pre-order" button click event
+  if (preOrderButton) {
+    preOrderButton.addEventListener('click', () => {
+      // Directly navigate to the countdown page
+      window.location.href = '/countdown.html';
+    });
+  }
 
-    // If the countdown is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.querySelector(".countdown-container").innerHTML = "<h1>You can start streaming now!</h1>";
-    }
-}
-
-// Update the countdown every 1 second
-const x = setInterval(updateCountdown, 1000);
+  // Function to validate email format
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+});

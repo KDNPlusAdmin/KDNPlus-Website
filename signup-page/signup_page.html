@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="signup_styles.css">
+</head>
+<body>
+    <div class="subscription-container">
+        <!-- Payment Details Section -->
+        <div class="payment-details">
+            <h2>Sign Up & Payment Details</h2>
+            <form>
+                <!-- New User Information Fields (Horizontal Layout) -->
+                <div class="user-info-container">
+                    <div class="user-info-field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+                    <div class="user-info-field">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="user-info-field">
+                        <label for="middle-name">Middle Name</label>
+                        <input type="text" id="middle-name" placeholder="Middle Name">
+                    </div>
+                    <div class="user-info-field">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Address">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+
+                <label for="card-details">Card Details</label>
+                <input type="text" id="card-details" placeholder="Card Number">
+
+                <div class="card-info">
+                    <input type="text" id="expiry" placeholder="MM/YY">
+                    <input type="text" id="cvv" placeholder="CVV">
+                </div>
+
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="">
+
+                <button type="button" class="cancel-btn">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Subscription Plan Section -->
+        <div class="subscription-plan plan-box" id="plan-1">
+            <div class="plan-header">
+                <h2>Basic Plan</h2>
+                <button class="change-plan-btn">✏️ Change Plan</button>
+            </div>
+            <p class="plan-price">₦ 2,700 &nbsp; Unlimited Access &nbsp; 1 Month</p>
+            <ul class="plan-features">
+                <li>480-720p Streaming</li>
+                <li>Full Captioning</li>
+                <li>Average quality streaming</li>
+                <li>Access to all movies and shows</li>
+                <li>1 profile / 1 screen per account</li>
+            </ul>
+            <hr>
+            <p>Your subscription will be renewed monthly</p>
+            <div class="total-fee">
+                <p>Total Fee</p>
+                <p class="price">₦ 2,700</p>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+
+        <!-- "Sign in" Option -->
+        <div class="signin-section">
+            <p>Already have an account? <a href="../login/login.html" class="signin-link">Sign in</a></p>
+        </div>
+    </div>
+    <script src="signup_script.js"></script>
+</body>
+</html>
