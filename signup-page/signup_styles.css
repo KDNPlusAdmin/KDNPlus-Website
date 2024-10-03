@@ -1,226 +1,224 @@
-
-
-body {  
-    font-family: 'Arial', sans-serif;  
-    background-color: #000; /* Darker black background */  
-    margin: 0;  
-    /* display: flex;  
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #000; /* Darker black background */
+  margin: 0;
+  /* display: flex;  
     justify-content: center;  
     align-items: center;   */
-    height: 80vh;  
-    padding: 10px; /* Add some padding for smaller screens */  
-}  
+  height: 80vh;
+  padding: 10px; /* Add some padding for smaller screens */
+}
 
-
-.name-fields {  
-    display: flex;  
-    gap: 8px; /* Adjust the space between the fields */  
-    box-sizing: border-box;
-}  
-.name-field {  
-    flex: 1; /* Allow fields to grow equally */  
-}  
+.name-fields {
+  display: flex;
+  gap: 8px; /* Adjust the space between the fields */
+  box-sizing: border-box;
+}
+.name-field {
+  flex: 1; /* Allow fields to grow equally */
+}
 
 .logo img {
-    max-height: 35px; /*Adjust the logo size if necessary*/
-    margin-bottom: 12px;
-  }
+  max-height: 35px; /*Adjust the logo size if necessary*/
+  margin-bottom: 12px;
+}
 
 .multi-page-container {
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .page {
-    display: none;
-    padding: 20px;
-    background: #1C1C1C;
-    transition: transform 0.6s ease, opacity 0.6s ease;
+  display: none;
+  padding: 20px;
+  background: #1c1c1c;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .page.active {
-    display: block;
-    transform: translateX(0);
-    opacity: 1;
+  display: block;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .page.slide-in {
-    transform: translateX(100%);
-    opacity: 0;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .page.slide-out {
-    transform: translateX(-100%);
-    opacity: 0;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
-.user-info-container, .subscription-plan, .payment-details {
-    background: #1C1C1C;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.user-info-container,
+.subscription-plan,
+.payment-details {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
-label, input, button {
-    display: block;
-    width: 90%;
-    margin-bottom: 10px;
-    padding: 10px;
+label,
+input,
+button {
+  display: block;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-
-input, button {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input,
+button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-  /* Add your CSS styles here */  
-  input {  
-    width: 90%;  
-    margin-bottom: 10px;  
-    gap: 10px;
-}  
-
-.input-group {  
-    display: flex;  
-    justify-content: space-between;  
-    margin-bottom: 10px;  
-}  
-
-.name-field {  
-    flex: 1;  
-    margin-right: 10px;  
-}  
-
-.name-field:last-child {  
-    margin-right: 0;  
-}  
-
-.social-signup {  
-    margin: 20px 0;  
-    text-align: center;  
-}  
-
-.facebook-btn {  
-    background-color: #3b5998;  
-    color: white;  
-    border: none;  
-    padding: 20px 20px;  
-    border-radius: 5px;  
-    cursor: pointer;  
-    display: flex; /* Use flexbox to align the icon and text */  
-    align-items: center; /* Center items vertically */  
-    justify-content: center; /* Center items horizontally */  
-}  
-
-.facebook-btn i {  
-    margin-right: 8px; /* Space between icon and text */  
-}  
-
-.facebook-btn:hover {  
-    opacity: 0.9;  
-}  
-
-.center-text {  
-    text-align: center;  
-    margin: 10px 0;  
-    color: #fff;
-}  
-
-
-a{
-   
-    color: #d32f2f;
+/* Add your CSS styles here */
+input {
+  width: 90%;
+  margin-bottom: 10px;
+  gap: 10px;
 }
 
-a:hover{
-    text-decoration: none;
-    color: #fff;
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.next-btn, .cancel-btn {
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 20px 20px;  
-    
+.name-field {
+  flex: 1;
+  margin-right: 10px;
+}
 
+.name-field:last-child {
+  margin-right: 0;
+}
+
+.social-signup {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex; /* Use flexbox to align the icon and text */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.facebook-btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.facebook-btn:hover {
+  opacity: 0.9;
+}
+
+.center-text {
+  text-align: center;
+  margin: 10px 0;
+  color: #fff;
+}
+
+a {
+  color: #d32f2f;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.next-btn,
+.cancel-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 20px 20px;
 }
 
 .cancel-btn {
-    background-color: #d32f2f;
-    margin-top: 15px !important;
-    align-items: center;
+  background-color: #d32f2f;
+  margin-top: 15px !important;
+  align-items: center;
 }
 
+.plan-features {
+  list-style: none;
+  padding: 0;
+}
 
-.plan-features {  
-    list-style: none;  
-    padding: 0;  
-}  
+.plan-features li {
+  margin: 5px 0;
+  position: relative;
+  padding-left: 30px; /* To create space for the icon */
+  color: #fff; /* Ensuring the text remains white */
+}
 
-.plan-features li {  
-    margin: 5px 0;  
-    position: relative;  
-    padding-left: 30px; /* To create space for the icon */  
-    color: #fff; /* Ensuring the text remains white */  
-}  
-
-.plan-features li::before {  
-    content: "\2713"; /* Unicode for the checkmark */  
-    position: absolute;  
-    left: 0;  
-    color: red; /* Explicitly set to red */  
-}  
-
+.plan-features li::before {
+  content: "\2713"; /* Unicode for the checkmark */
+  position: absolute;
+  left: 0;
+  color: red; /* Explicitly set to red */
+}
 
 /* video session  */
 
-.background-video {  
-    position: absolute;  
-    top: 0;  
-    left: 0;  
-    width: 100%;  
-    height: 100%;    
-    object-fit: cover; /* Cover the whole container */  
-    z-index: -100; /* Send video to the back */  
-}  
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the whole container */
+  z-index: -100; /* Send video to the back */
+}
 
-.content {  
-    position: relative; /* Position relative to the video */  
-    z-index: 1; /* Sits on top of the video */  
-    color: white; /* Text color */  
-      
-    
-    /* Add a semi-transparent background */  
-    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */  
-    border-radius: 8px; /* Round the corners for a softer look */  
-}  
+.content {
+  position: relative; /* Position relative to the video */
+  z-index: 1; /* Sits on top of the video */
+  color: white; /* Text color */
 
-.overlay {  
-    position: absolute;  
-    top: 0;  
-    left: 0;  
-    width: 100%;  
-    height: 100%;  
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust the rgba values for the overlay color and transparency */  
-    z-index: 0; /* Make sure it sits above the video */  
-}  
+  /* Add a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+  border-radius: 8px; /* Round the corners for a softer look */
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Adjust the rgba values for the overlay color and transparency */
+  z-index: 0; /* Make sure it sits above the video */
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .multi-page-container {
-        max-width: 90%;
-    }
+  .multi-page-container {
+    max-width: 90%;
+  }
 }
-
