@@ -1,188 +1,223 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header {
-    background-color: #ffffff;
-    padding: 20px;
-    border-bottom: 2px solid #f4f4f4;
-}
-
-.logo h1 {
-    color: #FF0000;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.main-content {
-    display: flex;
-    margin: 20px 0;
-}
-
-.left-panel {
-    width: 30%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-right: 2px solid #f4f4f4;
-}
-
-.left-panel h2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.avatar-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.avatar, .profile-cover {
-    width: 150px;
-    height: 150px;
-    border: 2px dashed #dcdcdc;
-    margin-bottom: 10px;
-}
-
-.update-profile-btn {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #ff0000;
-    border: 2px solid #ff0000;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.update-profile-btn:hover {
-    background-color: #ff0000;
-    color: #ffffff;
-}
-
-.right-panel {
-    width: 70%;
-    padding: 20px;
-    background-color: #ffffff;
-}
-
-.tabs {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.tab {
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #dcdcdc;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.tab.active, .tab:hover {
-    background-color: #ff0000;
-    color: #ffffff;
-}
-
-.profile-detail {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #dcdcdc;
-}
-
-.profile-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.profile-edit {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #dcdcdc;
-    margin-right: 10px;
-}
-
-.profile-form {
-    margin-bottom: 20px;
-}
-
-.profile-form h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.profile-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-form label {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.profile-form input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-}
-
-.profile-form .small-update-btn {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #dcdcdc;
-    cursor: pointer;
-}
-
-.actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.change-password-btn, .close-account-btn {
-    padding: 10px 20px;
-    background-color: #ff0000;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
-
-.footer {
-    background-color: #ffffff;
-    padding: 20px;
-    border-top: 2px solid #f4f4f4;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-links a {
-    margin-right: 20px;
-    color: #333333;
+a{
     text-decoration: none;
 }
 
-.footer-note p {
-    color: #666666;
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+}  
+
+.container {  
+    width: 100%;  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 0 20px; /* Add some padding for smaller devices */  
+}  
+
+.header {  
+    background-color: #ffffff;  
+    padding: 20px;  
+    border-bottom: 2px solid #f4f4f4;  
+}  
+
+.logo img {
+    max-height: 40px; /*Adjust the logo size if necessary*/
+  }
+  
+.main-content {  
+    display: flex;  
+    flex-wrap: wrap; /* Allow wrapping */  
+    margin: 20px 0;  
+}  
+
+.left-panel, .right-panel {  
+    background-color: #ffffff;  
+    padding: 20px;  
+    border: 2px solid #f4f4f4;  
+}  
+
+.left-panel {  
+    width: 30%;  
+}  
+
+.right-panel {  
+    width: 70%;  
+}  
+
+.left-panel h2, .right-panel h3, .right-panel h4 {  
+    font-size: 18px;  
+    font-weight: bold;  
+    margin-bottom: 20px;  
+}  
+
+.avatar-box {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+}  
+
+.avatar, .profile-cover {  
+    width: 150px;  
+    height: 150px;  
+    border: 2px dashed #dcdcdc;  
+    margin-bottom: 10px;  
+}  
+
+.update-profile-btn {  
+    padding: 10px 20px;  
+    background-color: #ffffff;  
+    color: #ff0000;  
+    border: 2px solid #ff0000;  
+    cursor: pointer;  
+    margin-top: 10px;  
+    transition: background-color 0.3s, color 0.3s;  
+}  
+
+.update-profile-btn:hover {  
+    background-color: #ff0000;  
+    color: #ffffff;  
+}  
+
+.tabs {  
+    display: flex;  
+    margin-bottom: 20px;  
+}  
+
+.tab {  
+    background-color: #ffffff;  
+    color: #000000;  
+    border: 2px solid #dcdcdc;  
+    padding: 10px 20px;  
+    cursor: pointer;  
+    margin-right: 10px;  
+    border-radius: 5px;  
+    transition: background-color 0.3s, color 0.3s;  
+}  
+
+.tab.active, .tab:hover {  
+    background-color: #ff0000;  
+    color: #ffffff;  
+}  
+
+.profile-detail {  
+    margin-bottom: 20px;  
+    padding: 10px;  
+    border: 1px solid #dcdcdc;  
+}  
+
+.profile-info {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    margin-bottom: 20px;  
+}  
+
+.profile-edit {  
+    flex-grow: 1;  
+    padding: 10px;  
+    border: 1px solid #dcdcdc;  
+    margin-right: 10px;  
+}  
+
+.profile-form {  
+    margin-bottom: 20px;  
+}  
+
+.profile-form h4 {  
+    font-size: 16px;  
+    margin-bottom: 10px;  
+}  
+
+.profile-form form {  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+.profile-form label {  
+    margin-top: 10px;  
+    font-size: 14px;  
+}  
+
+.profile-form input {  
+    padding: 10px;  
+    margin-top: 5px;  
+    border: 1px solid #dcdcdc;  
+    border-radius: 5px;  
+}  
+
+.profile-form .small-update-btn {  
+    margin-top: 10px;  
+    padding: 5px 10px;  
+    background-color: #ffffff;  
+    color: #000000;  
+    border: 1px solid #dcdcdc;  
+    cursor: pointer;  
+}  
+
+.actions {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-top: 20px;  
+}  
+
+.change-password-btn, .close-account-btn {  
+    padding: 10px 20px;  
+    background-color: #ff0000;  
+    color: #ffffff;  
+    border: none;  
+    cursor: pointer;  
+}  
+
+/* Footer Styles */  
+.footer {  
+    background-color: #ffffff;  
+    padding: 20px;  
+    border-top: 2px solid #f4f4f4;  
+    display: flex;  
+    justify-content: space-between;  
+}  
+
+.footer-links a {  
+    margin-right: 20px;  
+    color: #333333;  
+    text-decoration: none;  
+}  
+
+.footer-note p {  
+    color: #666666;  
+}  
+
+/* Media Queries for Responsiveness */  
+@media (max-width: 768px) {  
+    .left-panel, .right-panel {  
+        width: 100%; /* Full width on small screens */  
+        border-right: none; /* Remove right border */  
+    }  
+    .main-content {  
+        flex-direction: column; /* Stack panels vertically */  
+    }  
+
+    .tabs {  
+        flex-wrap: wrap; /* Allow tabs to wrap */  
+    }  
+
+    .tab {  
+        margin-bottom: 10px; /* Space between tabs */  
+    }  
+}  
+
+@media (max-width: 480px) {  
+    .header, .footer {  
+        padding: 10px; /* Reduce padding on smaller devices */  
+    }  
+
+    .logo h1 {  
+        font-size: 24px; /* Adjust logo size */  
+    }  
 }

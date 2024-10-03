@@ -10,7 +10,8 @@
     <div class="container">
         <header class="header">
             <div class="logo">
-                <h1>KDNPLUS</h1>
+                <img src="https://d2c512779vw9nw.cloudfront.net/text.png" alt="Kdnplus Logo"> <!-- Updated logo to kdn00.png -->
+
             </div>
         </header>
 
@@ -26,34 +27,60 @@
 
             <div class="right-panel">
                 <div class="tabs">
-                    <button class="tab active">Transactions</button>
-                    <button class="tab">Membership</button>
-                    <button class="tab">Profiles</button>
+                    <a href="../transactions/index.html" class="tab active">Transactions</a>
+                    <a href="../membership/index.html" class="tab">Membership</a>
+                    <a href="../profiles/index.html" class="tab">Profiles</a>
                 </div>
 
-                <div class="transactions">
-                    <h3>Transactions</h3>
-                    <table class="transaction-table">
-                        <thead>
-                            <tr>
-                                <th>Transactions ID</th>
-                                <th>Invoice ID</th>
-                                <th>Plan</th>
-                                <th>Payment Gateway</th>
-                                <th>Payment Type</th>
-                                <th>Transaction Status</th>
-                                <th>Amount</th>
-                                <th>Used Coupon Code</th>
-                                <th>Used Coupon Discount</th>
-                                <th>Payment Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="10">There are no transactions</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="transactions">  
+                    <h3>Transactions</h3>  
+                    <div class="table-container"> <!-- Added container div here -->  
+                        <table class="transaction-table">  
+                            <thead>  
+                                <tr>  
+                                    <th scope="col">Transactions ID</th>  
+                                    <th scope="col">Invoice ID</th>  
+                                    <th scope="col">Plan</th>  
+                                    <th scope="col">Payment Gateway</th>  
+                                    <th scope="col">Payment Type</th>  
+                                    <th scope="col">Transaction Status</th>  
+                                    <th scope="col">Amount</th>  
+                                    <th scope="col">Used Coupon Code</th>  
+                                    <th scope="col">Used Coupon Discount</th>  
+                                    <th scope="col">Payment Date</th>  
+                                </tr>  
+                            </thead>  
+                            <tbody>  
+                                <tr>  
+                                    <td colspan="10" class="no-transactions">There are no transactions</td>  
+                                </tr>  
+                            </tbody>  
+                        </table>  
+
+                        <div class="container">
+                            <h3>Paid Most Purchases</h3>
+                            <div class="table-responsive">
+                                <table class="purchase-table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Paid Post</th>
+                                            <th>Post Type</th>
+                                            <th>Start On</th>
+                                            <th>Cycle Date</th>
+                                            <th>Expires On</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="6">There is no membership found</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    
+                    </div> <!-- End of container div -->  
                 </div>
 
                 <div class="actions">
