@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // Example JavaScript for handling subscription actions
 document.querySelector('.subscribe-btn').addEventListener('click', function() {
     alert('Subscription confirmed!');
@@ -25,4 +26,3 @@ $(document).ready(function() {
         switchPlan();
     });
 });
-

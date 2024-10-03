@@ -1,6 +1,6 @@
 // Set the countdown date to 29 days from today
 const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 29); // Set countdown to 29 days from now
+countdownDate.setDate(countdownDate.getDate() + 2); // Set countdown to 29 days from now
 
 function updateCountdown() {
     const now = new Date().getTime();
