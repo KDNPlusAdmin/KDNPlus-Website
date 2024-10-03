@@ -41,7 +41,7 @@ body, html {
 }
 
 .logo img {
-  max-height: 40px; /Adjust the logo size if necessary/
+  max-height: 40px; /*Adjust the logo size if necessary*/
 }
 
 /* image */
@@ -785,7 +785,7 @@ body {
 .flow-section h2 {
   font-size: 2rem; /* Adjust font size as needed */
   text-align: center; /* Ensure text is centered */
-  margin-bottom: 10x; /* Reduced space between the heading and the image */
+  margin-bottom: 10px; /* Reduced space between the heading and the image */
 }
 
 /* Image Styling */
@@ -1028,14 +1028,6 @@ body {
     }
   }
 }  
-
-
-/* Responsive adjustments................... */
-/*@media (max-width: 768px) {
-  .slide img {
-   /* max-width: 100%;/ / Ensure images are responsive on smaller screens */
-  /* } */
-/}/
 
 
 

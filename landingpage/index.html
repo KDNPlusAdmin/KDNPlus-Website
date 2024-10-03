@@ -245,18 +245,11 @@
     
 <section class="flow-section">
     <div class="content-wrapper">
-      <h2>Flow through Movies on All Screens</h2>
+      <h2>Flow Through Movies On All Screens</h2>
       <img src="images/flowscreensection.png" alt="Flow through devices" class="flow-image">
     </div>
   </section>
   
-
-    <section class="nonso-section">
-        <h2>Meet Nonso Your Movie Buddy</h2>
-        <p>Personalize your stream with Nonso</p>
-        <img src="https://d2c512779vw9nw.cloudfront.net/nonso ai activation.png  
-        " alt="" class="nonso">
-    </section>
     
         <section class="avatar-section ">
             <h2>Personalize Your Avatar</h2>
@@ -592,6 +585,8 @@
       </footer>
     
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./script.js">
+        </script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {  
                 const accordionHeaders = document.querySelectorAll('.accordion-header');  
@@ -642,36 +637,5 @@
             });
         </script>
         
-    <script src="./script.js">
-            </script>
-            <script>
-                    //  JavaScript for Accordion 
-  document.addEventListener("DOMContentLoaded", function() {  
-    const accordionHeaders = document.querySelectorAll('.accordion-header');  
-
-    accordionHeaders.forEach(header => {  
-        header.addEventListener('click', function() {  
-            const content = this.nextElementSibling;  
-
-            // Toggle the display of the content  
-            if (content.style.display === "block") {  
-                content.style.display = "none";  
-                this.querySelector('.accordion-icon').textContent = "+";  
-            } else {  
-                // First, hide any other open contents  
-                document.querySelectorAll('.accordion-content').forEach(item => {  
-                    item.style.display = 'none';  
-                    item.previousElementSibling.querySelector('.accordion-icon').textContent = "+";  
-                });  
-
-                // Then, show the clicked content  
-                content.style.display = "block";  
-                this.querySelector('.accordion-icon').textContent = "-";  
-            }  
-        });  
-    });  
-});  
-
-            </script>
 </body>
 </html>

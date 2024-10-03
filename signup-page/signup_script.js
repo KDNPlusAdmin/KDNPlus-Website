@@ -1,8 +1,29 @@
-/* eslint-disable no-undef */
-// Example JavaScript for handling subscription actions
-document.querySelector('.subscribe-btn').addEventListener('click', function() {
-    alert('Subscription confirmed!');
-});
+// Function to handle page transitions
+function goToPage(pageNumber) {
+    const currentPage = document.querySelector('.page.active');
+    const nextPage = document.querySelector(`#page-${pageNumber}`);
+
+    // Apply the slide-out animation to the current page
+    currentPage.classList.add('slide-out');
+    
+    // Remove the active class after the slide-out animation finishes
+    setTimeout(() => {
+        currentPage.classList.remove('active', 'slide-out');
+    }, 600); // Match the transition duration
+
+    // Add the slide-in animation to the next page
+    nextPage.classList.add('active', 'slide-in');
+    setTimeout(() => {
+        nextPage.classList.remove('slide-in');
+    }, 600); // Match the transition duration
+}
+
+
+
+////////////////////////////////////////////////////////////
+
+// Set the first page to be visible by default
+document.querySelector('#page-1').classList.add('active');
 
 $(document).ready(function() {
     let currentPlanIndex = 1;
@@ -25,4 +46,7 @@ $(document).ready(function() {
     $(".change-plan-btn").click(function() {
         switchPlan();
     });
+
+    // Default behavior: show the first plan by default
+    $('#plan-1').show(); // Show the first plan on page load
 });

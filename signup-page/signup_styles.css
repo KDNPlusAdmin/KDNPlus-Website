@@ -1,249 +1,226 @@
-/* General styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000; /* Darker black background */
-    color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 10px;
-}
 
-/* Styling for Sign Up & Payment Details heading */
-.signup-step h2,
-.payment-details h2 {
-    color: #ff0000; /* Change the heading text color to red */
-}
 
-.subscription-container {
-    display: flex;
-    background-color: #1c1c1c;
-    border-radius: 10px;
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: #000; /* Darker black background */  
+    margin: 0;  
+    /* display: flex;  
+    justify-content: center;  
+    align-items: center;   */
+    height: 80vh;  
+    padding: 10px; /* Add some padding for smaller screens */  
+}  
+
+
+.name-fields {  
+    display: flex;  
+    gap: 8px; /* Adjust the space between the fields */  
+    box-sizing: border-box;
+}  
+.name-field {  
+    flex: 1; /* Allow fields to grow equally */  
+}  
+
+.logo img {
+    max-height: 35px; /*Adjust the logo size if necessary*/
+    margin-bottom: 12px;
+  }
+
+.multi-page-container {
+    max-width: 600px;
+    margin: 0 auto;
     overflow: hidden;
-    max-width: 1000px; /* Adjusted width for better layout */
-    width: 100%;
-    flex-direction: column;
+    position: relative;
 }
 
-.subscription-container:hover {
-    box-shadow: 2px 2px 4px 4px rgba(190, 65, 15, 0.5);
+.page {
+    display: none;
+    padding: 20px;
+    background: #1C1C1C;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
+.page.active {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+}
 
-/* User Information Container */
-.user-info-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrap for smaller screens */
-    gap: 15px; /* Spacing between the fields */
+.page.slide-in {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.page.slide-out {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.user-info-container, .subscription-plan, .payment-details {
+    background: #1C1C1C;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-.user-info-field {
-    flex: 1;
-    min-width: 22%; /* Ensure each field takes up similar space */
-}
-
-.user-info-field label {
-    display: block;
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-.user-info-field input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-/* Payment details styling */
-.payment-details {
-    flex: 1;
-    padding: 20px;
-    border-bottom: 1px solid #444;
-}
-
-.payment-details h2 {
+h2 {
     margin-top: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffab00;
 }
 
-.payment-details label {
+label, input, button {
     display: block;
-    margin: 15px 0 5px;
-    font-weight: bold;
-}
-
-.payment-details input {
     width: 90%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    font-size: 14px;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
-.card-info {
-    display: flex;
-    flex-direction: row;
+
+input, button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+  /* Add your CSS styles here */  
+  input {  
+    width: 90%;  
+    margin-bottom: 10px;  
     gap: 10px;
+}  
+
+.input-group {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-bottom: 10px;  
+}  
+
+.name-field {  
+    flex: 1;  
+    margin-right: 10px;  
+}  
+
+.name-field:last-child {  
+    margin-right: 0;  
+}  
+
+.social-signup {  
+    margin: 20px 0;  
+    text-align: center;  
+}  
+
+.facebook-btn {  
+    background-color: #3b5998;  
+    color: white;  
+    border: none;  
+    padding: 20px 20px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    display: flex; /* Use flexbox to align the icon and text */  
+    align-items: center; /* Center items vertically */  
+    justify-content: center; /* Center items horizontally */  
+}  
+
+.facebook-btn i {  
+    margin-right: 8px; /* Space between icon and text */  
+}  
+
+.facebook-btn:hover {  
+    opacity: 0.9;  
+}  
+
+.center-text {  
+    text-align: center;  
+    margin: 10px 0;  
+    color: #fff;
+}  
+
+
+a{
+   
+    color: #d32f2f;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.next-btn, .cancel-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 20px 20px;  
+    
+
 }
 
 .cancel-btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-    display: block;
-    width: 95%;
-}
-
-.cancel-btn:hover {
-    background-color: #f8f4f4;
-    color: #000;
-}
-
-/* Subscription plan styling */
-.subscription-plan {
-    flex: 1;
-    padding: 20px;
-    color: #fff;
-}
-
-.plan-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.plan-header h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.change-plan-btn {
-    background-color: transparent;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 14px;
-}
-
-.plan-price {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.plan-features {
-    list-style: none;
-    padding: 0;
-}
-
-.plan-features li {
-    margin: 5px 0;
-    position: relative;
-    padding-left: 30px;
-    color: #fff;
-}
-
-.plan-features li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    color: red;
-}
-
-.total-fee {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.price {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.subscribe-btn {
     background-color: #d32f2f;
-    border: none;
-    padding: 15px;
-    width: 100%;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
+    margin-top: 15px !important;
+    align-items: center;
 }
 
-.signin-section {
-    text-align: right;
-    margin: 20px 10px;
+
+.plan-features {  
+    list-style: none;  
+    padding: 0;  
+}  
+
+.plan-features li {  
+    margin: 5px 0;  
+    position: relative;  
+    padding-left: 30px; /* To create space for the icon */  
+    color: #fff; /* Ensuring the text remains white */  
+}  
+
+.plan-features li::before {  
+    content: "\2713"; /* Unicode for the checkmark */  
+    position: absolute;  
+    left: 0;  
+    color: red; /* Explicitly set to red */  
+}  
+
+
+/* video session  */
+
+.background-video {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;    
+    object-fit: cover; /* Cover the whole container */  
+    z-index: -100; /* Send video to the back */  
+}  
+
+.content {  
+    position: relative; /* Position relative to the video */  
+    z-index: 1; /* Sits on top of the video */  
+    color: white; /* Text color */  
+      
+    
+    /* Add a semi-transparent background */  
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */  
+    border-radius: 8px; /* Round the corners for a softer look */  
+}  
+
+.overlay {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the rgba values for the overlay color and transparency */  
+    z-index: 0; /* Make sure it sits above the video */  
+}  
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .multi-page-container {
+        max-width: 90%;
+    }
 }
 
-.signin-link {
-    color: #ff0000;
-    text-decoration: underline;
-}
-
-.signin-link:hover {
-    color: #ff5722;
-}
-
-/* Responsive Styles */
-@media (min-width: 600px) {
-    /* For tablets and larger screens */
-    .subscription-container {
-        flex-direction: row; /* Show side by side on larger screens */
-    }
-
-    .payment-details {
-        border-right: 1px solid #444;
-        border-bottom: none; /* Remove border on larger screens */
-    }
-
-    .subscribe-btn {
-        margin-top: 30px; /* More space on large screens */
-    }
-
-    .payment-details input,
-    .cancel-btn {
-        font-size: 16px; /* Larger font size for larger screens */
-    }
-
-    /* Increase size of subscription plan items */
-    .plan-price, .total-fee, .price {
-        font-size: 20px; /* Larger font for better visibility */
-    }
-}
-
-@media (min-width: 800px) {
-    /* For large screens */
-    .plan-price {
-        font-size: 22px; /* Increase size on large screens */
-    }
-
-    .subscribe-btn {
-        padding: 20px; /* Make button larger */
-        font-size: 20px; /* Increase text size */
-    }
-}
