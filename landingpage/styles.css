@@ -1,5 +1,7 @@
 
 
+
+
 /* Global Styles */
 body, html {
   margin: 0;
@@ -39,9 +41,25 @@ body, html {
 }
 
 .logo img {
-  max-height: 40px; /*Adjust the logo size if necessary*/
+  max-height: 40px; /Adjust the logo size if necessary/
 }
 
+/* image */
+.nonso {  
+  width: 100%; /* Make the image take the full width of its container */  
+  max-width: 500px; /* Set a maximum width to maintain a moderate size */  
+  height: 40rem; /* Maintain the aspect ratio */  
+  display: block; /* Ensure no extra space at the bottom */  
+  margin: 0 auto; /* Center align the image horizontally */  
+}  
+
+.avatar {  
+  width: 100%; /* Make the image take the full width of its container */  
+  max-width: 500px; /* Set a maximum width to maintain a moderate size for the avatar */  
+  height: auto; /* Maintain the aspect ratio */  
+  display: block; /* Ensure no extra space at the bottom */  
+  margin: 0 auto; /* Center align the image horizontally */  
+}
 
 /* Buttons Container */
 .header-buttons {
@@ -1015,9 +1033,9 @@ body {
 /* Responsive adjustments................... */
 /*@media (max-width: 768px) {
   .slide img {
-   /* max-width: 100%;*/ /* Ensure images are responsive on smaller screens */
+   /* max-width: 100%;/ / Ensure images are responsive on smaller screens */
   /* } */
-/*}/*
+/}/
 
 
 
@@ -1247,4 +1265,4 @@ h2 {
   display: none; /* Hidden by default */  
   background-color: #2a2a2a;  
   border-top: 1px solid #333;  
-}  
+}
