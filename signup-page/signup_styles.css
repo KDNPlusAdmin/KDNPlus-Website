@@ -12,6 +12,16 @@ body {
   padding: 10px; /* Add some padding for smaller screens */
 }
 
+.fb2{
+  background-color: #fff;
+  color: red;
+}
+
+.fb2:hover{
+  background-color: red;
+  color: #fff;
+}
+
 .logo img {
   max-height: 35px; 
   margin-bottom: 12px;
@@ -114,10 +124,6 @@ section {
 
 }  
 
-.logo img {  
-  max-width: 100%;  
-  height: auto;  
-}  
 
 h1 {  
   margin: 20px 0;  
@@ -232,8 +238,14 @@ button:hover {
 
 /* ............TWO............. */
 
+.price{
+  color: #fff !important;
+}
 
-
+.total{
+  color: #fff !important;
+  margin-top: 4px;
+}
 .plan-header{
   display: flex;
   justify-content: space-between;
@@ -273,6 +285,11 @@ button:hover {
   width: 45%;
 }
 
+@media (max-width: 768px) {  
+
+
+
+}
 
 
 /* .......THREE......... */
@@ -304,7 +321,7 @@ button:hover {
 
 .bt2:hover{
   background-color: red;
-  color: #333;
+  color: #fff;
 }
 
 .container-last {  
@@ -327,6 +344,8 @@ button:hover {
 
 .payment-details h2 {  
   margin-bottom: 20px;  
+  margin-left: 24%;
+  margin-top: 14px;
 }  
 
 
@@ -365,7 +384,10 @@ button:hover {
 
 #page-3{
   margin-top: 50px;
+
 }
+
+
 #full-name{
   margin-bottom: 10px;
 }
