@@ -2,38 +2,31 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #000; /* Darker black background */
   margin: 0;
-  /* display: flex;  
+  
+  margin-bottom: 10px;
+  display: flex;  
     justify-content: center;  
-    align-items: center;   */
+    align-items: center;  
   height: 80vh;
+  overflow: hidden;
   padding: 10px; /* Add some padding for smaller screens */
 }
 
-.name-fields {
-  display: flex;
-  gap: 8px; /* Adjust the space between the fields */
-  box-sizing: border-box;
-}
-.name-field {
-  flex: 1; /* Allow fields to grow equally */
-}
-
 .logo img {
-  max-height: 35px; /*Adjust the logo size if necessary*/
+  max-height: 35px; 
   margin-bottom: 12px;
 }
 
 .multi-page-container {
   max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
+  margin: 20px auto;
   position: relative;
 }
 
 .page {
   display: none;
-  padding: 20px;
-  background: #1c1c1c;
+  /* padding: 20px; */
+  background: #000;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
@@ -53,208 +46,338 @@ body {
   opacity: 0;
 }
 
-.user-info-container,
-.subscription-plan,
-.payment-details {
-  background: #1c1c1c;
-  color: #fff;
-  padding: 20px;
+.user-info-container {
+ 
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-top: 20px;
+}
+ 
+.form-container p{
+  color: #838181;
 }
 
-h2 {
-  margin-top: 0;
-}
 
-label,
-input,
-button {
-  display: block;
-  width: 90%;
-  margin-bottom: 10px;
-  padding: 10px;
-}
+/* one session  */
+* {  
+  box-sizing: border-box;  
+  margin: 0;  
+  padding: 0;  
+}  
 
-input,
-button {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+.line {  
+  flex: 1; /* Allow the line to expand */  
+  border: 1px solid #ccc; /* Style for hr line */  
+}  
 
-/* Add your CSS styles here */
-input {
-  width: 95%;
-  margin-bottom: 10px;
-  gap: 10px;
-}
+.or-text {  
+  margin: 5px 10px; /* Space around the text */  
+  font-weight: small; /* Bold the text */  
+  color: #fff; /* Color for the text */  
+}  
 
-.input-group {
-  display: flex;
+button {  
+  width: 100%;  
+  padding: 10px;  
+  background-color: #e50914;  
+  color: #fff;  
+  border: none;  
+  border-radius: 5px;  
+  cursor: pointer;  
+}  
+
+section {  
+  font-family: Arial, sans-serif;  
+  display: flex;  
+  height: 100vh;  
+}  
+
+.container {  
+  display: flex;  
   justify-content: space-between;
-  margin-bottom: 10px;
-  gap: 10px;
-}
+  justify-content: center;
+  width: 100%;  
+  margin-top: 50px ;
+  
 
-.name-field {
-  flex: 1;
-  margin-right: 10px;
-}
+}  
 
-.name-field:last-child {
-  margin-right: 0;
-}
+.form-container {  
+  background-color: #000;  
+  color: #fff;  
+  padding: 20px;  
+  flex: 0 0 500px; /*Fixed width for the form   */
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  margin: 50px ;
 
-.social-signup {
-  margin: 20px 0;
-  text-align: center;
-}
+}  
 
-.facebook-btn {
-  background-color: #3b5998;
-  color: white;
-  border: none;
-  padding: 20px 20px;
-  border-radius: 5px;
-  margin-left: 20px;
-  cursor: pointer;
-  display: flex; /* Use flexbox to align the icon and text */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-}
+.logo img {  
+  max-width: 100%;  
+  height: auto;  
+}  
 
-.facebook-btn i {
-  margin-right: 8px; /* Space between icon and text */
-}
+h1 {  
+  margin: 20px 0;  
+}  
 
-.facebook-btn:hover {
-  opacity: 0.9;
-}
+.user-info-container {  
+  width: 100%;  
+}  
 
-.center-text {
-  text-align: center;
-  margin: 10px 0;
-  color: #fff;
-}
+.input-group {  
+  display: flex;  
+  justify-content: space-between;  
+  margin-bottom: 15px;  
+}  
 
-a {
-  color: #d32f2f;
-}
-
-a:hover {
+a{
   text-decoration: none;
-  color: #fff;
+  color: #f40612;
+  font-weight: 600;
 }
 
-.next-btn,
-.cancel-btn {
-  background-color: #d32f2f;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 20px 20px;
-  margin-left: 20px;
+input{
+  background-color: #333;
+}
+.name-field {  
+  flex: 1;  
+  margin-right: 10px;  
+}  
+
+.name-field:last-child {  
+  margin-right: 0;  
+}  
+
+input {  
+  width: 100%;  
+  padding: 10px;  
+  margin-top: 5px;  
+  border: 1px solid #333;  
+  border-radius: 5px;  
+}  
+
+
+.social-signup {  
+  margin: 20px 0;  
+}  
+
+
+.divider-container {  
+  display: flex;  
+  align-items: center;  
+}  
+
+
+button:hover {  
+  background-color: #f40612;  
+}  
+
+.center-text {  
+  text-align: center;  
+  margin-top: 10px;  
+}  
+
+.image-container {  
+  flex: 0 0 500px;
+  margin: 50px auto;
+
+  
+}  
+
+.image-container img {  
+  width: 100%;  
+  height: 100vh; /* Full height of the viewport */  
+  object-fit: cover; /* Cover the area without distortion */  
+  border-radius: 15px;
+}  
+
+.flex-containerr{
+  display: flex;
 }
 
-.cancel-btn {
-  background-color: #d32f2f;
-  margin-top: 15px !important;
-  align-items: center;
-}
+@media (max-width: 768px) {  
+  .input-group {  
+      flex-direction: column;  
+  }  
 
-.submit-btn {
-  background-color: rgb(54, 241, 54);
-  color: #fff;
-  margin-top: 15px !important;
-  align-items: center;
-  padding: 20px 20px;
-  margin-left: 8px;
+  .name-field {  
+      margin-right: 0;  
+      margin-bottom: 10px;  
+  }  
 
-}
+  .form-container {  
+    margin-top: 20px;
+    flex: 1; /* Allow form to take full width on smaller screens */  
+  }  
+
+  .container{
+    flex-direction: column;
+  
+
+  }
+
+  .image-container img{
+    display: none;
+  }
+}  
+
+
+/* ............TWO............. */
+
+
 
 .plan-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.plan-features {  
+  list-style: none;  
+  padding: 0;  
+}  
+
+.plan-features li {  
+  margin: 5px 0;  
+  position: relative;  
+  padding-left: 30px; /* To create space for the icon */  
+  color: #fff; /* Ensuring the text remains white */  
+}  
+
+.plan-features li::before {  
+  content: "\2713"; /* Unicode for the checkmark */  
+  position: absolute;  
+  left: 0;  
+  color: red; /* Explicitly set to red */  
+}  
+
+.subscription-plan{
+  background: #000;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px  solid #333;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .change-plan-btn{
-    width: 25%;
+  width: 45%;
 }
 
 
 
-.plan-features {
-  list-style: none;
-  padding: 0;
-}
-
-.plan-features li {
-  margin: 5px 0;
-  position: relative;
-  padding-left: 30px; /* To create space for the icon */
-  color: #fff; /* Ensuring the text remains white */
-}
-
-.plan-features li::before {
-  content: "\2713"; /* Unicode for the checkmark */
-  position: absolute;
-  left: 0;
-  color: red; /* Explicitly set to red */
-}
+/* .......THREE......... */
+ .payment-details{
+  background: #1C1C1C;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+} 
 
 .submit-cancel-buttons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    margin-left: -12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.bt1{
+  padding: 20px !important;
+  width: 40%;
+  margin-top: 20px;
+} 
 
-
-
-/* video session  */
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the whole container */
-  z-index: -100; /* Send video to the back */
+.bt2{
+  background-color: #d4d3d3;
+  color: #333;
 }
 
-.content {
-  position: relative; /* Position relative to the video */
-  z-index: 1; /* Sits on top of the video */
-  color: white; /* Text color */
-
-  /* Add a semi-transparent background */
-  background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
-  border-radius: 8px; /* Round the corners for a softer look */
+.bt2:hover{
+  background-color: red;
+  color: #333;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.8
-  ); /* Adjust the rgba values for the overlay color and transparency */
-  z-index: 0; /* Make sure it sits above the video */
-}
+.container-last {  
+  display: flex;  
+  flex-direction: column;  
+  max-width: 1200px; /* Maximum width for larger screens */  
+  width: 100%;  
+}  
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .multi-page-container {
-    max-width: 90%;
-  }
+.form-containerr {  
+  flex: 1; /* Flex-grow to fill available space */  
+  padding: 20px;  
+}  
+
+
+
+.payment-details {  
+  margin-top: 30px;  
+}  
+
+.payment-details h2 {  
+  margin-bottom: 20px;  
+}  
+
+
+.card-info {  
+  display: flex;  
+  justify-content: space-between;  
+}  
+
+.card-info input {  
+  flex: 1; /* Flex-grow for equal width */  
+  margin-right: 10px; /* Space between inputs */  
+}  
+
+.card-info input:last-child {  
+  margin-right: 0; /* Remove margin from the last input */  
+}  
+
+.submit-cancel-buttons {  
+  display: flex;  
+  justify-content: space-between; 
+  gap:10px; 
+}  
+
+.image-containerr {  
+  flex: 1;  
+  display: flex;  
+  justify-content: space-between; /* Center image */  
+  align-items: center;  
+  padding: 20px;  
+}  
+
+.image-containerr img {  
+  max-width: 100%; /* Responsive image */  
+  height: auto;  
+}  
+
+#page-3{
+  margin-top: 50px;
 }
+#full-name{
+  margin-bottom: 10px;
+}
+#card-details{
+  margin-top: 12px;
+}
+/* Media Query for Smaller Screens */  
+@media (max-width: 768px) {  
+  .image-containerr {  
+      display: none; /* Hide image container on smaller screens */  
+  }  
+  
+  .container-last {  
+      flex-direction: column; /* Stack items vertically */  
+  }  
+  
+  .form-containerr {  
+      width: 100%; /* Ensure full width on smaller screens */  
+  }  
+}  

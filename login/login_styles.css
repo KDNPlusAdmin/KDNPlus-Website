@@ -1,30 +1,36 @@
 /* General styles */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif; /* Modern font */
-  background-color: #121212; /* Dark theme */
+  background-color: #000; /* Dark theme */
   color: #ffffff;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
+
+.fb1{
+  background-color: transparent;
+  padding: 20px;
+  color: #fff;
+  border: 1px solid#333;
+}
+
+.fbb{
+  color: rgb(89, 89, 240);
+  font-weight: 600;
+}
 /* Container for login box */
-.login-container {
-  background: linear-gradient(145deg, #1f1f1f, #2a2a2a); /* Dark gradation */
-  border-radius: 15px;
-  width: 400px;
-  padding: 40px 30px; /* Increased padding for spaciousness */
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3),
-    -8px -8px 20px rgba(255, 255, 255, 0.05); /* Soft shadow */
-  transition: box-shadow 0.3s ease;
-}
 
-.login-container:hover {
-  box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.4),
-    -12px -12px 25px rgba(255, 165, 0, 0.1);
-}
+
 
 /* Header text */
 .login-container h2 {
@@ -36,10 +42,10 @@ body {
 
 /* Button styling */
 #login-btn {
-  background-color: #d32f2f; /* Primary button color */
+  background-color: #ec2424; /* Primary button color */
   border: none;
   padding: 15px;
-  width: 100%;
+  width: 90%;
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
@@ -49,10 +55,7 @@ body {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-#login-btn:hover {
-  background-color: #8a3131; /* Lighter orange on hover */
-  transform: translateY(-1px); /* Subtle lift effect */
-}
+
 .login-container input{
     display: flex;
     flex-direction: row;
@@ -78,40 +81,6 @@ a {
 
 /* video session  */
 
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the whole container */
-    z-index: -100; /* Send video to the back */
-  }
-  
-  .content {
-    position: relative; /* Position relative to the video */
-    z-index: 1; /* Sits on top of the video */
-    color: white; /* Text color */
-  
-    /* Add a semi-transparent background */
-    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
-    border-radius: 8px; /* Round the corners for a softer look */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.8
-    ); /* Adjust the rgba values for the overlay color and transparency */
-    z-index: 0; /* Make sure it sits above the video */
-  }
 
 
 /* Responsive styles */
@@ -130,3 +99,161 @@ a {
     font-size: 24px; /* Adjust header size */
   }
 }
+
+
+p{
+  color: #838080;
+}
+.line {  
+  flex: 1; /* Allow the line to expand */  
+  border: 1px solid #ccc; /* Style for hr line */  
+}  
+
+.or-text {  
+  margin: 5px 10px; /* Space around the text */  
+  font-weight: small; /* Bold the text */  
+  color: #fff; /* Color for the text */  
+}  
+
+button {  
+  width: 100%;  
+  padding: 10px;  
+  background-color: #e50914;  
+  color: #fff;  
+  border: none;  
+  border-radius: 5px;  
+  cursor: pointer;  
+}  
+
+section {  
+  font-family: Arial, sans-serif;  
+  display: flex;  
+  height: 100vh;  
+}  
+
+.container {  
+  display: flex;  
+  justify-content: space-between;
+  justify-content: center;
+  width: 100%;  
+  margin-top: 50px ;
+  
+
+}  
+
+.form-container {  
+  background-color: #000;  
+  color: #fff;  
+  padding: 20px;  
+  flex: 0 0 500px; /*Fixed width for the form   */
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  margin: 50px ;
+
+}  
+
+.logo img {  
+  max-width: 100%;  
+  height: 30px;  
+  margin-bottom: 12px;
+}  
+
+h1 {  
+  margin: 20px 0;  
+}  
+
+.user-info-container {  
+  width: 100%;  
+}  
+
+.input-group {  
+  display: flex;  
+  justify-content: space-between;  
+  margin-bottom: 15px;  
+}  
+
+a{
+  text-decoration: none;
+  color: #f40612;
+  font-weight: 600;
+}
+
+input{
+  background-color: #333;
+}
+.name-field {  
+  flex: 1;  
+  margin-right: 10px;  
+}  
+
+.name-field:last-child {  
+  margin-right: 0;  
+}  
+
+input {  
+  width: 100%;  
+  padding: 10px;  
+  margin-top: 5px;  
+  border: 1px solid #333;  
+  border-radius: 5px;  
+}  
+
+.social-signup {  
+  margin: 20px 0;  
+}  
+
+
+.divider-container {  
+  display: flex;  
+  align-items: center;  
+}  
+
+
+
+.center-text {  
+  text-align: center;  
+  margin-top: 10px;  
+}  
+
+.image-container {  
+  flex: 0 0 500px;
+  margin: 50px auto;
+
+  
+}  
+
+.image-container img {  
+  width: 100%;  
+  height: 100vh; /* Full height of the viewport */  
+  object-fit: cover; /* Cover the area without distortion */  
+  border-radius: 15px;
+}  
+
+@media (max-width: 768px) {  
+  .input-group {  
+      flex-direction: column;  
+  }  
+
+  .name-field {  
+      margin-right: 0;  
+      margin-bottom: 10px;  
+  }  
+
+  .form-container {  
+    margin-top: 20px;
+    flex: 1; /* Allow form to take full width on smaller screens */  
+  }  
+
+  .container{
+    flex-direction: column;
+  
+
+  }
+
+  .image-container img{
+    display: none;
+  }
+}  
+
