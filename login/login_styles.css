@@ -31,7 +31,7 @@ body {
   text-align: center;
   font-size: 26px;
   margin-bottom: 30px;
-  color: #ffab00; /* Accent color for header */
+  color: #fff; /* Accent color for header */
 }
 
 /* Button styling */
@@ -53,6 +53,13 @@ body {
   background-color: #8a3131; /* Lighter orange on hover */
   transform: translateY(-1px); /* Subtle lift effect */
 }
+.login-container input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    width: 90%;
+}
 
 input {
   padding: 10px;
@@ -62,6 +69,51 @@ a {
   text-decoration: none;
   color: #d32f2f;
 }
+
+.logo img {
+    max-height: 30px; /*Adjust the logo size if necessary*/
+    margin-bottom: 12px;
+  }
+  
+
+/* video session  */
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the whole container */
+    z-index: -100; /* Send video to the back */
+  }
+  
+  .content {
+    position: relative; /* Position relative to the video */
+    z-index: 1; /* Sits on top of the video */
+    color: white; /* Text color */
+  
+    /* Add a semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    border-radius: 8px; /* Round the corners for a softer look */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Adjust the rgba values for the overlay color and transparency */
+    z-index: 0; /* Make sure it sits above the video */
+  }
+
+
 /* Responsive styles */
 @media (max-width: 600px) {
   .login-container {
