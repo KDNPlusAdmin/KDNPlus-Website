@@ -49,7 +49,7 @@ html {
 
 .avatar {
   width: 100%; /* Make the image take the full width of its container */
-  max-width: 500px; /* Set a maximum width to maintain a moderate size for the avatar */
+  max-width: 600px; /* Set a maximum width to maintain a moderate size for the avatar */
   height: auto; /* Maintain the aspect ratio */
   display: block; /* Ensure no extra space at the bottom */
   margin: 0 auto; /* Center align the image horizontally */
@@ -796,6 +796,8 @@ body {
   position: relative;
   min-height: 50vh;
 }
+
+
 
 .custom-shape-divider-bottom-1726664902 {
   position: absolute;
