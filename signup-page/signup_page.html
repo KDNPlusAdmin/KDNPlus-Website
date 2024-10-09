@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-Way Login Flow</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="signup_styles.css" />
+  </head>
+  <body>  
+    <div class="multi-page-container content">  
+      <section class="page" id="page-1">  
+        <div class="container">  
+          <div class="form-container">  
+              <div class="logo">  
+                  <img src="https://d2c512779vw9nw.cloudfront.net/text.png" alt="Kdnplus Logo" />  
+              </div>  
+              <h1>Get started now</h1>  
+              <p>Sign up now for a seamless streaming experience</p>  
+              <form onsubmit="saveUserInfo(event)">  
+                  <div class="user-info-container">  
+                      <div class="input-group">  
+                          <div class="name-field">  
+                              <label for="username">Username</label>  
+                              <input type="text" id="username" placeholder="Username" required/>  
+                          </div>  
+                          <div class="name-field">  
+                              <label for="first-name">First Name</label>  
+                              <input type="text" id="first-name" placeholder="First Name" required/>  
+                          </div>  
+                      </div>  
+                      <div class="input-group">  
+                          <div class="name-field">  
+                              <label for="middle-name">Middle Name</label>  
+                              <input type="text" id="middle-name" placeholder="Middle Name" required/>  
+                          </div>  
+                          <div class="name-field">  
+                              <label for="last-name">Last Name</label>  
+                              <input type="text" id="last-name" placeholder="Last Name" required/>  
+                          </div>  
+                      </div>  
+                      <div class="input-group">  
+                          <div class="name-field">  
+                              <label for="email">Email</label>  
+                              <input type="email" id="email" placeholder="Email Address" required/>  
+                          </div>  
+                          <div class="name-field">  
+                              <label for="password">Password</label>  
+                              <input type="password" id="password" placeholder="Password" required/>  
+                          </div>  
+                      </div>  
+                    </div>  
+                    <button type="submit" class="next-btn fb1">Get Started</button>  
+
+                    <div class="divider-container">  
+                      <hr class="line">  
+                      <span class="or-text">or</span>  
+                      <hr class="line">  
+                    </div>  
+  
+                    <div class="social-signup">  
+                        <button type="button" class="facebook-btn fb2">  
+                            <i class="fab fa-facebook-f"></i>&nbsp; &nbsp; Sign Up with <span class="fbb">Facebook</span>  
+                        </button>  
+                    </div>  
+                    <p class="center-text">  
+                        Already have an Account? <a href="../login/login.html">Sign In</a>  
+                    </p>  
+                </form>  
+            </div>  
+            <div class="image-container">  
+                <img src="New Project (3).png" alt="KDNPlus Background" />  
+            </div>  
+        </div>  
+      </section>  
+    </div>  
+    <script src="./signup_script.js"></script>  
+  </body>  
+</html>

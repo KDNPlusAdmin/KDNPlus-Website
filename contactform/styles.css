@@ -1,0 +1,297 @@
+/* General Styles */  
+body {  
+    background-color: #000;  
+    color: #fff;  
+    font-family: 'Arial', sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    height: 100vh;  
+    overflow: auto; /* Prevents overflow issues */  
+}  
+
+.logo img {  
+    max-height: 40px; /* Adjust the logo size if necessary */  
+    padding: 10px 16px;  
+}  
+
+@media(max-width: 480px){
+    .logo img {
+        max-height: 50px; /* Smaller logo for small screens */
+        content: url('https://d2c512779vw9nw.cloudfront.net/plus.png'); /* Update source for smaller screens */ 
+      }
+}
+
+.container {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    width: 90%;  
+    max-width: 1200px;  
+    margin: 0 auto; /* Center the container */  
+}  
+
+/* Left and Right Content Styles */  
+.left-content {  
+    flex: 1;  
+    padding: 40px;  
+}  
+
+.left-content h2 {  
+    color: #e53935; /* Red color for the heading */  
+    font-size: 32px;  
+    margin-top: 20px;  
+}  
+
+.left-content p {  
+    font-size: 18px;  
+    line-height: 1.5;  
+}  
+
+.right-form {  
+    flex: 1;  
+    padding: 40px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+form {  
+    width: 100%;  
+    max-width: 400px;  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+.form-group {  
+    margin-bottom: 20px;  
+}  
+
+.form-group label {  
+    display: block;  
+    margin-bottom: 8px;  
+    font-weight: bold;  
+}  
+
+.form-group input,  
+.form-group textarea {  
+    width: 100%;  
+    padding: 10px;  
+    border: none;  
+    border-radius: 5px;  
+    background-color: #fff;  
+    color: #000;  
+    font-size: 16px;  
+}  
+
+.submit-btn {  
+    background-color: #d32f2f;  
+    color: #fff;  
+    border: none;  
+    width: 100%;  
+    max-width: 400px;  
+    padding: 14px;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    cursor: pointer;  
+    font-weight: bold;  
+    margin-bottom: 10px; /* Space between button and FAQ text */  
+}  
+
+.submit-btn:hover {  
+    background-color: #8b2525;  
+    transition: background-color 0.3s;  
+}  
+
+.faq-text {  
+    font-size: 16px;  
+    line-height: 1.5;  
+    color: #fff;  
+    text-align: center;  
+}  
+
+.faq-link {  
+    color: #fff;  
+    text-decoration: underline;  
+    font-weight: bold;  
+}  
+
+/* Responsive Design */  
+@media (max-width: 768px) {  
+    .container {  
+        flex-direction: column; /* Stack elements vertically on small screens */  
+        align-items: center; /* Center elements */  
+    }  
+
+    .left-content {  
+        padding: 20px; /* Adjust padding for smaller screens */  
+        width: 90%; /* Full width for both sections */  
+        text-align: center; /* Center text in left-content */  
+    }  
+
+    .right-form {  
+        padding: 20px; /* Adjust padding for smaller screens */  
+        width: 90%;   
+        text-align: center; /* Center text in right-form */  
+    }  
+
+    .left-content h2 {  
+        font-size: 24px; /* Adjust heading size */  
+    }  
+
+    .left-content p {  
+        font-size: 16px; /* Adjust paragraph size */  
+    }  
+}  
+
+.footer-section {  
+    background-color: black;  
+    color: #ddd;  
+    padding: 40px 20px;  
+}  
+  
+.footer-content {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: stretch;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+    text-align: left;  
+}  
+  
+.footer-column {  
+    flex: 1;  
+    justify-content: space-around;  
+    min-width: 300px; /* Ensure columns don't get too narrow on smaller screens */  
+}  
+  
+.footer-column h5 {  
+    font-size: 18px;  
+    margin-bottom: 15px;  
+    color: #fff;  
+}  
+  
+.footer-column p {  
+    font-size: 14px;  
+    line-height: 1.6;  
+}  
+  
+.footer-column ul {  
+    list-style: none;  
+    padding: 0;  
+}  
+  
+.footer-column ul li {  
+    margin-bottom: 10px;  
+}  
+  
+.footer-column ul li a {  
+    text-decoration: none;  
+    color: #ddd;  
+}  
+  
+.footer-column ul li a:hover {  
+    text-decoration: underline;  
+    color: #fff;  
+}  
+  
+/* Newsletter Form */  
+.newsletter-form input {  
+    padding: 10px;  
+    width: 100%;  
+    border: none;  
+    border-radius: 5px;  
+    margin-bottom: 10px;  
+}  
+  
+.newsletter-form button {  
+    padding: 10px;  
+    width: 100%; /* Full width for better usability */  
+    border: none;  
+    border-radius: 5px;  
+    background-color: #e50914;  
+    color: white;  
+    font-size: 16px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+  
+.newsletter-form button:hover {  
+    background-color: rgb(252, 84, 84);  
+}  
+  
+/* Footer Bottom */  
+.footer-bottom {  
+    text-align: center;  
+    margin-top: 20px;  
+    border-top: 1px solid #444;  
+    padding-top: 20px;  
+    color: #aaa;  
+}  
+  
+/* Responsive Design for Footer */  
+/* Centering the Form on Smaller Screens */  
+@media (max-width: 768px) {  
+    .right-form {  
+        flex-direction: column; /* Stack items vertically */  
+        justify-content: center; /* Center items vertically */  
+        align-items: center; /* Center items horizontally */  
+        padding: 20px; /* Adjust padding */  
+        width: 100%; /* Full width for the form container */  
+    }  
+
+    form {  
+        width: 90%; /* Increase width for smaller screens */  
+        max-width: 400px; /* Ensure the form does not exceed this width */  
+        margin: 0 auto; /* Center the form horizontally */  
+        display: flex;  
+        flex-direction: column; /* Ensure label/input are stacked */  
+        align-items: center; /* Center inputs and button */  
+    }  
+
+    .form-group {  
+        width: 100%; /* Full width for form group */  
+        margin-bottom: 20px; /* Ensure spacing between fields */  
+        text-align: center; /* Center text labels */  
+    }  
+
+    .form-group label {  
+        margin-bottom: 8px; /* Space between label and input */  
+        font-weight: bold;  
+        display: block; /* Ensure label takes full width */  
+    }  
+
+    .form-group input,  
+    .form-group textarea {  
+        width: 100%; /* Full width inputs */  
+        border: none;  
+        border-radius: 5px;  
+        background-color: #fff;  
+        color: #000;  
+        font-size: 16px;  
+        padding: 10px; /* Padding inside inputs */  
+    }  
+
+    .submit-btn {  
+        width: 100%; /* Full width for button */  
+        max-width: 250px; /* Keep a max width for button */  
+        margin-top: 10px; /* Space between inputs and button */  
+    }  
+}  
+
+/* Adjustments for Footers and Other Custom Styles */  
+.footer-section {  
+    background-color: black;  
+    color: #ddd;  
+    padding: 40px 20px;  
+}  
+  
+.footer-content {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: stretch;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+    text-align: left;  
+}  
+
+/* Rest of the footer styles and media queries -->

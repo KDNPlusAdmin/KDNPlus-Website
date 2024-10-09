@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konplus Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="hero1">
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://d2c512779vw9nw.cloudfront.net/text.png" alt="Kdnplus Logo">
+            </div>
+
+            <div class="header-buttons">
+                <button class="btn-pre-order">Pre-Order </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="welcome overlay">
+        <div class="overlay ">
+            <div class="welcome-content">
+                <h1>Welcome</h1>
+                <p class="subheading">Stream your favorite Nollywood Content</p>
+                <p class="tagline">For the culture</p>
+                <p class="coming-soon ">Coming to you soon...</p>
+                <div class="email-signup">
+                    <input type="email" placeholder="Enter your Email" id="email-input"> <br>
+                    <button class="btn-primary" id="get-started-btn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    
+    <script>
+        document.querySelector('.btn-pre-order').addEventListener('click', function () {
+            // Redirect to the subscription page
+            window.location.href = 'subscription_page.html';
+        });
+
+        document.querySelector('#get-started-btn').addEventListener('click', function () {
+            // Capture the email if needed
+            let email = document.querySelector('#email-input').value;
+            
+            // Redirect to the subscription page
+            window.location.href = 'subscription_page.html?email=' + encodeURIComponent(email);
+        });
+    </script>
+</body>
+</html>
