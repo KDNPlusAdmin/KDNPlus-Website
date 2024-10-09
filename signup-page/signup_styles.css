@@ -33,12 +33,6 @@ body {
   position: relative;
 }
 
-.page {
-  display: none;
-  /* padding: 20px; */
-  background: #000;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
 
 .page.active {
   display: block;
@@ -65,6 +59,7 @@ body {
 .form-container p{
   color: #838181;
 }
+
 
 
 /* one session  */
@@ -189,7 +184,6 @@ button:hover {
 .image-container {  
   flex: 0 0 500px;
   margin: 50px auto;
-
   
 }  
 
@@ -236,175 +230,9 @@ button:hover {
 }  
 
 
+
 /* ............TWO............. */
 
-.price{
-  color: #fff !important;
-}
-
-.total{
-  color: #fff !important;
-  margin-top: 4px;
-}
-.plan-header{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.plan-features {  
-  list-style: none;  
-  padding: 0;  
-}  
-
-.plan-features li {  
-  margin: 5px 0;  
-  position: relative;  
-  padding-left: 30px; /* To create space for the icon */  
-  color: #fff; /* Ensuring the text remains white */  
-}  
-
-.plan-features li::before {  
-  content: "\2713"; /* Unicode for the checkmark */  
-  position: absolute;  
-  left: 0;  
-  color: red; /* Explicitly set to red */  
-}  
-
-.subscription-plan{
-  background: #000;
-    color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px  solid #333;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.change-plan-btn{
-  width: 45%;
-}
-
-@media (max-width: 768px) {  
 
 
 
-}
-
-
-/* .......THREE......... */
- .payment-details{
-  background: #1C1C1C;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-} 
-
-.submit-cancel-buttons{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.bt1{
-  padding: 20px !important;
-  width: 40%;
-  margin-top: 20px;
-} 
-
-.bt2{
-  background-color: #d4d3d3;
-  color: #333;
-}
-
-.bt2:hover{
-  background-color: red;
-  color: #fff;
-}
-
-.container-last {  
-  display: flex;  
-  flex-direction: column;  
-  max-width: 1200px; /* Maximum width for larger screens */  
-  width: 100%;  
-}  
-
-.form-containerr {  
-  flex: 1; /* Flex-grow to fill available space */  
-  padding: 20px;  
-}  
-
-
-
-.payment-details {  
-  margin-top: 30px;  
-}  
-
-.payment-details h2 {  
-  margin-bottom: 20px;  
-  margin-left: 24%;
-  margin-top: 14px;
-}  
-
-
-.card-info {  
-  display: flex;  
-  justify-content: space-between;  
-}  
-
-.card-info input {  
-  flex: 1; /* Flex-grow for equal width */  
-  margin-right: 10px; /* Space between inputs */  
-}  
-
-.card-info input:last-child {  
-  margin-right: 0; /* Remove margin from the last input */  
-}  
-
-.submit-cancel-buttons {  
-  display: flex;  
-  justify-content: space-between; 
-  gap:10px; 
-}  
-
-.image-containerr {  
-  flex: 1;  
-  display: flex;  
-  justify-content: space-between; /* Center image */  
-  align-items: center;  
-  padding: 20px;  
-}  
-
-.image-containerr img {  
-  max-width: 100%; /* Responsive image */  
-  height: auto;  
-}  
-
-#page-3{
-  margin-top: 50px;
-
-}
-
-
-#full-name{
-  margin-bottom: 10px;
-}
-#card-details{
-  margin-top: 12px;
-}
-/* Media Query for Smaller Screens */  
-@media (max-width: 768px) {  
-  .image-containerr {  
-      display: none; /* Hide image container on smaller screens */  
-  }  
-  
-  .container-last {  
-      flex-direction: column; /* Stack items vertically */  
-  }  
-  
-  .form-containerr {  
-      width: 100%; /* Ensure full width on smaller screens */  
-  }  
-}  
