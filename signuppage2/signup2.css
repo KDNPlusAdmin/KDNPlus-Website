@@ -1,162 +1,258 @@
-   /* Global Styles */  
-   body {  
-    font-family: 'Arial', sans-serif;  
-    background-color: #000;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    min-height: 100vh;  
-    margin: 0;  
-  }  
+/* Global Styles */  
+body {  
+  font-family: 'Arial', sans-serif;  
+  background-color: #000;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  min-height: 100vh;  
+  margin: 0;  
+}  
 
-  .logo img {
-    max-height: 35px; 
-    margin-bottom: 12px;
-    margin-left: 65px;
-  }
+.logo img {
+  max-height: 35px; 
+  margin-bottom: 12px;
+  margin-left: 65px;
+}
+
+.change{
+  margin-left: 28%;
+  color: #fff;
+}
   
+.change h1{
+  margin-right: 30px;
+  color: #fff;
+}
 
-  .change{
-    margin-left: 28%;
-    color: #fff;
+.change p{
+  margin-right: 30px;
+  color: #696666;
+}
+
+.flex-container {  
+  display: flex;  
+  align-items: stretch;  
+  justify-content: space-between;  
+  width: 90%;  
+  max-width: 1200px;  
+}  
+
+.pricing-container {  
+  flex: 2;  
+  padding: 20px;  
+}  
+
+.image-container img {  
+  width: 100%;  
+  height: 95vh;  
+  object-fit: cover;  
+  border-radius: 15px;
+}  
+
+img {  
+  max-width: 100%;  
+  height: auto;  
+}  
+
+.toggle-buttons {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;
+  margin-bottom: 20px;  
+  margin-left: 150px;
+  max-width: 440px;
+  border: 1px solid #333;
+  background-color: #000;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}  
+
+.toggle-btn {  
+  background-color: #000;
+  color: #fff;  
+  border: 1px solid #000;  
+  padding: 10px 30px;  
+  margin: 0 5px;  
+  cursor: pointer;  
+  font-size: 16px;  
+  border-radius: 25px;  
+}  
+
+.toggle-btn.active {  
+  background-color: #E50914;  
+  color: #fff;  
+}  
+
+/* Plan Card Styles */  
+.pricing-plans {  
+  display: flex;  
+  justify-content: center;  
+}  
+
+.plan-card {  
+  background-color: #333;  
+  color: white;  
+  margin: 10px;  
+  padding: 20px;  
+  border-radius: 15px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  text-align: left;  
+  flex: 1;  
+  min-width: 200px;  
+  height: 18.5rem;
+}  
+
+.plan-card .s1 {
+  margin-top: 50px;
+}
+
+.plan-header {  
+  font-size: 20px;  
+  font-weight: bold;  
+  padding: 5px 10px;  
+  text-transform: uppercase;  
+}  
+
+.plan-header.basic, .plan-header.standard, .plan-header.premium {  
+  background-color: #E50914;  
+  color: white;  
+}  
+
+.plan-price {  
+  font-size: 24px;  
+  margin: 15px 0;  
+}  
+
+.plan-details {  
+  list-style: none;  
+  padding: 0;  
+}  
+
+.plan-details li {  
+  margin-bottom: 10px;  
+}  
+
+.choose-plan-btn {  
+  background-color: black;  
+  color: white;  
+  padding: 10px;  
+  border: none;  
+  cursor: pointer;  
+  width: 80%;  
+  border-radius: 5px;  
+  margin-left: 20px; 
+}  
+
+.choose-plan-btn:hover {  
+  background-color: #E50914;  
+  color: #fff;
+}  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
   }
-  
-  .change h1{
-    margin-right: 30px;
-    color: #fff;
+
+  .pricing-container {
+    margin-bottom: 10px;
+    width: 100%; /* Make pricing section full width */
   }
 
-  .change p{
-    margin-right: 30px;
-    color: #696666;
+  .toggle-buttons {
+    justify-content: center;
+    margin-left: 0; /* Center the toggle buttons */
   }
 
+  .pricing-plans {
+    flex-direction: column; /* Stack plan cards vertically */
+  }
 
-  .flex-container {  
-    display: flex;  
-    align-items: stretch;  
-    justify-content: space-between;  
-    width: 90%; /* Use a percentage for responsiveness */  
-    max-width: 1200px; /* Limit maximum width */  
-  }  
+  .plan-card {
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 300px; /* Further reduce max width */
+    height: 16rem; /* Reduce card height */
+    padding: 15px; /* Reduce padding */
+  }
 
-  .pricing-container {  
-    flex: 2; /* Allocate more space to the left side */  
-    padding: 20px; /* Padding for spacing */  
-  }  
+  .plan-header {
+    font-size: 18px; /* Reduce font size for headers */
+  }
 
-  .image-container img {  
-    width: 100%;  
-    height: 95vh; /* Full height of the viewport */  
-    object-fit: cover; /* Cover the area without distortion */  
-    border-radius: 15px;
-    }  
+  .plan-price {
+    font-size: 20px; /* Reduce price font size */
+  }
 
-  img {  
-    max-width: 100%; /* Make image responsive */  
-    height: auto; /* Maintain aspect ratio */  
-  }  
+  .plan-details li {
+    margin-bottom: 8px; /* Adjust spacing between details */
+    font-size: 14px; /* Reduce font size for plan details */
+  }
 
-  .toggle-buttons {  
-    display: flex;  
-    justify-content: space-between;  
-    align-items: center;
-    margin-bottom: 20px;  
-    margin-left: 150px;
-    max-width: 440px;
-    border: 1px solid #333;
-    background-color: #000; /* Thick black background */
-    border-radius: 50px; /* Pill-shaped container */
-    /* Padding inside container */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-  }  
+  .choose-plan-btn {
+    padding: 8px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size for button */
+  }
 
-  .toggle-btn {  
-    background-color: #000;
-    color: #fff;  
-    border: 1px solid #000;  
-    padding: 10px 30px;  
-    margin: 0 5px;  
-    cursor: pointer;  
-    font-size: 16px;  
-    border-radius: 25px;  
-  }  
+  .image-container {
+    display: none; /* Hide image on small screens */
+  }
 
-  .toggle-btn.active {  
-    background-color: #E50914;  
-    color: #fff;  
-  }  
+  /* Update for .change class */
+  .change {
+    margin-left: -10px; /* Center the content */
+    text-align: center;
+    padding: 0 20px; /* Add padding for better spacing */
+  }
 
-  /* Plan Card Styles */  
-  .pricing-plans {  
-    display: flex; /* Stack plans horizontally */  
-    justify-content: center;  
-  }  
+  .change h1 {
+    font-size: 22px; /* Reduce font size for header */
+    margin-left: -18px;
+  }
 
-  .plan-card {  
-    background-color: #333;  
-    color: white;  
-    margin: 10px; /* Adjust spacing between cards */  
-    padding: 20px;  
-    border-radius: 15px;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-    text-align: left;  
-    flex: 1; /* Allow cards to grow evenly */  
-    min-width: 200px; /* Minimum width for plan cards */  
-    height: 18.5rem;
-    
-  }  
+  .change p {
+    font-size: 16px; /* Reduce font size for description */
+    margin: 0 auto; /* Center align the text */
+  }
 
-  .plan-header {  
-    font-size: 20px;  
-    font-weight: bold;  
-    padding: 5px 10px;  
-    text-transform: uppercase;  
-  }  
+  .logo img{
+    margin-left: -12px;
+  }
+}
 
-  .plan-header.basic {  
-    background-color: #E50914;  
-    color: white;  
-  }  
+@media (max-width: 480px) {
+  .change h1, .change p {
+    text-align: center; /* Center align the heading and text */
+    margin: 0; /* Remove margin */
+  }
 
-  .plan-header.standard {  
-    background-color: #E50914;  
-    color: white;  
-  }  
+  .toggle-btn {
+    padding: 8px 20px; /* Adjust padding for smaller buttons */
+    font-size: 14px; /* Adjust font size */
+  }
 
-  .plan-header.premium {  
-    background-color: #E50914;  
-    color: white;  
-  }  
+  .plan-card {
+    min-width: unset; /* Remove minimum width */
+    max-width: 250px; /* Reduce max width further */
+    padding: 10px; /* Reduce padding */
+    height: 14rem; /* Further reduce card height */
+  }
 
-  .plan-price {  
-    font-size: 24px;  
-    margin: 15px 0;  
-  }  
+  .plan-header {
+    font-size: 16px; /* Reduce font size further */
+  }
 
-  .plan-details {  
-    list-style: none;  
-    padding: 0;  
-  }  
+  .plan-price {
+    font-size: 18px; /* Adjust price font size */
+  }
 
-  .plan-details li {  
-    margin-bottom: 10px;  
-  }  
+  .plan-details li {
+    font-size: 12px; /* Further reduce font size for details */
+  }
 
-  .choose-plan-btn {  
-    background-color: black;  
-    color: white;  
-    padding: 10px;  
-    border: none;  
-    cursor: pointer;  
-    width: 80%;  
-    border-radius: 5px; 
-    margin-left: 20px; 
-   
-  }  
-
-  .choose-plan-btn:hover {  
-    background-color: #E50914;  
-    color: #fff;
-  }  
-  
+  .choose-plan-btn {
+    padding: 6px; /* Adjust button padding */
+    font-size: 12px; /* Further reduce font size */
+  }
+}

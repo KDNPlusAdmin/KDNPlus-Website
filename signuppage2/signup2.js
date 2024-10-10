@@ -37,19 +37,21 @@ document.addEventListener("DOMContentLoaded", function () {
         <li>480p streaming (SD quality)</li>  
         <li>Mobile-only access</li>  
         <li>Offline downloads not available</li>  
-        <li>Ad-supported</li>  
+        <li>Ad-supported</li>
+        
+
       `;  
 
       standardDetails.innerHTML = `  
        <li>
-                      <img src="mockup.png" alt="Subscription Image" style="max-height: 10rem; margin-left: 42px;">  
+                      <img src="mockup.png" alt="Subscription Image" style="max-height: 15rem; margin-left: 20px;">  
               
                                   </li>  
       `;  
 
       premiumDetails.innerHTML = `  
        <li>
-                      <img src="mockup.png" alt="Subscription Image" style="max-height: 10rem; margin-left: 42px;">  
+                      <img src="mockup.png" alt="Subscription Image" style="max-height: 15rem; margin-left: 20px;">  
               
                                   </li>
       `;  
@@ -71,42 +73,54 @@ document.addEventListener("DOMContentLoaded", function () {
       standardDetails.innerHTML = `  
         <li>720p streaming (HD quality)</li>  
         <li>1 screen</li>  
-        <li>Offline downloads available</li>  
-      `;  
+        <li>Offline downloads available</li>
+        
+        <button class="choose-plan-btn " onclick="choosePlan('Standard')" style="margin-top: 85px;">Choose Plan</button>    
 
-      premiumDetails.innerHTML = `  
+        `;  
+        
+        premiumDetails.innerHTML = `  
         <li>1080p/4K streaming (Ultra HD quality)</li>  
         <li>4 screens</li>  
         <li>Offline downloads available</li>  
-        <li>Early access to exclusive content</li>  
-      `;  
+        <li>Early access to exclusive content</li>
 
-    } else if (period === "yearly") {  
-      // Update Prices  
-      basicPrice.textContent = "₦25000/year";  
-      standardPrice.textContent = "₦60000/year";  
+        <button class="choose-plan-btn " onclick="choosePlan('Premium')" style="margin-top: 20px;">Choose Plan</button>  
+
+        
+        
+        `;  
+        
+      } else if (period === "yearly") {  
+        // Update Prices  
+        basicPrice.textContent = "₦25000/year";  
+        standardPrice.textContent = "₦60000/year";  
       premiumPrice.textContent = "₦90000/year";  
-
+      
       // Update Details for Yearly Plans  
       basicDetails.innerHTML = `  
-        <li>480p streaming (SD quality)</li>  
-        <li>Mobile-only access</li>  
-        <li>Unlimited offline downloads</li>  
-        <li>No ads</li>  
+      <li>480p streaming (SD quality)</li>  
+      <li>Mobile-only access</li>  
+      <li>Unlimited offline downloads</li>  
+      <li>No ads</li>  
       `;  
-
+      
       standardDetails.innerHTML = `  
-        <li>720p streaming (HD quality)</li>  
-        <li>2 screens</li>  
-        <li>Unlimited offline downloads</li>  
+      <li>720p streaming (HD quality)</li>  
+      <li>2 screens</li>  
+      <li>Unlimited offline downloads</li>  
+      
+      <button class="choose-plan-btn " onclick="choosePlan('Standard')" style="margin-top: 85px;">Choose Plan</button>
       `;  
-
+      
       premiumDetails.innerHTML = `  
-        <li>1080p/4K streaming (Ultra HD quality)</li>  
-        <li>4 screens</li>  
-        <li>Unlimited offline downloads</li>  
-        <li>Early access to exclusive content</li>  
-        <li>Priority customer support</li>  
+      <li>1080p/4K streaming (Ultra HD quality)</li>  
+      <li>4 screens</li>  
+      <li>Unlimited offline downloads</li>  
+      <li>Early access to exclusive content</li>  
+      <li>Priority customer support</li>  
+      
+      <button class="choose-plan-btn " onclick="choosePlan('Premium')"  style="margin-top: 0px;">Choose Plan</button>
       `;  
     }  
   }  

@@ -21,7 +21,7 @@
     />
   </head>
   <body>
-    <div class="hero1 ">
+    <div class="hero1">
       <header class="header">
         <div class="container">
           <div class="logo">
@@ -39,7 +39,7 @@
         </div>
       </header>
 
-      <section class="welcome ">
+      <section class="welcome">
         <div class="">
           <div class="welcome-content">
             <h1>Welcome</h1>
@@ -60,71 +60,71 @@
         <img src="../landingpage/images/offer.jpg" alt="ads" class="offer1" />
       </div>
     </section>
-      <!-- new start -->
-      <div class="flex-container" id="page-2">  
-        <div class="pricing-container">  
-            <div class="change">  
-               
-                <h1>Choose Your Right Plan</h1>  
-                <p>Select from the best plans, ensuring a perfect match</p>  
-            </div>  
-            <div class="toggle-buttons">  
-                <button id="weekly" class="toggle-btn active">Weekly</button>  
-                <button id="monthly" class="toggle-btn ">Monthly</button>  
-                <button id="yearly" class="toggle-btn">Yearly</button>  
-            </div>  
-    
-            <div class="pricing-plans">  
-                <!-- Basic Plan -->  
-                <div class="plan-card">  
-                    <div class="plan-header basic">Basic</div>  
-                    <div class="plan-price" id="basic-price">₦2500/month</div>  
-                    <ul class="plan-details">  
-                        <li>480p streaming (SD quality)</li>  
-                        <li>Mobile-only access</li>  
-                        <li>Limited offline downloads</li>  
-                        <li>Ad-supported</li>  
-                    </ul>  
-                    <button class="choose-plan-btn s1" onclick="choosePlan('Basic')">Choose Plan</button>    
-                </div>  
-    
-                <!-- Standard Plan -->  
-                <div class="plan-card">  
-                    <div class="plan-header standard">Standard</div>  
-                    <div class="plan-price" id="standard-price"><!--₦5500/month--></div>  
-                    <ul class="plan-details">  
-                       
-                        <li>
-            <img src="../signuppage2/mockup.png" alt="Subscription Image" style="max-height: 15rem;margin-left: 42px;">  
-    
-                        </li>
-                    </ul>  
-                    <!-- <button class="choose-plan-btn s2" onclick="choosePlan('Standard')">Choose Plan</button>     -->
-                </div>  
-    
-                <!-- Premium Plan -->  
-                <div class="plan-card">  
-                    <div class="plan-header premium">Premium</div>  
-                    <div class="plan-price" id="premium-price"><!--₦8500/month--></div>  
-                    <ul class="plan-details">  
-                        
-                        <li>
-                          <img src="../signuppage2/mockup.png" alt="Subscription Image" style="max-height: 15rem; margin-left: 42px;">  
-                  
-                                      </li>
-                    </ul>  
-                    <!-- <button class="choose-plan-btn s3" onclick="choosePlan('Premium')">Choose Plan</button>   -->
-                </div>  
-            </div>  
-        </div>  
-    
-       
-    </div>  
-    
-      
-      <!-- new end -->
+    <!-- new start -->
+    <div class="flex-container" id="page-2">
+      <div class="pricing-container">
+        <div class="change">
+          <h1>Choose Your Right Plan</h1>
+          <p>Select from the best plans, ensuring a perfect match</p>
+        </div>
+        <div class="toggle-buttons">
+          <button id="weekly" class="toggle-btn active">Weekly</button>
+          <button id="monthly" class="toggle-btn">Monthly</button>
+          <button id="yearly" class="toggle-btn">Yearly</button>
+        </div>
 
+        <div class="pricing-plans">
+          <!-- Basic Plan -->
+          <div class="plan-card">
+            <div class="plan-header basic">Basic</div>
+            <div class="plan-price" id="basic-price">₦2500/month</div>
+            <ul class="plan-details">
+              <li>480p streaming (SD quality)</li>
+              <li>Mobile-only access</li>
+              <li>Limited offline downloads</li>
+              <li>Ad-supported</li>
+            </ul>
+            <button class="choose-plan-btn s1" onclick="choosePlan('Basic')">
+              Choose Plan
+            </button>
+          </div>
 
+          <!-- Standard Plan -->
+          <div class="plan-card">
+            <div class="plan-header standard">Standard</div>
+            <div class="plan-price" id="standard-price"><!--₦5500/month--></div>
+            <ul class="plan-details">
+              <li>
+                <img
+                  src="../signuppage2/mockup.png"
+                  alt="Subscription Image"
+                  style="max-height: 15rem; margin-left: 42px"
+                />
+              </li>
+            </ul>
+            <!-- <button class="choose-plan-btn s2" onclick="choosePlan('Standard')">Choose Plan</button>     -->
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="plan-card">
+            <div class="plan-header premium">Premium</div>
+            <div class="plan-price" id="premium-price"><!--₦8500/month--></div>
+            <ul class="plan-details">
+              <li>
+                <img
+                  src="../signuppage2/mockup.png"
+                  alt="Subscription Image"
+                  style="max-height: 15rem; margin-left: 42px"
+                />
+              </li>
+            </ul>
+            <!-- <button class="choose-plan-btn s3" onclick="choosePlan('Premium')">Choose Plan</button>   -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- new end -->
 
     <section class="flow-section">
       <div class="content-wrapper">
@@ -579,7 +579,7 @@
               <span class="accordion-icon">+</span>
             </div>
             <div class="accordion-content">
-              <p>Enjoy our collection of  African cultural movies.</p>
+              <p>Enjoy our collection of African cultural movies.</p>
             </div>
           </div>
           <div class="accordion-item">
@@ -654,29 +654,29 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <script>
-      // accordion script 
-      const accordionHeaders = document.querySelectorAll('.accordion-header');
+      // accordion script
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-accordionHeaders.forEach((header) => {
-  header.addEventListener('click', () => {
-    const content = header.nextElementSibling;
-    const icon = header.querySelector('.accordion-icon');
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector(".accordion-icon");
 
-    // Toggle active class for the accordion item
-    header.classList.toggle('active');
-    content.classList.toggle('active');
+          // Toggle active class for the accordion item
+          header.classList.toggle("active");
+          content.classList.toggle("active");
 
-    // Toggle between '+' and 'x'
-    if (content.classList.contains('active')) {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } else {
-      content.style.maxHeight = null;
-    }
+          // Toggle between '+' and 'x'
+          if (content.classList.contains("active")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = null;
+          }
 
-    // Rotate icon when active
-    icon.textContent = icon.textContent === '+' ? '×' : '+';
-  });
-});
+          // Rotate icon when active
+          icon.textContent = icon.textContent === "+" ? "×" : "+";
+        });
+      });
 
       document.addEventListener("DOMContentLoaded", function () {
         const getStartedButton = document.querySelector(".btn-primary"); // Get Started button
