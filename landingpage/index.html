@@ -655,30 +655,28 @@
     <script src="./script.js"></script>
     <script>
       // accordion script 
-      document.addEventListener("DOMContentLoaded", function () {
-        const accordionHeaders = document.querySelectorAll(".accordion-header");
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-        accordionHeaders.forEach((header) => {
-          header.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-              this.querySelector(".accordion-icon").textContent = "+";
-            } else {
-              document
-                .querySelectorAll(".accordion-content")
-                .forEach((item) => {
-                  item.style.display = "none";
-                  item.previousElementSibling.querySelector(
-                    ".accordion-icon"
-                  ).textContent = "+";
-                });
-              content.style.display = "block";
-              this.querySelector(".accordion-icon").textContent = "-";
-            }
-          });
-        });
-      });
+accordionHeaders.forEach((header) => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('.accordion-icon');
+
+    // Toggle active class for the accordion item
+    header.classList.toggle('active');
+    content.classList.toggle('active');
+
+    // Toggle between '+' and 'x'
+    if (content.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+
+    // Rotate icon when active
+    icon.textContent = icon.textContent === '+' ? '×' : '+';
+  });
+});
 
       document.addEventListener("DOMContentLoaded", function () {
         const getStartedButton = document.querySelector(".btn-primary"); // Get Started button
