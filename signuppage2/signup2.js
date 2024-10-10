@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const token = getCookie("token");
 
   if (!token) {
-    window.location.href = "../loginpage/login.html";
+    window.location.href = "../login/login.html";
   }
 
   // check if user already has active plan
