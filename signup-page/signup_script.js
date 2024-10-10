@@ -1,5 +1,6 @@
 import { BASEURL } from "../constants/baseURL.js";
 
+// TODO: Display server error messages
 // Make sure the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Base URL: ", BASEURL);
@@ -88,7 +89,7 @@ async function saveUserInfo(event) {
       // Set token in Cookie with security attributes
       const token = data.token;
       const maxAge = 60 * 60 * 24; // 1 day in seconds
-      document.cookie = `token=${token}; path=/; Max-Age=${maxAge}; Secure; HttpOnly; SameSite=Strict`;
+      document.cookie = `token=${token}; path=/`;
 
       // navigate to the plans page
       location.href = "../signuppage2/signup2.html";
