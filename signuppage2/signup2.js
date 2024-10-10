@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (period === "weekly") {  
       // Update Prices  
       basicPrice.textContent = "₦1200/week";  
-      standardPrice.textContent = "₦2800/week";  
-      premiumPrice.textContent = "₦4200/week";  
+      standardPrice.textContent = "";  
+      premiumPrice.textContent = "";  
 
       // Update Details for Weekly Plans  
       basicDetails.innerHTML = `  
@@ -41,15 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
       `;  
 
       standardDetails.innerHTML = `  
-        <li>720p streaming (HD quality)</li>  
-        <li>1 screen</li>  
-        <li>Limited offline downloads</li>  
+       <li>
+                      <img src="mockup.png" alt="Subscription Image" style="max-height: 10rem; margin-left: 42px;">  
+              
+                                  </li>  
       `;  
 
       premiumDetails.innerHTML = `  
-        <li>1080p streaming (HD quality)</li>  
-        <li>2 screens</li>  
-        <li>Offline downloads available</li>  
+       <li>
+                      <img src="mockup.png" alt="Subscription Image" style="max-height: 10rem; margin-left: 42px;">  
+              
+                                  </li>
       `;  
 
     } else if (period === "monthly") {  

@@ -1,68 +1,69 @@
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #000; /* Darker black background */
-  margin: 0;
-  
-  margin-bottom: 10px;
+body {  
+  font-family: "Arial", sans-serif;  
+  background-color: #000; /* Darker black background */  
+  margin: 0;  
   display: flex;  
-    justify-content: center;  
-    align-items: center;  
-  height: 80vh;
-  overflow: hidden;
-  padding: 10px; /* Add some padding for smaller screens */
-}
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh; /* Full viewport height */  
+  overflow: hidden; /* Prevent scrolling */  
+}  
 
-.fb2{
-  background-color: #fff;
-  color: red;
-}
+.fb2 {  
+  background-color: #fff;  
+  color: red;  
+}  
 
-.fb2:hover{
-  background-color: red;
-  color: #fff;
-}
+.fb2:hover {  
+  background-color: red;  
+  color: #fff;  
+}  
 
-.logo img {
-  max-height: 35px; 
-  margin-bottom: 12px;
-}
+.logo img {  
+  max-height: 35px;  
+  margin-bottom: 12px;  
+}  
 
-.multi-page-container {
-  max-width: 600px;
-  margin: 20px auto;
-  position: relative;
-}
+.multi-page-container {  
+  max-width: 1200px; /* Limit container width for wider screens */  
+  width: 90%; /* Make container responsive */  
+  padding: 20px; /* Proper padding for smaller screens */  
+  box-sizing: border-box; /* Include padding in the width */  
+}  
 
+.page {  
+  display: flex;  
+  width: 100%;  
+}  
 
-.page.active {
-  display: block;
-  transform: translateX(0);
-  opacity: 1;
-}
+.page.active {  
+  display: block;  
+  transform: translateX(0);  
+  opacity: 1;  
+}  
 
-.page.slide-in {
-  transform: translateX(100%);
-  opacity: 0;
-}
+.page.slide-in {  
+  transform: translateX(100%);  
+  opacity: 0;  
+}  
 
-.page.slide-out {
-  transform: translateX(-100%);
-  opacity: 0;
-}
+.page.slide-out {  
+  transform: translateX(-100%);  
+  opacity: 0;  
+}  
 
-.user-info-container {
- 
-  border-radius: 8px;
-  margin-top: 20px;
-}
- 
-.form-container p{
-  color: #838181;
-}
+.user-info-container {  
+  border-radius: 8px;  
+  margin-top: 20px;  
+  width: 100%; /* Full width */  
+}  
 
+.form-container p {  
+  color: #838181;  
+  margin-left: 12px; 
+}  
 
-
-/* one session  */
+/* One session */  
 * {  
   box-sizing: border-box;  
   margin: 0;  
@@ -92,57 +93,66 @@ button {
 
 section {  
   font-family: Arial, sans-serif;  
-  display: flex;  
+  display: flex; /* Flex display to allow side by side */  
   height: 100vh;  
 }  
 
 .container {  
-  display: flex;  
-  justify-content: space-between;
-  justify-content: center;
+  display: flex; /* Flexbox for equal width containers */  
+  justify-content: center; /* Center the items */  
+  align-items: center; /* Align items vertically */  
   width: 100%;  
-  margin-top: 50px ;
-  
-
+  max-width: 1200px; /* Max width for tight design */  
+  margin-top: 50px;   
 }  
 
 .form-container {  
-  background-color: #000;  
-  color: #fff;  
-  padding: 20px;  
-  flex: 0 0 500px; /*Fixed width for the form   */
-  display: flex;  
-  flex-direction: column;  
-  justify-content: center;  
-  align-items: center;  
-  margin: 50px ;
-
+  background-color: #000;   
+  color: #fff;   
+  padding: 20px;   
+  flex: 1; /* Allow form to take equal width */  
+  display: flex;   
+  flex-direction: column;   
+  justify-content: center;   
+  align-items: center;   
+  border-radius: 8px; /* Rounded corners */   
+  margin-right: 10px; /* Slight gap between containers */  
 }  
 
+.image-container {  
+  flex: 1; /* Allow image to take equal width */  
+  margin-left: 10px; /* Slight gap between containers */  
+  height: 80vh; /* Set the height to 80% of the viewport height */  
+  overflow: hidden; /* Hide overflow if necessary */  
+}  
 
+.image-container img {  
+  width: 100%;   
+  height: auto; /* Keep aspect ratio */  
+  min-height: 100%; /* Ensure the image occupies the full height if needed */  
+  object-fit: cover; /* Ensure the image covers the container */  
+  border-radius: 15px;  
+}
 h1 {  
   margin: 20px 0;  
-}  
-
-.user-info-container {  
-  width: 100%;  
 }  
 
 .input-group {  
   display: flex;  
   justify-content: space-between;  
-  margin-bottom: 15px;  
+  margin-bottom: 15px;   
 }  
 
-a{
-  text-decoration: none;
-  color: #f40612;
-  font-weight: 600;
-}
+a {  
+  text-decoration: none;  
+  color: #f40612;  
+  font-weight: 600;  
+}  
 
-input{
-  background-color: #333;
-}
+input {  
+  background-color: #333;  
+}  
+
 .name-field {  
   flex: 1;  
   margin-right: 10px;  
@@ -160,17 +170,14 @@ input {
   border-radius: 5px;  
 }  
 
-
 .social-signup {  
   margin: 20px 0;  
 }  
-
 
 .divider-container {  
   display: flex;  
   align-items: center;  
 }  
-
 
 button:hover {  
   background-color: #f40612;  
@@ -181,27 +188,12 @@ button:hover {
   margin-top: 10px;  
 }  
 
-.image-container {  
-  flex: 0 0 500px;
-  margin: 50px auto;
-  
-}  
-
 .image-container img {  
   width: 100%;  
-  height: 95vh; /* Full height of the viewport */  
+  height: auto; /* Auto to maintain aspect ratio */  
   object-fit: cover; /* Cover the area without distortion */  
-  border-radius: 15px;
+  border-radius: 15px;  
 }  
-
-.plann-two{
-  margin-top: 14px;
-}
-
-
-.flex-containerr{
-  display: flex;
-}
 
 @media (max-width: 768px) {  
   .input-group {  
@@ -214,25 +206,15 @@ button:hover {
   }  
 
   .form-container {  
-    margin-top: 20px;
+    margin-top: 20px;  
     flex: 1; /* Allow form to take full width on smaller screens */  
   }  
 
-  .container{
-    flex-direction: column;
-  
+  .container {  
+    flex-direction: column; /* Stack containers vertically */  
+  }  
 
-  }
-
-  .image-container img{
-    display: none;
-  }
-}  
-
-
-
-/* ............TWO............. */
-
-
-
-
+  .image-container img {  
+    display: none; /* Hide image on smaller devices if desired */  
+  }  
+}

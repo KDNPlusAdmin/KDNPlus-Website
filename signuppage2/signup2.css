@@ -5,7 +5,7 @@
     display: flex;  
     justify-content: center;  
     align-items: center;  
-    height: 100vh;  
+    min-height: 100vh;  
     margin: 0;  
   }  
 
@@ -59,14 +59,23 @@
 
   .toggle-buttons {  
     display: flex;  
-    justify-content: center;  
+    justify-content: space-between;  
+    align-items: center;
     margin-bottom: 20px;  
+    margin-left: 150px;
+    max-width: 440px;
+    border: 1px solid #333;
+    background-color: #000; /* Thick black background */
+    border-radius: 50px; /* Pill-shaped container */
+    /* Padding inside container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
   }  
 
   .toggle-btn {  
-    background-color: #ccc;  
-    border: none;  
-    padding: 10px 20px;  
+    background-color: #000;
+    color: #fff;  
+    border: 1px solid #000;  
+    padding: 10px 30px;  
     margin: 0 5px;  
     cursor: pointer;  
     font-size: 16px;  
@@ -74,7 +83,7 @@
   }  
 
   .toggle-btn.active {  
-    background-color: #333;  
+    background-color: #E50914;  
     color: #fff;  
   }  
 
@@ -94,6 +103,8 @@
     text-align: left;  
     flex: 1; /* Allow cards to grow evenly */  
     min-width: 200px; /* Minimum width for plan cards */  
+    height: 18.5rem;
+    
   }  
 
   .plan-header {  
@@ -104,17 +115,17 @@
   }  
 
   .plan-header.basic {  
-    background-color: #ff5050;  
+    background-color: #E50914;  
     color: white;  
   }  
 
   .plan-header.standard {  
-    background-color: #ff3333;  
+    background-color: #E50914;  
     color: white;  
   }  
 
   .plan-header.premium {  
-    background-color: #e60000;  
+    background-color: #E50914;  
     color: white;  
   }  
 
@@ -138,10 +149,14 @@
     padding: 10px;  
     border: none;  
     cursor: pointer;  
-    width: 100%;  
-    border-radius: 5px;  
+    width: 80%;  
+    border-radius: 5px; 
+    margin-left: 20px; 
+   
   }  
 
   .choose-plan-btn:hover {  
-    background-color: #333;  
+    background-color: #E50914;  
+    color: #fff;
   }  
+  
