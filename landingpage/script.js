@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('chosenPlan', planName);  
     localStorage.setItem('chosenPlanPrice', price);  
     // Navigate to the next page (Final Step)  
-    window.location.href = '../signup3/signup3.html';   
+    window.location.href = '../signup-page/signup_page.html';   
   }
 
 
