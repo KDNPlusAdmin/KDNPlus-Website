@@ -74,6 +74,30 @@
           console.log("email: ", data.email);
 
           localStorage.setItem("email", data.email);
+
+          // check for if user has active plan, if they do navigate to the profile page
+          const url1 = `${BASEURL}/plans/has-active-plan`;
+          async function doesUserHaveActivePlan() {
+            const res1 = await fetch(url1, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+            });
+
+            if (!res1.ok) {
+              const error = await res1.json();
+              throw new Error(error.message);
+            }
+
+            const data1 = await res1.json();
+            if (data1 && data1.status === "success") {
+              window.location.href = "../profile/profile.html";
+            }
+          }
+
+          doesUserHaveActivePlan();
         }
       });
 
@@ -146,12 +170,15 @@
                   confirmError.message;
               } else {
                 alert("Subscription successful!");
+                // navigate to accounts page
+                window.location.href = "../profile/profile.html";
               }
             } else if (paymentIntentStatus === "succeeded") {
               // Payment has already succeeded
               alert("Subscription successful!");
 
               // navigate to accounts page
+              window.location.href = "../profile/profile.html";
             } else {
               document.getElementById("error-message").textContent =
                 "Unexpected payment status: " + paymentIntentStatus;
