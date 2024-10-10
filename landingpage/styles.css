@@ -432,310 +432,199 @@ html {
   z-index: -1; /* Ensure the background is behind the text */
 }
 
-/* Plan Container */
-.plan-container {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  /* gap: 30px; */
-  margin: 20px 0;
+
+
+
+/* styling for plan selection start............... */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Plan Heading */
-.plan-container h2 {
-  color: white;
-  font-size: 2.7rem;
-  font-weight: bold; /* Bold heading */
-  text-align: center; /* Centered heading */
-  margin-bottom: 20px;
+/* For the overall page container */
+#page-2 {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 100vh; /* Make sure the content takes full height */
+  padding: 20px;
 }
 
-/* Plan Selection Container */
-.plan-selection-container {
-  display: flex;
-  justify-content: center;
+/* General container for pricing section */
+.pricing-container {
+  max-width: 1200px;
   width: 100%;
-  max-width: 600px;
-  background-color: #333; /* Thick black background */
-  border-radius: 50px; /* Pill-shaped container */
-  /* Padding inside container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  padding: 20px;
 }
 
-/* Plan Options */
-.plan-option {
-  flex: 1;
+/* Heading and text styling */
+.change {
   text-align: center;
-  padding: 15px 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  background-color: #333; /* Default inactive state */
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-  border: none; /* No border */
+  margin-bottom: 30px;
 }
 
-/* Active Option (Light Red) */
-.plan-option.active {
-  background-color: #e50914; /* Light red for active option */
-  color: white;
-  box-shadow: 0 0 15px rgba(255, 77, 77, 0.5); /* Glow effect when active */
-  border-radius: 50px; /* Pill-shaped container */
+.change h1 {
+  color: #fff;
 }
 
-/* Special rounded edges for the entire container */
-.plan-option:first-child {
-  border-radius: 50px 0 0 50px; /* Round left side of the first option */
+.change p {
+  color: #696666;
 }
 
-.plan-option:last-child {
-  border-radius: 0 50px 50px 0; /* Round right side of the last option */
-}
-
-body {
-  background-color: #000;
-  font-family: Arial, sans-serif;
-  color: white;
-}
-
-.plan-details {
+/* Toggle buttons container */
+.toggle-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  /* flex-wrap: wrap; */
-}
-
-.plan-details-box {
-  background-color: white;
-  border: 2px solid #e50914;
-  padding: 30px 30px;
-  border-radius: 10px;
-  width: 350px;
-  color: black;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  height: 37.5rem;
-  box-sizing: border-box !important;
-}
-
-.plan-details-box.annual-plan {
-  width: 350px;
-}
-
-.price-container {
-  background-color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-radius: 10px 10px 0 0;
-  width: 100%;
+  margin-bottom: 20px;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border: 1px solid #333;
+  background-color: #000;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Individual toggle button styling */
+.toggle-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+.toggle-btn.active {
+  background-color: #E50914;
+  color: #fff;
+}
+
+/* Pricing plans container */
+.pricing-plans {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+}
+
+/* Plan card styling */
+.plan-card {
+  background-color: #333;
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1;
+  max-width: 320px; /* Ensures the card doesn't get too wide */
+  min-width: 250px; /* Ensures the card doesn't get too small */
+  /* height: auto; */
+  height: 22rem;
+}
+
+.plan-card .s1 {
+  margin-top: 60px;
+}
+
+
+
+.plan-header {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.plan-header.basic {
+  background-color: #E50914;
+}
+
+.plan-header.standard {
+  background-color: #E50914;
+}
+
+.plan-header.premium {
+  background-color: #E50914;
 }
 
 .plan-price {
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding-left: 3.125rem;
+  font-size: 24px;
+  margin: 15px 0;
 }
 
-.discount {
-  background-color: #e50914;
+.plan-details {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-details li {
+  margin-bottom: 10px;
+}
+
+.choose-plan-btn {
+  background-color: black;
   color: white;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  border-radius: 15px;
-  bottom: 10px;
-  right: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Full width of the plan card */
+  border-radius: 5px;
 }
 
-/* Red underline separator added for both top and bottom sections */
-.plan-header-line {
-  width: 100%;
-  height: 2px;
-  background-color: #e50914;
-  margin: 20px 0;
+.choose-plan-btn:hover {
+  background-color: #E50914;
+  color: #fff;
 }
 
-.plan-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.plan-details-box ul {
+.plan-card ul {
   list-style-type: none;
   padding: 0;
 }
 
-.plan-details-box ul li {
+.plan-card ul li {
   margin-bottom: 10px;
-  color: black;
+  color: #fff;
   position: relative;
   padding-left: 20px;
 }
 
-.plan-details-box ul li::before {
+.plan-card ul li::before {
   content: "✔";
   color: #e50914;
   position: absolute;
   left: 0;
 }
 
-.select-plan {
-  background-color: #e50914;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
-  position: relative;
-}
 
-.select-plan:hover {
-  background-color: #d40813;
-}
-
-/* Spacer to separate the top and bottom sections */
-.spacer {
-  height: 50px; /* Adjust the space between the two sections */
-}
-
-/* ..................................................... */
-
-/* Active section that is visible */
-/* Default styles for larger screens */
-.plan-section.active {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row; /* Default row layout for larger screens */
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-  gap: 20px; /* Space between items */
-  padding: 20px;
-}
-
-.plan-details {
-  padding: 0px;
-  flex: 1;
-  max-width: 300px; /* Optional: limit the maximum width */
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* border: 1px solid #ddd; */
-  border-radius: 8px;
-  /* background-color: #fff; */
-}
-
-/* Responsive design for medium screens */
-@media (max-width: 1024px) {
-  .plan-section.active {
-    justify-content: center; /* Center items on medium screens */
-  }
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .plan-section.active {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-
-  .plan-details {
-    width: 100%; /* Full width for each item */
-    max-width: 90%; /* Optional: limit the width to 90% */
-    padding: 0px;
-  }
-}
-
-/* Additional responsive design for extra small screens */
-@media (max-width: 480px) {
-  .plan-details {
-    padding: 0px; /* Reduce padding on smaller screens */
-  }
-}
-
-.hidden {
-  display: none;
-}
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .plan-details-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .plan-details-box {
-    background-color: white;
-    border: 2px solid #e50914;
-    padding: 20px 20px;
-    border-radius: 10px;
-    width: 250px;
-    color: black;
-    text-align: left;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-@media (max-width: 1000px) {
-  .plan-details {
-    /* flex-direction: column;
-    align-items: center; */
-    font-size: 0.7rem;
-    padding: 0px;
-  }
-
-  .plan-details-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .plan-price {
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    padding-left: 3.125rem;
-  }
-  .plan-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-}
 @media (max-width: 768px) {
-  .plan-details {
+  .pricing-plans {
     flex-direction: column;
     align-items: center;
-    font-size: 1rem;
-    padding: 0px;
+  }
+  
+  .plan-card {
+    max-width: 100%; /* Take full width on smaller screens */
   }
 
-  .plan-details-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .plan-price {
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding-left: 3.125rem;
-  }
-  .plan-title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
+  .toggle-buttons {
+    flex-direction: column;
   }
 }
+
+/* styling for plan selection end............... */
+
+
+
+
 
 .flow-section {
   display: flex;
@@ -1205,3 +1094,5 @@ h2 {
   background-color: #2a2a2a;
   border-top: 1px solid #333;
 }
+
+
