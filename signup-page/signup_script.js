@@ -4,6 +4,21 @@ import { BASEURL } from "../constants/baseURL.js";
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Base URL: ", BASEURL);
 
+  // Function to get a specific cookie by name
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+    return null;
+  }
+
+  // navigate to the next page if the token Cookie is already set.
+  // User is already logged in
+  const token = getCookie("token");
+  if (token) {
+    window.location.href = "../signuppage2/signup2.html";
+  }
+
   const form = document.getElementById("signup-form");
   form.addEventListener("submit", saveUserInfo);
 });
@@ -45,8 +60,8 @@ async function saveUserInfo(event) {
   };
 
   try {
-    // send email & password to the db call
-    const url = `${BASEURL}/users/create-otp`;
+    // Make the POST request to pre-launch endpoint to insert the user into the Users table
+    const url = `${BASEURL}/prelaunch/register`;
 
     const res = await fetch(url, {
       method: "POST",
@@ -68,7 +83,15 @@ async function saveUserInfo(event) {
 
     // Navigate based on result
     if (data.status === "success") {
-      window.location.href = "../otp/otp.html";
+      console.log(data.token);
+
+      // Set token in Cookie with security attributes
+      const token = data.token;
+      const maxAge = 60 * 60 * 24; // 1 day in seconds
+      document.cookie = `token=${token}; path=/; Max-Age=${maxAge}; Secure; HttpOnly; SameSite=Strict`;
+
+      // navigate to the plans page
+      location.href = "../signuppage2/signup2.html";
     } else {
       alert("Error: Unable to create OTP");
     }
