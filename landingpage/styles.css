@@ -83,7 +83,7 @@ html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
     position: relative;
     display: flex;
     justify-content: space-between; /* Align content to the left */
@@ -549,6 +549,7 @@ html {
   font-size: 20px;
   font-weight: bold;
   padding: 5px 10px;
+  border-radius: 8px;
   text-transform: uppercase;
 }
 
@@ -616,22 +617,90 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .pricing-plans {
-    flex-direction: column;
-    align-items: center;
-    
+  .flex-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
   }
-  
-  .plan-card {
-    max-width: 100%; /* Take full width on smaller screens */
-    margin-right: -14px;
+
+  .pricing-container {
+    margin-bottom: 10px;
+    width: 100%; /* Make pricing section full width */
   }
 
   .toggle-buttons {
-    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px auto; /* Center the toggle buttons */
+    max-width: 280px;
+    margin-top: 8px;
+  }
+
+  
+  .toggle-btn:first-child {
+    border-radius: 50px 0 0 50px; /* Round left side of the first option */
+      
+  }
+  
+  .toggle-btn:last-child {
+    border-radius: 0 50px 50px 0; /* Round right side of the last option */
+  }
+  
+  
+
+
+  .pricing-plans {
+    flex-direction: column; /* Stack plan cards vertically */
+  }
+
+  .plan-card {
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 300px; /* Further reduce max width */
+    height: 16rem; /* Reduce card height */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .plan-header {
+    font-size: 18px; /* Reduce font size for headers */
+  }
+
+  .plan-price {
+    font-size: 20px; /* Reduce price font size */
+  }
+
+  .plan-details li {
+    margin-bottom: 8px; /* Adjust spacing between details */
+    font-size: 14px; /* Reduce font size for plan details */
+  }
+
+  .choose-plan-btn {
+    padding: 8px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size for button */
+  }
+
+  .image-container {
+    display: none; /* Hide image on small screens */
+  }
+
+  /* Update for .change class */
+  .change {
+    margin-left: -10px; /* Center the content */
+    text-align: center;
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+
+  .change h1 {
+    font-size: 22px; /* Reduce font size for header */
+    margin-left: -18px;
+  }
+
+  .change p {
+    font-size: 16px; /* Reduce font size for description */
+    margin-right: 10px; /* Center align the text */
+  }
+
+  .logo img{
+    margin-left: 12px;
   }
 }
-
 /* styling for plan selection end............... */
 
 
@@ -1136,6 +1205,7 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   color: #cfcfcf;
+  padding-bottom: 10px;
 }
 
 .accordion-content.active {

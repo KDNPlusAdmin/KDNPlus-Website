@@ -116,13 +116,15 @@ img {
 }  
 
 .plan-card .s1 {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .plan-header {  
   font-size: 20px;  
   font-weight: bold;  
   padding: 5px 10px;  
+  border-radius: 6px;
+
   text-transform: uppercase;  
 }  
 
@@ -144,6 +146,28 @@ img {
 .plan-details li {  
   margin-bottom: 10px;  
 }  
+
+.plan-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.plan-card ul li {
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  padding-left: 20px;
+}
+
+.plan-card ul li::before {
+  content: "✔";
+  color: #e50914;
+  position: absolute;
+  left: 0;
+}
+
+
+
 
 .choose-plan-btn {  
   background-color: black;  
@@ -175,18 +199,35 @@ img {
 
   .toggle-buttons {
     justify-content: center;
-    margin-left: 0; /* Center the toggle buttons */
+    margin-left: 25px; /* Center the toggle buttons */
+    max-width: 280px;
+    margin-top: 8px;
   }
+
+
+  .toggle-btn:first-child {
+    border-radius: 50px 0 0 50px; /* Round left side of the first option */
+      
+  }
+  
+  .toggle-btn:last-child {
+    border-radius: 0 50px 50px 0; /* Round right side of the last option */
+  }
+  
+  
+
 
   .pricing-plans {
     flex-direction: column; /* Stack plan cards vertically */
+    
   }
-
+  
   .plan-card {
     width: 90%; /* Reduce width for smaller screens */
     max-width: 300px; /* Further reduce max width */
     height: 16rem; /* Reduce card height */
     padding: 15px; /* Reduce padding */
+    margin-left: 40px;
   }
 
   .plan-header {
@@ -225,7 +266,7 @@ img {
 
   .change p {
     font-size: 16px; /* Reduce font size for description */
-    margin: 0 auto; /* Center align the text */
+    margin-right: 10px; /* Center align the text */
   }
 
   .logo img{

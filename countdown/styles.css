@@ -10,7 +10,7 @@ body, html {
 .header-section {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background: url('images/countdownposter.jpg') no-repeat center center/cover;
+    background: url('../signup-page/New\ Project\ \(3\).png') no-repeat center center/cover;
     opacity: 0.8; /* Increased opacity for sharper background image */
 }
 

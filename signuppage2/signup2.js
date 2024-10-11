@@ -36,22 +36,24 @@ document.addEventListener("DOMContentLoaded", function () {
       basicDetails.innerHTML = `  
         <li>480p streaming (SD quality)</li>  
         <li>Mobile-only access</li>  
-        <li>Offline downloads not available</li>  
+        <li>limited Offline downloads </li>  
         <li>Ad-supported</li>
         
+             
+
 
       `;  
 
       standardDetails.innerHTML = `  
        <li>
-                      <img src="mockup.png" alt="Subscription Image" style="max-height: 15rem; margin-left: 20px;">  
+                      <img src="mockup.png" alt="Subscription Image" style="max-height: 14rem; margin-left: 20px;">  
               
                                   </li>  
       `;  
 
       premiumDetails.innerHTML = `  
        <li>
-                      <img src="mockup.png" alt="Subscription Image" style="max-height: 15rem; margin-left: 20px;">  
+                      <img src="mockup.png" alt="Subscription Image" style="max-height: 14rem; margin-left: 20px;">  
               
                                   </li>
       `;  
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li>1 screen</li>  
         <li>Offline downloads available</li>
         
-        <button class="choose-plan-btn " onclick="choosePlan('Standard')" style="margin-top: 85px;">Choose Plan</button>    
+        <button class="choose-plan-btn " onclick="choosePlan('Standard')" style="margin-top: 62px;">Choose Plan</button>    
 
         `;  
         
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li>Offline downloads available</li>  
         <li>Early access to exclusive content</li>
 
-        <button class="choose-plan-btn " onclick="choosePlan('Premium')" style="margin-top: 20px;">Choose Plan</button>  
+        <button class="choose-plan-btn " onclick="choosePlan('Premium')" style="margin-top: 15px;">Choose Plan</button>  
 
         
         
@@ -102,7 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
       <li>480p streaming (SD quality)</li>  
       <li>Mobile-only access</li>  
       <li>Unlimited offline downloads</li>  
-      <li>No ads</li>  
+      <li>No ads</li>
+      
+      
+
       `;  
       
       standardDetails.innerHTML = `  
@@ -110,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <li>2 screens</li>  
       <li>Unlimited offline downloads</li>  
       
-      <button class="choose-plan-btn " onclick="choosePlan('Standard')" style="margin-top: 85px;">Choose Plan</button>
+      <button class="choose-plan-btn " onclick="choosePlan('Standard')" style="margin-top: 62px;">Choose Plan</button>
       `;  
       
       premiumDetails.innerHTML = `  
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <li>Early access to exclusive content</li>  
       <li>Priority customer support</li>  
       
-      <button class="choose-plan-btn " onclick="choosePlan('Premium')"  style="margin-top: 0px;">Choose Plan</button>
+      <button class="choose-plan-btn " onclick="choosePlan('Premium')"  style="margin-top: -10px;">Choose Plan</button>
       `;  
     }  
   }  
