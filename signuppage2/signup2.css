@@ -57,15 +57,16 @@ img {
 
 .toggle-buttons {  
   display: flex;  
-  justify-content: space-between;  
+  justify-content: center;  
   align-items: center;
   margin-bottom: 20px;  
   margin-left: 150px;
-  max-width: 440px;
-  border: 1px solid #333;
+  max-width: 355px;
+  border: 2px solid #333;
   background-color: #000;
   border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+
 }  
 
 .toggle-btn {  
@@ -78,6 +79,17 @@ img {
   font-size: 16px;  
   border-radius: 25px;  
 }  
+
+.toggle-btn:first-child {
+  border-radius: 50px 0 0 50px; /* Round left side of the first option */
+    
+}
+
+.toggle-btn:last-child {
+  border-radius: 0 50px 50px 0; /* Round right side of the last option */
+}
+
+
 
 .toggle-btn.active {  
   background-color: #E50914;  

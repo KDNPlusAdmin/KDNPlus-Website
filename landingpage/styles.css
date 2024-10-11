@@ -467,6 +467,7 @@ html {
 
 .change h1 {
   color: #fff;
+  margin-bottom: 5px;
 }
 
 .change p {
@@ -479,10 +480,10 @@ html {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  max-width: 440px;
+  max-width: 355px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px;
+  padding: 0px;
   border: 1px solid #333;
   background-color: #000;
   border-radius: 50px;
@@ -501,6 +502,15 @@ html {
   border-radius: 25px;
 }
 
+.toggle-btn:first-child {
+  border-radius: 50px 0 0 50px; /* Round left side of the first option */
+}
+
+.toggle-btn:last-child {
+  border-radius: 0 50px 50px 0; /* Round right side of the last option */
+}
+
+
 .toggle-btn.active {
   background-color: #E50914;
   color: #fff;
@@ -509,7 +519,7 @@ html {
 /* Pricing plans container */
 .pricing-plans {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
 }
 
