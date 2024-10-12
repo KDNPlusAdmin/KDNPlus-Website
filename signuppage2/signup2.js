@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       basicDetails.innerHTML = `  
       <li>480p streaming (SD quality)</li>  
       <li>Mobile-only access</li>  
-      <li>Unlimited offline downloads</li>  
+      <li>Infinite offline downloads</li>  
       <li>No ads</li>
       
       
