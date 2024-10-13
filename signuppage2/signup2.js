@@ -58,16 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("weekly").addEventListener("click", function () {
     updatePricingAndDetails("weekly");
     setActiveButton(this);
+    localStorage.setItem("planDuration", "weekly");
   });
 
   document.getElementById("monthly").addEventListener("click", function () {
     updatePricingAndDetails("monthly");
     setActiveButton(this);
+    localStorage.setItem("planDuration", "monthly");
   });
 
   document.getElementById("yearly").addEventListener("click", function () {
     updatePricingAndDetails("yearly");
     setActiveButton(this);
+    localStorage.setItem("planDuration", "yearly");
   });
 
   // Function to update both the pricing and the card details
@@ -164,6 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ..............................PAYMENT PLAN..................
 window.choosePlan = function (planName) {
+  console.log("planName: ", planName);
+
   // Retrieve the price dynamically based on the current plan price displayed
   let price;
   if (planName === "Basic") {
@@ -174,9 +179,13 @@ window.choosePlan = function (planName) {
     price = document.getElementById("premium-price").textContent;
   }
 
-  // Store the chosen plan in localStorage
-  localStorage.setItem("chosenPlan", planName);
-  localStorage.setItem("chosenPlanPrice", price);
-  // Navigate to the next page (Final Step)
-  window.location.href = "../signup3/signup3.html";
+  // // Store the chosen plan in localStorage
+  const planDuration = localStorage.getItem("planDuration");
+  localStorage.setItem("chosenPlan", planName + "_" + planDuration);
+  const res = localStorage.getItem("chosenPlan");
+  console.log("chosen plan: ", res);
+  return;
+  // localStorage.setItem("chosenPlanPrice", price);
+  // // Navigate to the next page (Final Step)
+  // window.location.href = "../signup3/signup3.html";
 };
