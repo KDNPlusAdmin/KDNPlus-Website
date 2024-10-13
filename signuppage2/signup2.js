@@ -169,23 +169,40 @@ document.addEventListener("DOMContentLoaded", function () {
 window.choosePlan = function (planName) {
   console.log("planName: ", planName);
 
-  // Retrieve the price dynamically based on the current plan price displayed
-  let price;
-  if (planName === "Basic") {
-    price = document.getElementById("basic-price").textContent;
-  } else if (planName === "Standard") {
-    price = document.getElementById("standard-price").textContent;
-  } else if (planName === "Premium") {
-    price = document.getElementById("premium-price").textContent;
-  }
-
   // // Store the chosen plan in localStorage
   const planDuration = localStorage.getItem("planDuration");
   localStorage.setItem("chosenPlan", planName + "_" + planDuration);
-  const res = localStorage.getItem("chosenPlan");
-  console.log("chosen plan: ", res);
-  return;
-  // localStorage.setItem("chosenPlanPrice", price);
+  const chosenPlan = localStorage.getItem("chosenPlan");
+  console.log("chosen plan: ", chosenPlan);
+
+  // Retrieve the price dynamically based on the current plan price displayed
+  let price;
+  if (chosenPlan === "Basic_weekly") {
+    price = "₦1,200";
+  } else if (chosenPlan === "Standard_weekly") {
+    price = "₦2,800";
+  } else if (chosenPlan === "Premium_weekly") {
+    price = "₦4,200";
+  } else if (chosenPlan === "Basic_monthly") {
+    price = "₦2,500";
+  } else if (chosenPlan === "Standard_monthly") {
+    price = "₦5,500";
+  } else if (chosenPlan === "Premium_monthly") {
+    price = "₦8.500";
+  } else if (chosenPlan === "Basic_yearly") {
+    price = "₦25,000";
+  } else if (chosenPlan === "Standard_yearly") {
+    price = "₦60,000";
+  } else if (chosenPlan === "Premium_yearly") {
+    price = "₦90,000";
+  } else {
+    console.log("No plan selected");
+    return;
+  }
+
+  console.log("price: ", price);
+
+  localStorage.setItem("chosenPlanPrice", price);
   // // Navigate to the next page (Final Step)
-  // window.location.href = "../signup3/signup3.html";
+  window.location.href = "../signup3/signup3.html";
 };

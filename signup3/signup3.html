@@ -34,6 +34,18 @@
               <button type="submit">Submit Payment</button>
               <p id="error-message"></p>
             </form>
+            <!-- Add a "Payment Secured by Stripe" message -->
+            <div class="payment-security">
+              <p style="text-align: center; font-size: 14px; margin-top: 10px">
+                <img
+                  src="https://logos-world.net/wp-content/uploads/2021/03/Stripe-Logo.png"
+                  alt="Stripe Logo"
+                  style="width: 80px"
+                />
+                <br />
+                Your payment is secured by Stripe
+              </p>
+            </div>
           </div>
         </div>
         <div class="image-container">
@@ -45,8 +57,39 @@
     <script type="module">
       import { BASEURL } from "../constants/baseURL.js";
 
+      let planId;
       document.addEventListener("DOMContentLoaded", async function () {
         const url = `${BASEURL}/users/get-user-email`;
+
+        // set the priceId based on the chosenPlan from local storage
+        const chosenPlan = localStorage.getItem("chosenPlan");
+        console.log("chosen plan: ", chosenPlan);
+
+        // Retrieve the price dynamically based on the current plan price displayed
+
+        if (chosenPlan === "Basic_weekly") {
+          planId = "price_1Q9RPuEkS7lEmAem3lVCaSP8";
+        } else if (chosenPlan === "Standard_weekly") {
+          planId = "price_1Q9RRqEkS7lEmAem8IK0cpat";
+        } else if (chosenPlan === "Premium_weekly") {
+          planId = "price_1Q9RTEEkS7lEmAem96wVKMaX";
+        } else if (chosenPlan === "Basic_monthly") {
+          planId = "price_1Q9RUmEkS7lEmAemuTKD2CWd";
+        } else if (chosenPlan === "Standard_monthly") {
+          planId = "price_1Q9RYUEkS7lEmAemYwoJESPO";
+        } else if (chosenPlan === "Premium_monthly") {
+          planId = "price_1Q9RZgEkS7lEmAemJmnYgKZ4";
+        } else if (chosenPlan === "Basic_yearly") {
+          planId = "price_1Q9RabEkS7lEmAemFEbeXPqe";
+        } else if (chosenPlan === "Standard_yearly") {
+          planId = "price_1Q9RbSEkS7lEmAemNykJ7isF";
+        } else if (chosenPlan === "Premium_yearly") {
+          planId = "price_1Q9RcIEkS7lEmAemKJy480YX";
+        } else {
+          console.log("No plan selected");
+          return;
+        }
+
         // Helper function to get a specific cookie by name
         function getCookie(name) {
           const value = `; ${document.cookie}`;
@@ -146,7 +189,7 @@
               // pass the email and userPlan
               body: JSON.stringify({
                 paymentMethodId: paymentMethod.id,
-                priceId: "price_1Q7itBEkS7lEmAemxUF6wdtG", // Replace with your actual price ID from Stripe
+                priceId: planId,
                 email,
                 userPlan: chosenPlan,
               }),
