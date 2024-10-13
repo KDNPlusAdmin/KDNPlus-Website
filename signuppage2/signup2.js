@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ..............................PAYMENT PLAN..................
-function choosePlan(planName) {
+window.choosePlan = function (planName) {
   // Retrieve the price dynamically based on the current plan price displayed
   let price;
   if (planName === "Basic") {
@@ -179,4 +179,4 @@ function choosePlan(planName) {
   localStorage.setItem("chosenPlanPrice", price);
   // Navigate to the next page (Final Step)
   window.location.href = "../signup3/signup3.html";
-}
+};
