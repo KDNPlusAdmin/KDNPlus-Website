@@ -1,5 +1,7 @@
 import { BASEURL } from "../constants/baseURL.js";
 
+// display error via
+const errElem = document.querySelector("#error");
 document.addEventListener("DOMContentLoaded", function () {
   function getCookie(name) {
     const value = `; ${document.cookie}`;
@@ -21,7 +23,7 @@ document.getElementById("login-btn").addEventListener("click", () => {
   const password = document.getElementById("login-password").value;
 
   if (!usernameEmail || !password) {
-    alert("Please enter username/email and password");
+    errElem.innerHTML = "Please enter email and password";
     return;
   }
 
@@ -44,7 +46,8 @@ document.getElementById("login-btn").addEventListener("click", () => {
 
     if (!res.ok) {
       const error = await res.json();
-      throw new Error(error.message);
+      errElem.innerHTML = error.message;
+      return;
     }
 
     const data = await res.json();
