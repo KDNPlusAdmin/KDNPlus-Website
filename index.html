@@ -39,8 +39,8 @@
         </div>
       </header>
 
-      <section class="welcome overlay">
-        <div class="overlay">
+      <section class="welcome">
+        <div class="">
           <div class="welcome-content">
             <h1>Welcome</h1>
             <p class="subheading">Stream your favorite Nollywood Content</p>
@@ -60,199 +60,71 @@
         <img src="../landingpage/images/offer.jpg" alt="ads" class="offer1" />
       </div>
     </section>
+    <!-- new start -->
+    <div class="flex-container" id="page-2">
+      <div class="pricing-container">
+        <div class="change">
+          <h1>Choose Your Right Plan</h1>
+          <p>Select from the best plans, ensuring a perfect match</p>
+        </div>
+        <div class="toggle-buttons">
+          <button id="weekly" class="toggle-btn active">Weekly</button>
+          <button id="monthly" class="toggle-btn">Monthly</button>
+          <button id="yearly" class="toggle-btn">Yearly</button>
+        </div>
 
-    <!--arthur was this part on purpose? start-->
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Subscription Plans</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <!--arthur was this part on purpose? end-->
-      <body>
-        <div class="plan-container">
-          <h2>Find the plan that suits you</h2>
-          <div class="plan-selection-container">
-            <button class="plan-option basic-option" data-plan="basic">
-              Basic
+        <div class="pricing-plans">
+          <!-- Basic Plan -->
+          <div class="plan-card">
+            <div class="plan-header basic">Basic</div>
+            <div class="plan-price" id="basic-price">₦1200/week</div>
+            <ul class="plan-details">
+              <li>480p streaming (SD quality)</li>
+              <li>Mobile-only access</li>
+              <li>Limited offline downloads</li>
+              <li>Ad-supported</li>
+            </ul>
+            <button class="choose-plan-btn s1" onclick="choosePlan('Basic')">
+              Choose Plan
             </button>
-            <button class="plan-option standard-option" data-plan="standard">
-              Standard
-            </button>
-            <button class="plan-option premium-option" data-plan="premium">
-              Premium
-            </button>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="plan-card">
+            <div class="plan-header standard">Standard</div>
+            <div class="plan-price" id="standard-price"><!--₦5500/month--></div>
+            <ul class="plan-details">
+              <li>
+                <img
+                  src="../signuppage2/mockup.png"
+                  alt="Subscription Image"
+                  style="max-height: 15rem; margin-left: 42px"
+                />
+              </li>
+            </ul>
+            <!-- <button class="choose-plan-btn s2" onclick="choosePlan('Standard')">Choose Plan</button>     -->
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="plan-card">
+            <div class="plan-header premium">Premium</div>
+            <div class="plan-price" id="premium-price"><!--₦8500/month--></div>
+            <ul class="plan-details">
+              <li>
+                <img
+                  src="../signuppage2/mockup.png"
+                  alt="Subscription Image"
+                  style="max-height: 15rem; margin-left: 42px"
+                />
+              </li>
+            </ul>
+            <!-- <button class="choose-plan-btn s3" onclick="choosePlan('Premium')">Choose Plan</button>   -->
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Basic Plan Section -->
-
-        <div class="plan-section basic-option-section active">
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦1,500</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-
-              <p class="plan-title">1-Week Basic Plan</p>
-              <ul>
-                <li>480-720p Streaming</li>
-                <li>Full Captioning</li>
-                <li>Average quality streaming</li>
-                <li>Access to all movies and shows</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-
-          <!--2-->
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦2,700</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-              <p class="plan-title">Monthly Basic Plan</p>
-              <ul>
-                <li>480-720p Streaming</li>
-                <li>Full Captioning</li>
-                <li>Average quality streaming</li>
-                <li>Access to all movies and shows</li>
-                <li>1 profile / 1 screen per account</li>
-                <li>Access to Nonso AI</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-
-          <!--3-->
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦34,020</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-              <p class="plan-title">Annual Basic Plan</p>
-              <ul>
-                <li>480-720p Streaming</li>
-                <li>Full Captioning</li>
-                <li>Average quality streaming</li>
-                <li>Access to all movies and shows</li>
-                <li>1 profile / 1 screen per account</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Standard Plan Section -->
-
-        <div class="plan-section standard-option-section hidden">
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦2,700</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-              <p class="plan-title">Monthly Basic Plan</p>
-              <ul>
-                <li>480-720p Streaming</li>
-                <li>Full Captioning</li>
-                <li>Average quality streaming</li>
-                <li>Access to all movies and shows</li>
-                <li>1 profile / 1 screen per account</li>
-                <li>Access to Nonso AI</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-
-          <!--2-->
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦2,700</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-
-              <p class="plan-title">Monthly Standard Plan</p>
-              <ul>
-                <li>Full HD Streaming</li>
-                <li>2 screens per account</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Premium Plan Section -->
-
-        <div class="plan-section premium-option-section hidden">
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦3,500</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-
-              <p class="plan-title">Premium Plan</p>
-              <ul>
-                <li>4K Ultra HD Streaming</li>
-                <li>4 screens per account</li>
-                <li>Average quality streaming</li>
-                <li>Access to all movies and shows</li>
-                <li>1 profile / 1 screen per account</li>
-                <li>Access to Nonso AI</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-
-          <!--2-->
-          <div class="plan-details">
-            <div class="plan-details-box">
-              <div class="price-container">
-                <h3 class="plan-price">₦92,340</h3>
-                <span class="discount">30% off</span>
-              </div>
-              <div class="plan-header-line"></div>
-              <!-- Red underline -->
-              <p class="plan-title">Annual Basic Plan</p>
-              <ul>
-                <li>4k HD Streaming</li>
-                <li>Full Captioning</li>
-                <li>Access to all movies and shows</li>
-                <li>Multiple profiles, up to 4 screens per account</li>
-                <li>Download for offline viewing</li>
-                <li>Access to Nonso AI</li>
-              </ul>
-              <button class="select-plan">Select Plan</button>
-            </div>
-          </div>
-        </div>
-
-        <script src="script.js"></script>
-      </body>
-    </html>
+    <!-- new end -->
 
     <section class="flow-section">
       <div class="content-wrapper">
@@ -782,28 +654,27 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./landingpage/script.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const accordionHeaders = document.querySelectorAll(".accordion-header");
+      // accordion script
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-        accordionHeaders.forEach((header) => {
-          header.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-              this.querySelector(".accordion-icon").textContent = "+";
-            } else {
-              document
-                .querySelectorAll(".accordion-content")
-                .forEach((item) => {
-                  item.style.display = "none";
-                  item.previousElementSibling.querySelector(
-                    ".accordion-icon"
-                  ).textContent = "+";
-                });
-              content.style.display = "block";
-              this.querySelector(".accordion-icon").textContent = "-";
-            }
-          });
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector(".accordion-icon");
+
+          // Toggle active class for the accordion item
+          header.classList.toggle("active");
+          content.classList.toggle("active");
+
+          // Toggle between '+' and 'x'
+          if (content.classList.contains("active")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = null;
+          }
+
+          // Rotate icon when active
+          icon.textContent = icon.textContent === "+" ? "×" : "+";
         });
       });
 
