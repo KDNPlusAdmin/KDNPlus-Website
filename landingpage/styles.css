@@ -13,21 +13,13 @@ html {
 
 /* Header */
 .header {
-  background-color: transparent; /* Ensure there's no background color for the header */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* min-width: 100%; */
+  background-color: transparent; 
   z-index: 1000;
-  /* background-image: url('https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png'); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
   position: relative;
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   /* position: relative; */
   display: flex;
   justify-content: space-between; /* Align content to the left */
@@ -91,7 +83,7 @@ html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
     position: relative;
     display: flex;
     justify-content: space-between; /* Align content to the left */
@@ -165,22 +157,26 @@ html {
   box-sizing: border-box;
 }
 
-.hero1 {
-  background-image: url("https://d2c512779vw9nw.cloudfront.net/Landing%20Page%20hero%20section%20.png");
+.hero1{
+  background-image: linear-gradient( 
+    rgba(24, 24, 24, .7),
+    rgba(24, 24, 25, 0.7) 
+  ),url("../signup-page/New\ Project\ \(3\).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 20px;
+  flex-direction: column; */
+  /* padding: 20px; */
 }
 
 .welcome-content {
@@ -436,310 +432,280 @@ html {
   z-index: -1; /* Ensure the background is behind the text */
 }
 
-/* Plan Container */
-.plan-container {
-  margin-top: 50px;
+
+
+
+/* styling for plan selection start............... */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* For the overall page container */
+#page-2 {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  /* gap: 30px; */
-  margin: 20px 0;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 100vh; /* Make sure the content takes full height */
+  padding: 20px;
 }
 
-/* Plan Heading */
-.plan-container h2 {
-  color: white;
-  font-size: 2.7rem;
-  font-weight: bold; /* Bold heading */
-  text-align: center; /* Centered heading */
-  margin-bottom: 20px;
+/* General container for pricing section */
+.pricing-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
 }
 
-/* Plan Selection Container */
-.plan-selection-container {
+/* Heading and text styling */
+.change {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.change h1 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.change p {
+  color: #696666;
+}
+
+/* Toggle buttons container */
+.toggle-buttons {
   display: flex;
   justify-content: center;
-  width: 100%;
-  max-width: 600px;
-  background-color: #333; /* Thick black background */
-  border-radius: 50px; /* Pill-shaped container */
-  /* Padding inside container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 355px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  border: 1px solid #333;
+  background-color: #000;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Plan Options */
-.plan-option {
-  flex: 1;
-  text-align: center;
-  padding: 15px 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  background-color: #333; /* Default inactive state */
+/* Individual toggle button styling */
+.toggle-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 30px;
+  margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-  border: none; /* No border */
+  font-size: 16px;
+  border-radius: 25px;
 }
 
-/* Active Option (Light Red) */
-.plan-option.active {
-  background-color: #e50914; /* Light red for active option */
-  color: white;
-  box-shadow: 0 0 15px rgba(255, 77, 77, 0.5); /* Glow effect when active */
-  border-radius: 50px; /* Pill-shaped container */
-}
-
-/* Special rounded edges for the entire container */
-.plan-option:first-child {
+.toggle-btn:first-child {
   border-radius: 50px 0 0 50px; /* Round left side of the first option */
 }
 
-.plan-option:last-child {
+.toggle-btn:last-child {
   border-radius: 0 50px 50px 0; /* Round right side of the last option */
 }
 
-body {
-  background-color: #000;
-  font-family: Arial, sans-serif;
-  color: white;
+
+.toggle-btn.active {
+  background-color: #E50914;
+  color: #fff;
 }
 
-.plan-details {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  /* flex-wrap: wrap; */
-}
-
-.plan-details-box {
-  background-color: white;
-  border: 2px solid #e50914;
-  padding: 30px 30px;
-  border-radius: 10px;
-  width: 350px;
-  color: black;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  height: 37.5rem;
-  box-sizing: border-box !important;
-}
-
-.plan-details-box.annual-plan {
-  width: 350px;
-}
-
-.price-container {
-  background-color: white;
-  padding: 10px;
+/* Pricing plans container */
+.pricing-plans {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 10px 10px 0 0;
-  width: 100%;
+  flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+}
+
+/* Plan card styling */
+.plan-card {
+  background-color: #333;
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1;
+  max-width: 320px; /* Ensures the card doesn't get too wide */
+  min-width: 250px; /* Ensures the card doesn't get too small */
+  /* height: auto; */
+  height: 22rem;
+}
+
+.plan-card .s1 {
+  margin-top: 60px;
+}
+
+
+
+.plan-header {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.plan-header.basic {
+  background-color: #E50914;
+}
+
+.plan-header.standard {
+  background-color: #E50914;
+}
+
+.plan-header.premium {
+  background-color: #E50914;
 }
 
 .plan-price {
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding-left: 3.125rem;
+  font-size: 24px;
+  margin: 15px 0;
 }
 
-.discount {
-  background-color: #e50914;
+.plan-details {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-details li {
+  margin-bottom: 10px;
+}
+
+.choose-plan-btn {
+  background-color: black;
   color: white;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  border-radius: 15px;
-  bottom: 10px;
-  right: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Full width of the plan card */
+  border-radius: 5px;
 }
 
-/* Red underline separator added for both top and bottom sections */
-.plan-header-line {
-  width: 100%;
-  height: 2px;
-  background-color: #e50914;
-  margin: 20px 0;
+.choose-plan-btn:hover {
+  background-color: #E50914;
+  color: #fff;
 }
 
-.plan-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.plan-details-box ul {
+.plan-card ul {
   list-style-type: none;
   padding: 0;
 }
 
-.plan-details-box ul li {
+.plan-card ul li {
   margin-bottom: 10px;
-  color: black;
+  color: #fff;
   position: relative;
   padding-left: 20px;
 }
 
-.plan-details-box ul li::before {
+.plan-card ul li::before {
   content: "✔";
   color: #e50914;
   position: absolute;
   left: 0;
 }
 
-.select-plan {
-  background-color: #e50914;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
-  position: relative;
-}
 
-.select-plan:hover {
-  background-color: #d40813;
-}
-
-/* Spacer to separate the top and bottom sections */
-.spacer {
-  height: 50px; /* Adjust the space between the two sections */
-}
-
-/* ..................................................... */
-
-/* Active section that is visible */
-/* Default styles for larger screens */
-.plan-section.active {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row; /* Default row layout for larger screens */
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-  gap: 20px; /* Space between items */
-  padding: 20px;
-}
-
-.plan-details {
-  padding: 0px;
-  flex: 1;
-  max-width: 300px; /* Optional: limit the maximum width */
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* border: 1px solid #ddd; */
-  border-radius: 8px;
-  /* background-color: #fff; */
-}
-
-/* Responsive design for medium screens */
-@media (max-width: 1024px) {
-  .plan-section.active {
-    justify-content: center; /* Center items on medium screens */
-  }
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .plan-section.active {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-
-  .plan-details {
-    width: 100%; /* Full width for each item */
-    max-width: 90%; /* Optional: limit the width to 90% */
-    padding: 0px;
-  }
-}
-
-/* Additional responsive design for extra small screens */
-@media (max-width: 480px) {
-  .plan-details {
-    padding: 0px; /* Reduce padding on smaller screens */
-  }
-}
-
-.hidden {
-  display: none;
-}
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .plan-details-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .plan-details-box {
-    background-color: white;
-    border: 2px solid #e50914;
-    padding: 20px 20px;
-    border-radius: 10px;
-    width: 250px;
-    color: black;
-    text-align: left;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-@media (max-width: 1000px) {
-  .plan-details {
-    /* flex-direction: column;
-    align-items: center; */
-    font-size: 0.7rem;
-    padding: 0px;
-  }
-
-  .plan-details-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .plan-price {
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    padding-left: 3.125rem;
-  }
-  .plan-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-}
 @media (max-width: 768px) {
-  .plan-details {
-    flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
-    padding: 0px;
+  .flex-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
   }
 
-  .plan-details-box {
-    width: 100%;
-    margin-bottom: 20px;
+  .pricing-container {
+    margin-bottom: 10px;
+    width: 100%; /* Make pricing section full width */
   }
+
+  .toggle-buttons {
+    justify-content: center;
+    margin-left: 10px auto; /* Center the toggle buttons */
+    max-width: 280px;
+    margin-top: 8px;
+  }
+
+  
+  .toggle-btn:first-child {
+    border-radius: 50px 0 0 50px; /* Round left side of the first option */
+      
+  }
+  
+  .toggle-btn:last-child {
+    border-radius: 0 50px 50px 0; /* Round right side of the last option */
+  }
+  
+  
+
+
+  .pricing-plans {
+    flex-direction: column; /* Stack plan cards vertically */
+  }
+
+  .plan-card {
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 300px; /* Further reduce max width */
+    height: 16rem; /* Reduce card height */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .plan-header {
+    font-size: 18px; /* Reduce font size for headers */
+  }
+
   .plan-price {
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding-left: 3.125rem;
+    font-size: 20px; /* Reduce price font size */
   }
-  .plan-title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+  .plan-details li {
+    margin-bottom: 8px; /* Adjust spacing between details */
+    font-size: 14px; /* Reduce font size for plan details */
+  }
+
+  .choose-plan-btn {
+    padding: 8px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size for button */
+  }
+
+  .image-container {
+    display: none; /* Hide image on small screens */
+  }
+
+  /* Update for .change class */
+  .change {
+    margin-left: -10px; /* Center the content */
     text-align: center;
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+
+  .change h1 {
+    font-size: 22px; /* Reduce font size for header */
+    margin-left: -18px;
+  }
+
+  .change p {
+    font-size: 16px; /* Reduce font size for description */
+    margin-right: 10px; /* Center align the text */
+  }
+
+  .logo img{
+    margin-left: 12px;
   }
 }
+/* styling for plan selection end............... */
+
+
+
+
 
 .flow-section {
   display: flex;
@@ -1144,34 +1110,34 @@ body {
   padding-right: 20px;
 }
 
-/* accordion section */
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
 
+/* Main Accordion Container */
 .main-content {
   margin: 40px 0;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Adds depth */
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
-  color: #fff;
+  color: #fff; /* Accent color */
   margin-bottom: 30px;
 }
 
-/* Accordion Styles */
-
-.container-accordion {
-  max-width: 600px;
-  margin: auto;
-}
-
-.main-content {
-  background-color: #1e1e1e;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-h2 {
-  text-align: center;
+/* Accordion Container */
+.container-accordion{
+  margin: 50px auto;
 }
 
 .accordion {
@@ -1179,33 +1145,103 @@ h2 {
 }
 
 .accordion-item {
-  border: 1px solid #333;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  transition: transform 0.3s ease; /* Slight hover effect */
 }
 
+.accordion-item:hover {
+  transform: translateY(-5px); /* Lift on hover */
+}
+
+/* Accordion Header */
 .accordion-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
   cursor: pointer;
-  background-color: #2a2a2a;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+.accordion-header h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #fff;
 }
 
 .accordion-header:hover {
-  background-color: #3a3a3a;
+  background-color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dark shadow on hover */
 }
 
+/* Accordion Icon */
 .accordion-icon {
-  font-size: 20px;
+  font-size: 24px;
+  color: #fff; /* Accent color */
+  transition: transform 0.3s;
 }
 
+.accordion-header.active .accordion-icon {
+  transform: rotate(45deg); /* Rotate icon when active */
+}
+
+/* Accordion Content */
 .accordion-content {
-  padding: 15px;
-  display: none; /* Hidden by default */
+  max-height: 0; /* Hidden initially */
+  overflow: hidden;
+  padding: 0 20px;
   background-color: #2a2a2a;
-  border-top: 1px solid #333;
+  border-top: 1px solid #444;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cfcfcf;
+  padding-bottom: 10px;
+}
+
+.accordion-content.active {
+  max-height: 300px; /* Adjust as per content */
+  padding: 15px 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .accordion-header h3 {
+    font-size: 16px;
+  }
+
+  .accordion-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .accordion-header h3 {
+    font-size: 15px;
+  }
+
+  .accordion-content p {
+    font-size: 13px;
+  }
 }

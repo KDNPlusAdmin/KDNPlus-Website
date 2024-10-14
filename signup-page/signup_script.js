@@ -1,6 +1,7 @@
 import { BASEURL } from "../constants/baseURL.js";
 
 // TODO: Display server error messages
+const errElem = document.querySelector("#error");
 // Make sure the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Base URL: ", BASEURL);
@@ -38,7 +39,7 @@ async function saveUserInfo(event) {
 
   // Validate required fields
   if (!email || !password) {
-    alert("Missing email or password");
+    errElem.innerHTML = "Please enter email and password";
     return;
   }
 
@@ -75,7 +76,7 @@ async function saveUserInfo(event) {
     if (!res.ok) {
       const errorData = await res.json();
       const errorMsg = errorData.message;
-      alert(errorMsg); // Show error message
+      errElem.innerHTML = errorMsg;
       return;
     }
 
@@ -94,10 +95,10 @@ async function saveUserInfo(event) {
       // navigate to the plans page
       location.href = "../signuppage2/signup2.html";
     } else {
-      alert("Error: Unable to create OTP");
+      errElem.innerHTML = "Error: Unable to create OTP";
     }
   } catch (error) {
     console.error("Error during fetch:", error);
-    alert("An error occurred. Please try again later.");
+    errElem.innerHTML = "An error occurred. Please try again later.";
   }
 }

@@ -10,9 +10,10 @@ body, html {
 .header-section {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background: url('images/countdownposter.jpg') no-repeat center center/cover;
-    opacity: 0.8; /* Increased opacity for sharper background image */
+    background: url('../signup-page/New\ Project\ \(3\).png') no-repeat center center/cover;
+    opacity: 1; /* Increased opacity for sharper background image */
 }
+
 
 /* Overlay that contains the countdown and darkens the area */
 .overlay {
@@ -60,20 +61,26 @@ h1 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
+
+#days, #hours, #minutes, #seconds{
+    font-size: 2.5rem;
+    font-weight: 550;
+}
+
 
 /* Optional for responsiveness */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .countdown-item span {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .countdown-container {
-        padding: 20px;
+        padding: 15px;
     }
 }

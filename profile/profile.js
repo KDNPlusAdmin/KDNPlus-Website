@@ -42,8 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
         "username"
       ).textContent = `Hello ${username.toUpperCase()}`;
       document.getElementById("email").textContent = `Email: ${email}`;
+      function formatPlanString(planString) {
+        // Split the input string at the underscore
+        const [planName, planPeriod] = planString.split("_");
+
+        // Capitalize the first letter of the plan period (optional)
+        const formattedPeriod =
+          planPeriod.charAt(0).toUpperCase() + planPeriod.slice(1);
+
+        // Return the formatted string
+        return `${planName} (${planPeriod})`;
+      }
+
+      const formattedString = formatPlanString(plan);
       document.getElementById("plan").textContent = `Plan: ${
-        plan ?? "Choose a Plan"
+        formattedString ?? "Choose a Plan"
       }`;
     }
   }

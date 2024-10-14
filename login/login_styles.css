@@ -1,109 +1,107 @@
-/* General styles */
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: "Roboto", sans-serif; /* Modern font */
-  background-color: #000; /* Dark theme */
-  color: #ffffff;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
+/* General styles */  
+* {  
+  padding: 0;  
+  margin: 0;  
+  box-sizing: border-box;  
+}  
+body {  
+  font-family: "Roboto", sans-serif; /* Modern font */  
+  background-color: #000; /* Dark theme */  
+  color: #ffffff;  
+  margin: 0;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh;  
+  overflow: hidden;  
+}  
 
+.fb1 {  
+  background-color: transparent;  
+  padding: 20px;  
+  color: #fff;  
+  border: 1px solid #333;  
+}  
 
-.fb1{
-  background-color: transparent;
-  padding: 20px;
-  color: #fff;
-  border: 1px solid#333;
-}
+.fbb {  
+  color: rgb(89, 89, 240);  
+  font-weight: 600;  
+}  
 
-.fbb{
-  color: rgb(89, 89, 240);
-  font-weight: 600;
-}
-/* Container for login box */
+/* Header text */  
+.login-container h2 {  
+  text-align: center;  
+  font-size: 26px;  
+  margin-bottom: 30px;  
+  color: #fff; /* Accent color for header */  
+}  
 
+/* Button styling */  
+#login-btn {  
+  background-color: #ec2424; /* Primary button color */  
+  border: none;  
+  padding: 15px;  
+  width: 90%;  
+  border-radius: 5px;  
+  color: #fff;  
+  font-size: 18px;  
+  font-weight: bold;  
+  cursor: pointer;  
+  margin-top: 10px;  
+  transition: background-color 0.3s, transform 0.2s;  
+}  
 
+.login-container input {  
+  width: 90%;  
+  margin: 10px;  
+}  
 
-/* Header text */
-.login-container h2 {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 30px;
-  color: #fff; /* Accent color for header */
-}
+input {  
+  padding: 10px;  
+}  
 
-/* Button styling */
-#login-btn {
-  background-color: #ec2424; /* Primary button color */
-  border: none;
-  padding: 15px;
-  width: 90%;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s, transform 0.2s;
-}
+a {  
+  text-decoration: none;  
+  color: #d32f2f;  
+}  
 
+.logo img {  
+  max-height: 30px; /* Adjust the logo size if necessary */  
+  margin-bottom: 12px;  
+}  
 
-.login-container input{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
-    width: 90%;
-}
+/* Responsive styles */  
+@media (max-width: 600px) {  
+  .login-container {  
+    width: 90%;  
+    padding: 0 20px; /* Adjusted padding for smaller screens */  
+    display: flex;  
+    flex-direction: column; /* Stack elements vertically */  
+    align-items: center; /* Center elements horizontally */  
+  }  
 
-input {
-  padding: 10px;
-}
+  #login-btn {  
+    padding: 12px;  
+    font-size: 16px;  
+  }  
 
-a {
-  text-decoration: none;
-  color: #d32f2f;
-}
+  .login-container h2 {  
+    font-size: 24px; /* Adjust header size */  
+  }  
 
-.logo img {
-    max-height: 30px; /*Adjust the logo size if necessary*/
-    margin-bottom: 12px;
-  }
-  
+  .container {  
+    flex-direction: column; /* Stack login form and image vertically */  
+  }  
 
-/* video session  */
+  .image-container {  
+    display: none; /* Hide the image container on small screens */  
+  }  
+}  
 
+p {  
+  color: #838080;  
+}  
 
-
-/* Responsive styles */
-@media (max-width: 600px) {
-  .login-container {
-    width: 90%;
-    padding: 30px 20px; /* Adjusted padding for smaller screens */
-  }
-
-  #login-btn {
-    padding: 12px;
-    font-size: 16px;
-  }
-
-  .login-container h2 {
-    font-size: 24px; /* Adjust header size */
-  }
-}
-
-
-p{
-  color: #838080;
-}
 .line {  
   flex: 1; /* Allow the line to expand */  
   border: 1px solid #ccc; /* Style for hr line */  
@@ -133,31 +131,28 @@ section {
 
 .container {  
   display: flex;  
-  justify-content: space-between;
-  justify-content: center;
+  justify-content: center;  
+  align-items: center; /* Center items vertically */  
   width: 100%;  
-  margin-top: 50px ;
-  
-
+  margin-top: 50px;  
 }  
 
 .form-container {  
   background-color: #000;  
   color: #fff;  
   padding: 20px;  
-  flex: 0 0 500px; /*Fixed width for the form   */
+  flex: 0 0 500px; /* Fixed width for the form */  
   display: flex;  
   flex-direction: column;  
   justify-content: center;  
   align-items: center;  
-  margin: 50px ;
-
+  margin: 20px;  
 }  
 
 .logo img {  
   max-width: 100%;  
   height: 30px;  
-  margin-bottom: 12px;
+  margin-bottom: 12px;  
 }  
 
 h1 {  
@@ -174,25 +169,8 @@ h1 {
   margin-bottom: 15px;  
 }  
 
-a{
-  text-decoration: none;
-  color: #f40612;
-  font-weight: 600;
-}
-
-input{
-  background-color: #333;
-}
-.name-field {  
-  flex: 1;  
-  margin-right: 10px;  
-}  
-
-.name-field:last-child {  
-  margin-right: 0;  
-}  
-
 input {  
+  background-color: #333;  
   width: 100%;  
   padding: 10px;  
   margin-top: 5px;  
@@ -204,12 +182,10 @@ input {
   margin: 20px 0;  
 }  
 
-
 .divider-container {  
   display: flex;  
   align-items: center;  
 }  
-
 
 .center-text {  
   text-align: center;  
@@ -217,42 +193,29 @@ input {
 }  
 
 .image-container {  
-  flex: 0 0 500px;
-  margin: 50px auto;
-
-  
+  flex: 0 0 500px;  
+  margin: 50px auto;  
 }  
 
 .image-container img {  
   width: 100%;  
   height: 90vh; /* Full height of the viewport */  
   object-fit: cover; /* Cover the area without distortion */  
-  border-radius: 15px;
+  border-radius: 15px;  
 }  
 
 @media (max-width: 768px) {  
   .input-group {  
-      flex-direction: column;  
+    flex-direction: column;  
   }  
 
   .name-field {  
-      margin-right: 0;  
-      margin-bottom: 10px;  
+    margin-right: 0;  
+    margin-bottom: 10px;  
   }  
 
   .form-container {  
-    margin-top: 20px;
+    margin-top: 20px;  
     flex: 1; /* Allow form to take full width on smaller screens */  
   }  
-
-  .container{
-    flex-direction: column;
-  
-  }
-
-  
-  .image-container img{
-    display: none;
-  }
-}  
-
+}
