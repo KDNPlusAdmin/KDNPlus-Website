@@ -13,7 +13,6 @@ const page = () => {
   };
   return (
     <div className="">
-      {/* <Topbar /> */}
       <Hero tvseries />
       <div className="flex mt-5">
         <select
