@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="page" id="page-3">
+      <p id="error"></p>
       <br />
       <div class="container-last">
         <div class="flex-container">
@@ -58,6 +59,7 @@
       import { BASEURL } from "../constants/baseURL.js";
 
       let planId;
+      const errElem = document.querySelector("#error");
       document.addEventListener("DOMContentLoaded", async function () {
         const url = `${BASEURL}/users/get-user-email`;
 
@@ -158,7 +160,8 @@
         // get the email from local storage
         const email = localStorage.getItem("email");
         if (!email) {
-          alert("Please login first");
+          errElem.innerHTML = "Please login first";
+
           return;
         }
 
@@ -174,7 +177,8 @@
           // Get the plan name from local storage
           const chosenPlan = localStorage.getItem("chosenPlan");
           if (!chosenPlan) {
-            alert("Please select a plan");
+            errElem.innerHTML = "Please select a plan";
+
             return;
           }
           // Send payment method and priceId to the backend to create a subscription
@@ -212,13 +216,14 @@
                 document.getElementById("error-message").textContent =
                   confirmError.message;
               } else {
-                alert("Subscription successful!");
+                errElem.innerHTML = "Subscription successful!";
+
                 // navigate to accounts page
                 window.location.href = "../profile/profile.html";
               }
             } else if (paymentIntentStatus === "succeeded") {
               // Payment has already succeeded
-              alert("Subscription successful!");
+              errElem.innerHTML = "Subscription successful!";
 
               // navigate to accounts page
               window.location.href = "../profile/profile.html";
