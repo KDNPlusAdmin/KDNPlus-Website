@@ -14,6 +14,7 @@ body, html {
     opacity: 1; /* Increased opacity for sharper background image */
 }
 
+
 /* Overlay that contains the countdown and darkens the area */
 .overlay {
     position: absolute;
@@ -72,14 +73,14 @@ p {
 /* Optional for responsiveness */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .countdown-item span {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .countdown-container {
-        padding: 20px;
+        padding: 15px;
     }
 }
