@@ -130,12 +130,21 @@ body {
     margin-top: 20px;
 }
 
-.change-password-btn, .close-account-btn {
+.change-password-btn {
     padding: 10px 20px;
     background-color: #ff0000;
     color: #ffffff;
     border: none;
     cursor: pointer;
+}
+
+.close-account-btn {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-right: 128px;
 }
 
 .footer {
