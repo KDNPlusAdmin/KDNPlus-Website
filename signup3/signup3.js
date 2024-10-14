@@ -15,34 +15,30 @@ $(document).ready(function () {
     },
   });
 
+  // Function to format the plan string
+  function formatPlanString(planString) {
+    // Split the input string at the underscore
+    const [planName, planPeriod] = planString.split("_");
+
+    // Return the formatted string
+    return `${planName} (${planPeriod})`;
+  }
+
   // Display stored plan information
   const chosenPlan = localStorage.getItem("chosenPlan");
   const chosenPlanPrice = localStorage.getItem("chosenPlanPrice");
-  $("#plan-info").text(
-    "Selected Plan: " + chosenPlan + " - " + chosenPlanPrice
-  );
 
-  // Handle form submission
-  // $('#submitPayment').on('click', function(e) {
-  //     e.preventDefault();
-  //     // Collect payment information
-  //     const fullName = $('#full-name').val();
-  //     const cardDetails = $('#card-details').val();
-  //     const expiry = $('#expiry').val();
-  //     const cvv = $('#cvv').val();
-  //     const address = $('#location').val();
+  // Apply formatting if the chosen plan is in the format 'Plan_period'
+  if (chosenPlan && chosenPlan.includes("_")) {
+    const formattedPlan = formatPlanString(chosenPlan);
+    $("#plan-info").text(
+      "Selected Plan: " + formattedPlan + " - " + chosenPlanPrice
+    );
+  } else {
+    $("#plan-info").text(
+      "Selected Plan: " + chosenPlan + " - " + chosenPlanPrice
+    );
+  }
 
-  //     // Here you would typically send this information to your server for processing
-  //     console.log('Payment Info: ', { fullName, cardDetails, expiry, cvv, address });
-
-  //     // Simulate successful payment processing
-  //     alert('Payment submitted successfully!');
-
-  //     // Clear stored plan data
-  //     localStorage.removeItem('chosenPlan');
-  //     localStorage.removeItem('chosenPlanPrice');
-
-  //     // Redirect or further actions after payment
-  //     // window.location.href = 'thank_you.html'; // Uncomment for redirection after payment
-  // });
+  // Handle form submission (commented out code remains the same)
 });

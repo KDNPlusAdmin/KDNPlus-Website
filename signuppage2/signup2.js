@@ -58,16 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("weekly").addEventListener("click", function () {
     updatePricingAndDetails("weekly");
     setActiveButton(this);
+    localStorage.setItem("planDuration", "weekly");
   });
 
   document.getElementById("monthly").addEventListener("click", function () {
     updatePricingAndDetails("monthly");
     setActiveButton(this);
+    localStorage.setItem("planDuration", "monthly");
   });
 
   document.getElementById("yearly").addEventListener("click", function () {
     updatePricingAndDetails("yearly");
     setActiveButton(this);
+    localStorage.setItem("planDuration", "yearly");
   });
 
   // Function to update both the pricing and the card details
@@ -163,20 +166,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ..............................PAYMENT PLAN..................
-function choosePlan(planName) {
+window.choosePlan = function (planName) {
+  console.log("planName: ", planName);
+
+  // // Store the chosen plan in localStorage
+  const planDuration = localStorage.getItem("planDuration");
+  localStorage.setItem("chosenPlan", planName + "_" + planDuration);
+  const chosenPlan = localStorage.getItem("chosenPlan");
+  console.log("chosen plan: ", chosenPlan);
+
   // Retrieve the price dynamically based on the current plan price displayed
   let price;
-  if (planName === "Basic") {
-    price = document.getElementById("basic-price").textContent;
-  } else if (planName === "Standard") {
-    price = document.getElementById("standard-price").textContent;
-  } else if (planName === "Premium") {
-    price = document.getElementById("premium-price").textContent;
+  if (chosenPlan === "Basic_weekly") {
+    price = "₦1,200";
+  } else if (chosenPlan === "Standard_weekly") {
+    price = "₦2,800";
+  } else if (chosenPlan === "Premium_weekly") {
+    price = "₦4,200";
+  } else if (chosenPlan === "Basic_monthly") {
+    price = "₦2,500";
+  } else if (chosenPlan === "Standard_monthly") {
+    price = "₦5,500";
+  } else if (chosenPlan === "Premium_monthly") {
+    price = "₦8.500";
+  } else if (chosenPlan === "Basic_yearly") {
+    price = "₦25,000";
+  } else if (chosenPlan === "Standard_yearly") {
+    price = "₦60,000";
+  } else if (chosenPlan === "Premium_yearly") {
+    price = "₦90,000";
+  } else {
+    console.log("No plan selected");
+    return;
   }
 
-  // Store the chosen plan in localStorage
-  localStorage.setItem("chosenPlan", planName);
+  console.log("price: ", price);
+
   localStorage.setItem("chosenPlanPrice", price);
-  // Navigate to the next page (Final Step)
+  // // Navigate to the next page (Final Step)
   window.location.href = "../signup3/signup3.html";
-}
+};
