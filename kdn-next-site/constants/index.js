@@ -214,4 +214,32 @@ const myList = [
   },
 ];
 
-export { continueWatching, upcoming, tvSeries, myList };
+const topNav = [
+  {
+    label: "All",
+    route: "/",
+  },
+  {
+    label: "Tv series",
+    route: "tv-series",
+  },
+  {
+    label: "My Trial",
+    route: "/",
+  },
+  {
+    label: "New Arrivals and Upcoming",
+    route: "upcoming",
+  },
+];
+
+const upcomingNav = [
+  {
+    label: "New Arrivals",
+  },
+  {
+    label: "Upcoming",
+  },
+];
+
+export { continueWatching, upcoming, tvSeries, myList, topNav, upcomingNav };

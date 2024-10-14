@@ -7,9 +7,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="lg:px-[60px] px-5">
+    <div className="">
       <div className="">
-        <Topbar />
+        {/* <Topbar /> */}
         <Hero />
         <ListsCard
           continueWatching

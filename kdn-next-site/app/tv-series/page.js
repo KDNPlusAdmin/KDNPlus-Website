@@ -12,8 +12,8 @@ const page = () => {
     setSelectedDisplay(e.target.value);
   };
   return (
-    <div className="lg:px-[60px] px-5 ">
-      <Topbar />
+    <div className="">
+      {/* <Topbar /> */}
       <Hero tvseries />
       <div className="flex mt-5">
         <select
@@ -39,35 +39,37 @@ const page = () => {
         </select>
       </div>
 
-      {selectedDisplay === "all" && (
-        <>
-          {" "}
-          <TvseriesCard title="New Arivals" cardList={tvSeries} />
-          <TvseriesCard title="upcoming" cardList={upcoming} />
-          <TvseriesCard title="Recently Added" cardList={myList} />
-        </>
-      )}
+      <div className="mb-10">
+        {selectedDisplay === "all" && (
+          <>
+            {" "}
+            <TvseriesCard title="New Arivals" cardList={tvSeries} />
+            <TvseriesCard title="upcoming" cardList={upcoming} />
+            <TvseriesCard title="Recently Added" cardList={myList} />
+          </>
+        )}
 
-      {selectedDisplay === "upcoming" && (
-        <>
-          {" "}
-          <TvseriesCard title="upcoming" cardList={upcoming} />
-        </>
-      )}
+        {selectedDisplay === "upcoming" && (
+          <>
+            {" "}
+            <TvseriesCard title="upcoming" cardList={upcoming} />
+          </>
+        )}
 
-      {selectedDisplay === "new arrivals" && (
-        <>
-          {" "}
-          <TvseriesCard title="New Arrivals" cardList={tvSeries} />
-        </>
-      )}
+        {selectedDisplay === "new arrivals" && (
+          <>
+            {" "}
+            <TvseriesCard title="New Arrivals" cardList={tvSeries} />
+          </>
+        )}
 
-      {selectedDisplay === "recently added" && (
-        <>
-          {" "}
-          <TvseriesCard title="Recently Added" cardList={myList} />
-        </>
-      )}
+        {selectedDisplay === "recently added" && (
+          <>
+            {" "}
+            <TvseriesCard title="Recently Added" cardList={myList} />
+          </>
+        )}
+      </div>
     </div>
   );
 };

@@ -13,11 +13,13 @@ const Hero = ({ tvseries }) => {
       />
       <div className=" pt-[18rem] px-5 lg:px-10 relative bg-black/30 h-[600px] ">
         <Image
-          className="font-bold h-[80px] object-cover -ml-5 w-[300px]"
+          className={`font-bold ${
+            tvseries && "h-[200px] -ml-10 w-[330px]"
+          } h-[90px] object-cover -ml-5 w-[200px]`}
           width={1000}
           height={1000}
           alt="img"
-          src="/assets/rof.png"
+          src={tvseries ? "/assets/gh.png" : "/assets/rof.png"}
         />
         <p className="lg:w-[60%] my-5">
           There are so many styles you can combine that is possible to create

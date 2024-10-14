@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Topbar from "@/components/Topbar";
 
 const font = Poppins({
   weight: "400",
@@ -14,8 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
+    <html className="lg:px-[60px] px-5 " lang="en">
+      <body className={font.className}>
+        <Topbar />
+        {children}
+      </body>
     </html>
   );
 }

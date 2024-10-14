@@ -10,7 +10,7 @@ const ListsCard = ({ text, list, continueWatching, tvseries, upcoming }) => {
           <div className=" ">
             <Image
               className={`w-[300px] ${
-                upcoming && "w-[190px] h-[120px] object-center"
+                upcoming && "max-w-[190px] h-[120px] object-center"
               } ${
                 tvseries && "max-w-[300px] h-[350px]"
               } bg-red-300 h-[200px]  object-center object-cover mt-5  rounded-2xl`}
