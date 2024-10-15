@@ -46,8 +46,8 @@ async function saveUserInfo(event) {
   // Store the data in localStorage
   localStorage.setItem("username", username);
   localStorage.setItem("firstName", firstName);
-  localStorage.setItem("middleName", middleName);
-  localStorage.setItem("lastName", lastName);
+  // localStorage.setItem("middleName", middleName);
+  // localStorage.setItem("lastName", lastName);
   localStorage.setItem("email", email);
   localStorage.setItem("password", password);
 
@@ -55,8 +55,8 @@ async function saveUserInfo(event) {
   const body = {
     username,
     firstName,
-    middleName,
-    lastName,
+    // middleName,
+    // lastName,
     email,
     password,
   };
