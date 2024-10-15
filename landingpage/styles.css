@@ -23,11 +23,13 @@ html {
   /* position: relative; */
   display: flex;
   justify-content: space-between; /* Align content to the left */
-  padding: 10px 40px; /* Add padding for some spacing from the edge */
+  padding: 20px 40px; /* Add padding for some spacing from the edge */
 }
 
 .logo img {
   max-height: 40px; /*Adjust the logo size if necessary*/
+  box-sizing: border-box;
+  padding-left: 2.5rem;
 }
 
 /* image */
@@ -52,6 +54,8 @@ html {
   display: flex;
   gap: 15px; /* Space between buttons */
   transition: opacity 0.3s ease;
+  padding-right: 2.5rem;
+
 }
 
 /* Button Styling */
@@ -63,6 +67,7 @@ html {
   transition: background-color 0.3s ease;
   font-size: 18px;
   color: white;
+  
 }
 
 .btn-pre-order {
@@ -71,6 +76,7 @@ html {
   border: #444;
   font-weight: 700;
   font-size: larger;
+
 }
 
 .btn-pre-order:hover {
@@ -153,6 +159,8 @@ html {
   justify-content: center; /* Horizontally center the content */
   top: -50px !important;
   padding-bottom: 50px;
+  padding-top: 2.5rem;
+
   bottom: 20px;
   box-sizing: border-box;
 }
@@ -374,6 +382,7 @@ html {
 .offer1 {
   width: 100%; /* Ensures the image scales correctly */
   height: auto; /* Maintains aspect ratio */
+  margin-top: 30px;
 }
 
 /* media_query for .subscription start */
