@@ -30,8 +30,8 @@ async function saveUserInfo(event) {
 
   const username = document.getElementById("username").value;
   const firstName = document.getElementById("first-name").value;
-  const middleName = document.getElementById("middle-name").value;
-  const lastName = document.getElementById("last-name").value;
+  // const middleName = document.getElementById("middle-name").value;
+  // const lastName = document.getElementById("last-name").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
